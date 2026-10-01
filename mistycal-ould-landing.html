@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistycal Ould | Perfumería de Autor — Córdoba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 300: '#F4E8C1', 400: '#E5C158', 500: '#D4AF37', 600: '#B89320', 700: '#997B1E' },
+                        dark: { 950: '#050505', 900: '#0A0A0A', 800: '#141414', 700: '#1F1F1F' }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                        arabic: ['Amiri', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        #mistycal-ould-wrapper {
+            all: initial;
+            font-family: 'Montserrat', sans-serif !important;
+            background-color: #050505 !important;
+            color: #F3F4F6 !important;
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        #mistycal-ould-wrapper *, #mistycal-ould-wrapper *::before, #mistycal-ould-wrapper *::after {
+            box-sizing: border-box !important;
+        }
+        #mistycal-ould-wrapper h1, #mistycal-ould-wrapper h2, #mistycal-ould-wrapper h3, #mistycal-ould-wrapper h4, #mistycal-ould-wrapper .font-serif-luxury {
+            font-family: 'Playfair Display', serif !important;
+        }
+        #mistycal-ould-wrapper .arabic-heading {
+            font-family: 'Amiri', serif !important;
+            letter-spacing: 0.02em;
+        }
+        #mistycal-ould-wrapper .sp-grid-cards {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 1rem !important;
+            align-items: start !important;
+        }
+        @media (min-width: 768px) {
+            #mistycal-ould-wrapper .sp-grid-cards {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+                gap: 1.5rem !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            #mistycal-ould-wrapper .sp-grid-cards {
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                gap: 1.5rem !important;
+            }
+        }
+        #mistycal-ould-wrapper .sp-card {
+            background: linear-gradient(180deg, #141414 0%, #0A0A0A 100%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 0.75rem !important;
+            overflow: hidden !important;
+            display: flex !important;
+            flex-direction: column !important;
+            height: auto !important;
+            align-self: start !important;
+            transition: all 0.3s ease !important;
+        }
+        #mistycal-ould-wrapper .sp-card:hover {
+            border-color: rgba(212, 175, 55, 0.5) !important;
+            transform: translateY(-4px) !important;
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.15) !important;
+        }
+        #mistycal-ould-wrapper .sp-card.out-of-stock {
+            opacity: 0.6 !important;
+            pointer-events: none !important;
+        }
+        #mistycal-ould-wrapper .sp-card.out-of-stock .sp-img-container {
+            filter: grayscale(0.8) !important;
+        }
+        #mistycal-ould-wrapper .sp-img-container {
+            background: radial-gradient(circle, #1a1a1a 0%, #080808 100%) !important;
+            height: 180px !important;
+            min-height: 180px !important;
+            max-height: 180px !important;
+            width: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+            flex-shrink: 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+        #mistycal-ould-wrapper .sp-img-container img {
+            max-height: 140px !important;
+            max-width: 80% !important;
+            object-fit: contain !important;
+            object-position: center !important;
+            transition: transform 0.4s ease !important;
+        }
+        #mistycal-ould-wrapper .sp-card:hover .sp-img-container img {
+            transform: scale(1.06) !important;
+        }
+        #mistycal-ould-wrapper .gold-gradient-text {
+            background: linear-gradient(to right, #E5C158, #D4AF37, #F4E8C1) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+        #mistycal-ould-wrapper .gold-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #B89320 100%) !important;
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+        #mistycal-ould-wrapper .no-scrollbar::-webkit-scrollbar { display: none !important; }
+        #mistycal-ould-wrapper .no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
+        #mistycal-ould-wrapper .diamond-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #mistycal-ould-wrapper .diamond-logo svg {
+            width: 28px;
+            height: 28px;
+        }
+        #mistycal-ould-wrapper .olfactive-tag {
+            display: inline-block;
+            font-size: 8px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin: 1px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        #mistycal-ould-wrapper .season-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: #E5C158;
+        }
+        #mistycal-ould-wrapper .stock-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        #mistycal-ould-wrapper .stock-overlay span {
+            background: rgba(127, 29, 29, 0.9);
+            color: #FCA5A5;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+    </style>
+</head>
+<body style="margin: 0; background-color: #050505;">
+
+    <div id="mistycal-ould-wrapper">
+        <!-- Top alert banner -->
+        <div style="background-color: rgba(127, 29, 29, 0.95); color: white; font-size: 11px; font-weight: 700; padding: 10px 16px; text-align: center; text-transform: uppercase; letter-spacing: 0.1em; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(239, 68, 68, 0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-circle-exclamation" style="color: #F4E8C1;"></i>
+                <span>Consultar stock disponible por WhatsApp antes de señar</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #F4E8C1; font-size: 10px;">
+                <i class="fa-solid fa-truck"></i>
+                <span>Envío Gratis en Córdoba Capital</span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header style="background: rgba(20, 20, 20, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 58px; z-index: 40;">
+            <div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem; height: 75px; display: flex; align-items: center; justify-content: space-between;">
+                <a href="#" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 9L12 22L22 9L12 2Z" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                        <path d="M12 2L7 9H17L12 2Z" fill="rgba(212,175,55,0.2)"/>
+                        <path d="M2 9H22" stroke="#D4AF37" stroke-width="1"/>
+                        <path d="M7 9L12 22L17 9" stroke="#D4AF37" stroke-width="1" fill="none"/>
+                    </svg>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="font-serif-luxury gold-gradient-text" style="font-size: 22px; font-weight: 700; line-height: 1; letter-spacing: 0.05em;">MISTYCAL OULD</span>
+                        <span style="font-size: 7px; letter-spacing: 0.25em; color: #9CA3AF; text-transform: uppercase; margin-top: 3px;">Parfumerie Exclusive</span>
+                    </div>
+                </a>
+                <nav style="display: flex; align-items: center; gap: 1.5rem; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; color: #D1D5DB;">
+                    <a href="#hero" style="text-decoration: none; color: inherit;">Inicio</a>
+                    <a href="#destacados" style="text-decoration: none; color: inherit;">Destacados</a>
+                    <a href="#catalogo" style="text-decoration: none; color: inherit;">Catálogo</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section id="hero" style="position: relative; padding: 5rem 1rem; text-align: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2); background: #050505;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <span style="color: #E5C158; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; display: block; margin-bottom: 1rem;">Descubre tu esencia</span>
+                <h1 class="font-serif-luxury" style="font-size: clamp(2rem, 4vw, 4rem); font-weight: 700; color: #FFFFFF; margin-bottom: 1.2rem; line-height: 1.2;">
+                    El Arte de la <br/> <span class="gold-gradient-text" style="font-style: italic;">Alta Perfumería</span>
+                </h1>
+                <p style="color: #9CA3AF; font-size: 13px; max-width: 650px; margin: 0 auto 1rem auto; line-height: 1.6; font-weight: 300;">
+                    Selección exclusiva de fragancias.
+                </p>
+                <p style="color: #9CA3AF; font-size: 13px; max-width: 650px; margin: 0 auto 2rem auto; line-height: 1.6; font-weight: 300;">
+                    <strong style="color: #FFFFFF; font-weight: 500;">Modalidad:</strong> Reserva con una <span style="color: #E5C158; font-weight: 600;">seña del 50%</span> y abona el saldo al recibir en tu domicilio.
+                </p>
+                <div style="display: flex; flex-direction: column; sm:flex-direction: row; justify-content: center; gap: 1rem;">
+                    <a href="#destacados" class="gold-btn" style="text-decoration: none; padding: 12px 24px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block;">Ver Destacados</a>
+                    <a href="#catalogo" style="text-decoration: none; color: #E5C158; border: 1px solid rgba(212, 175, 55, 0.5); padding: 12px 24px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block;">Catálogo Completo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destacados -->
+        <section id="destacados" style="padding: 4rem 1rem; max-width: 1280px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 2.5rem;">
+                <h2 class="font-serif-luxury" style="font-size: 1.8rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Destacados</h2>
+                <div style="height: 2px; width: 50px; background-color: #D4AF37; margin: 0 auto;"></div>
+            </div>
+            <div id="featured-grid" class="sp-grid-cards"></div>
+        </section>
+
+        <!-- Catalogo -->
+        <section id="catalogo" style="padding: 4rem 1rem; max-width: 1280px; margin: 0 auto; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                <div>
+                    <h2 class="font-serif-luxury" style="font-size: 1.8rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.4rem;">Catálogo G5</h2>
+                    <p style="color: #9CA3AF; font-size: 12px;">Explora nuestra colección completa con precios actualizados.</p>
+                </div>
+                <div id="filter-bar" class="no-scrollbar" style="display: flex; align-items: center; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; width: 100%;"></div>
+            </div>
+            <div id="catalog-grid" class="sp-grid-cards"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="margin-top: 4rem; border-top: 1px solid rgba(255, 255, 255, 0.05); background: #0A0A0A; padding: 2.5rem 1rem; text-align: center;">
+            <div style="max-width: 1280px; margin: 0 auto;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 0.75rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 9L12 22L22 9L12 2Z" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                        <path d="M12 2L7 9H17L12 2Z" fill="rgba(212,175,55,0.2)"/>
+                        <path d="M2 9H22" stroke="#D4AF37" stroke-width="1"/>
+                        <path d="M7 9L12 22L17 9" stroke="#D4AF37" stroke-width="1" fill="none"/>
+                    </svg>
+                    <span class="font-serif-luxury gold-gradient-text" style="font-size: 22px; font-weight: 700;">MISTYCAL OULD</span>
+                </div>
+                <p style="color: #6B7280; font-size: 10px; letter-spacing: 0.15em; margin-bottom: 1.2rem; text-transform: uppercase;">Envío gratis Córdoba Capital • 50% seña / 50% contra entrega</p>
+                <button onclick="toggleAdmin()" style="background: none; border: none; color: #6B7280; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer; padding: 6px 14px;">
+                    <i class="fa-solid fa-gear" style="margin-right: 4px;"></i> Modo Edición / Admin
+                </button>
+            </div>
+        </footer>
+
+        <!-- Admin Modal -->
+        <div id="admin-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; align-items: center; justify-content: center; padding: 1rem;">
+            <div style="background: #141414; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; width: 100%; max-width: 1000px; max-height: 85vh; display: flex; flex-direction: column;">
+                <div style="padding: 1rem 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; background: #0A0A0A; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                    <h3 style="color: #D4AF37; font-family: 'Playfair Display', serif; font-size: 16px; margin: 0;">Panel de Administración (Inventario)</h3>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <button onclick="addProduct()" style="background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 4px; font-size: 11px; cursor: pointer;"><i class="fa-solid fa-plus"></i> Añadir</button>
+                        <button onclick="resetData()" style="background: rgba(127,29,29,0.5); color: #f87171; border: 1px solid rgba(239,68,68,0.3); padding: 5px 10px; border-radius: 4px; font-size: 11px; cursor: pointer;">Restaurar</button>
+                        <button onclick="toggleAdmin()" style="background: none; border: none; color: #9CA3AF; font-size: 16px; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <div style="padding: 1.2rem; overflow-y: auto; flex: 1;">
+                    <div id="admin-msg" style="display: none; margin-bottom: 1rem; padding: 8px; background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); color: #D4AF37; font-size: 11px; text-align: center; border-radius: 4px;"></div>
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 11px; color: #D1D5DB;">
+                        <thead>
+                            <tr style="background: #0A0A0A; color: #9CA3AF; text-transform: uppercase; font-size: 9px;">
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">Perfume</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">Precio Base</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">Categoría</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">Género</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">Estación</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">Stock</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: center;">Destacado</th>
+                                <th style="padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: center;">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fallbackImage = "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=500";
+        const imgBase = "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/";
+
+        const defaultData = [
+            // DESTACADOS (10)
+            { id: 1, name: "Yara Fem G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Primavera/Verano", featured: true, inStock: true, image: imgBase + "c_k4C_JTwiCKzgBAIDpJ6.png", notas: "Frutas tropicales, Flor de azahar, Almizcle, Vainilla" },
+            { id: 2, name: "Yara Candy G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Otoño/Invierno", featured: true, inStock: true, image: imgBase + "kKm15rdJpCdtUbrPEIN0e.png", notas: "Caramelo, Fresa, Jazmín, Sándalo, Vainilla" },
+            { id: 3, name: "Yara Tous G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Primavera/Verano", featured: true, inStock: true, image: imgBase + "1HCMKf4bcaJil4H4_US3i.png", notas: "Chabacano, Jazmín, Almizcle, Madera de cedro" },
+            { id: 4, name: "Yara Elixir G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Otoño/Invierno", featured: true, inStock: true, image: imgBase + "DGfhFJdXVeB-MfH7pBB67.png", notas: "Cítricos, Rosa, Oud, Ámbar, Vainilla" },
+            { id: 5, name: "Yara Moi G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Todo el año", featured: true, inStock: true, image: imgBase + "64m_K2iml1AGS0v0DnG0k.png", notas: "Melón, Jazmín, Almizcle blanco, Madera" },
+            { id: 6, name: "Asad G5", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Otoño/Invierno", featured: true, inStock: true, image: imgBase + "12WYMTrDZq_6br2UZyFaN.png", notas: "Pimienta negra, Tabaco, Vainilla, Ámbar" },
+            { id: 7, name: "Asad Bourbon G5", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Otoño/Invierno", featured: true, inStock: true, image: imgBase + "9ropETYvUEydWgtAcTze4.png", notas: "Bourbon, Canela, Cardamomo, Vainilla, Madera" },
+            { id: 8, name: "Asad Elixir", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Todo el año", featured: true, inStock: true, image: imgBase + "ZerJyFMjj6N5htoK97qWP.png", notas: "Especias, Cuero, Oud, Ámbar gris" },
+            { id: 9, name: "Asad Zanzíbar G5", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Verano", featured: true, inStock: true, image: imgBase + "I98iA1IbOvqNBJnhC4K5F.png", notas: "Cítricos, Pimienta, Sal marina, Madera" },
+            { id: 10, name: "9PM Elixir G5", basePrice: 30000, category: "9PM", gender: "Hombre", season: "Otoño/Invierno", featured: true, inStock: true, image: imgBase + "CYELRx3HmLnH-uathixoc.png", notas: "Manzana, Canela, Lavanda, Vainilla, Ámbar" },
+
+            // YARA
+            { id: 11, name: "Yara Fem G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "c_k4C_JTwiCKzgBAIDpJ6.png", notas: "Frutas tropicales, Flor de azahar, Almizcle, Vainilla" },
+            { id: 12, name: "Yara Candy G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "kKm15rdJpCdtUbrPEIN0e.png", notas: "Caramelo, Fresa, Jazmín, Sándalo, Vainilla" },
+            { id: 13, name: "Yara Tous G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "1HCMKf4bcaJil4H4_US3i.png", notas: "Chabacano, Jazmín, Almizcle, Madera de cedro" },
+            { id: 14, name: "Yara Elixir G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "DGfhFJdXVeB-MfH7pBB67.png", notas: "Cítricos, Rosa, Oud, Ámbar, Vainilla" },
+            { id: 15, name: "Yara Moi G5", basePrice: 18000, category: "Yara", gender: "Mujer", season: "Todo el año", featured: false, inStock: true, image: imgBase + "64m_K2iml1AGS0v0DnG0k.png", notas: "Melón, Jazmín, Almizcle blanco, Madera" },
+
+            // ASAD
+            { id: 16, name: "Asad Bourbon G5", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "9ropETYvUEydWgtAcTze4.png", notas: "Bourbon, Canela, Cardamomo, Vainilla, Madera" },
+            { id: 17, name: "Asad G5", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "12WYMTrDZq_6br2UZyFaN.png", notas: "Pimienta negra, Tabaco, Vainilla, Ámbar" },
+            { id: 18, name: "Asad Elixir", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Todo el año", featured: false, inStock: true, image: imgBase + "ZerJyFMjj6N5htoK97qWP.png", notas: "Especias, Cuero, Oud, Ámbar gris" },
+            { id: 19, name: "Asad Zanzíbar G5", basePrice: 18000, category: "Asad", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "I98iA1IbOvqNBJnhC4K5F.png", notas: "Cítricos, Pimienta, Sal marina, Madera" },
+
+            // 9PM
+            { id: 20, name: "9AM Dive G5", basePrice: 25000, category: "9PM", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "89Td4x7VkaRkW4ifZgL4z.png", notas: "Cítricos, Menta, Sal marina, Madera" },
+            { id: 21, name: "9PM Rebel G5", basePrice: 25000, category: "9PM", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "yMEWn9PB6NNxU8zT13nld.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 22, name: "9PM Night Out G5", basePrice: 35000, category: "9PM", gender: "Hombre", season: "Noches", featured: false, inStock: true, image: imgBase + "yHqdjsKsJGtOhwjgAOSqp.png", notas: "Frutas oscuras, Jazmín, Pachulí, Vainilla" },
+            { id: 23, name: "9PM Elixir G5", basePrice: 30000, category: "9PM", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "CYELRx3HmLnH-uathixoc.png", notas: "Manzana, Canela, Lavanda, Vainilla, Ámbar" },
+            { id: 24, name: "9PM Black G5", basePrice: 25000, category: "9PM", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ipq0z4KzAXul4RZfUX44p.png", notas: "Cuero negro, Oud, Especias, Ámbar" },
+            { id: 25, name: "9 AM Pour Femme G5", basePrice: 25000, category: "9PM", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "FOSdoNECNwUm7Vz0Awdel.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+
+            // ODYSSEY
+            { id: 26, name: "Odyssey Mandarin Sky G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "Af4nxhZRl7Lmf7slENfwr.png", notas: "Mandarina, Bergamota, Jazmín, Madera" },
+            { id: 27, name: "Mandarin Sky Vintage G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "56uAoPtM4COB-5Gnm15TT.png", notas: "Mandarina, Naranja, Especias, Madera" },
+            { id: 28, name: "Odyssey Black Forest G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ErGHaCkzP6kUK90hQeKc-.png", notas: "Pino, Cedro, Musgo, Cuero" },
+            { id: 29, name: "Odyssey Tyrant G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "J8cR_MKA3DEgMVlwqXx87.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 30, name: "Odyssey Marshmallow G5", basePrice: 25000, category: "Odyssey", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "xxGPOYA6kJ4ZjlTOM_Vsf.png", notas: "Malvavisco, Vainilla, Almizcle, Sándalo" },
+            { id: 31, name: "Odyssey Aqua G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "iYsKuP7CbTUccH-Lgm3ZJ.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
+            { id: 32, name: "Odyssey Bahamas G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "5jGs40aH3yYMTqsuWzNWr.png", notas: "Coco, Piña, Flor tropical, Vainilla" },
+            { id: 33, name: "Odyssey Eau de Montagne G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "lG49UMp79mN1Nz9mCT4SF.png", notas: "Montaña, Pino, Eucalipto, Menta" },
+            { id: 34, name: "Mega G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Todo el año", featured: false, inStock: true, image: imgBase + "-fwO9y64SAH_gTEwAjNU8.png", notas: "Cítricos, Especias, Madera, Almizcle" },
+            { id: 35, name: "Artisto G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "d8cI-88VuzLh2mwCDTrUd.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 36, name: "Odyssey Pink Pop G5", basePrice: 25000, category: "Odyssey", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "JASsECfMw7ocMUHchOTNC.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 37, name: "Odyssey Lichi Lush G5", basePrice: 25000, category: "Odyssey", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "kDvAvs2Bi9dqr6btQw3mr.png", notas: "Lichi, Jazmín, Almizcle, Vainilla" },
+            { id: 38, name: "Odyssey Go Mango G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "jmSDTvtUvsuOurz_SpxsF.png", notas: "Mango, Cítricos, Flor tropical, Vainilla" },
+            { id: 39, name: "Odyssey Dubai Chocolate G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "D7wfAUQkx_ZF5gMpCcIcu.png", notas: "Chocolate, Especias, Vainilla, Ámbar" },
+            { id: 40, name: "Odyssey Candee G5", basePrice: 25000, category: "Odyssey", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ZsEgYbPqswycejCeNU7ER.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+            { id: 41, name: "Odyssey Revolution G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "orY7vSQ6diL72hhq_pEdI.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 42, name: "Odyssey Mandarin Sky Elixir G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "bxVsw4xEwEiM0dYBkTurw.png", notas: "Mandarina, Bergamota, Jazmín, Madera" },
+            { id: 43, name: "Odyssey Aoud G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ktoQHS0BoJUyUMNNt4hOP.png", notas: "Oud, Especias, Ámbar, Cuero" },
+            { id: 44, name: "Odyssey Toffee Coffee G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "YL8E5PrF97M98NYHRdqBy.png", notas: "Café, Caramelo, Vainilla, Sándalo" },
+            { id: 45, name: "Odyssey Wild One G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "YVgxchy43sY7e_7aSLwHc.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 46, name: "Limoni G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "QD82tfVUtjxGEULSsf4Wm.png", notas: "Limón, Cítricos, Menta, Madera" },
+            { id: 47, name: "Homme White G5", basePrice: 25000, category: "Odyssey", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "VvnFuADnqRlJiiH1RcARn.png", notas: "Cítricos, Flor blanca, Almizcle, Madera" },
+            { id: 48, name: "Spectra Rainbow G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "6Tc5gXXo_BBe9hsdctPDj.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 49, name: "Spectra Blu G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "4HLvZq6SZhqUDJc0r24XB.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
+
+            // ARMAF
+            { id: 50, name: "Infinity Gold G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "4i9fi17WL6uKWnxBpsq1F.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 51, name: "Infinity Silver G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "hIzWOeuQaGVWc1hO7u3LP.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 52, name: "Island Breeze G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "-FT0QwL3f66mtl4abjcLc.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 53, name: "Delicacy Kunafa Chocolate G5", basePrice: 28000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "AB_M8aijYQS6D3AWq-Ad4.png", notas: "Kunafa, Chocolate, Vainilla, Sándalo" },
+            { id: 54, name: "Delicacy Red Velvet G5", basePrice: 28000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "bQ0ZYWNgk2riA4YjbcOGt.png", notas: "Red Velvet, Vainilla, Sándalo, Ámbar" },
+            { id: 55, name: "Éter Arabian Sky G5", basePrice: 40000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "R1DnKkD1lLvh-E9U1Zcuj.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 56, name: "Beach Party G5", basePrice: 25000, category: "Armaf", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "AtmJNLumKNZqbij2bbNIe.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 57, name: "Yum Yum G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "45gMjFySxkdR_aFhh_nJd.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+            { id: 58, name: "Bon Bon G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "qCy0CIH1z22cpQGReJI2J.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+            { id: 59, name: "Island Bliss G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "vmOB2NmedtUDxaQxg3Jpa.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 60, name: "Shk Saoud Alkaabi G5", basePrice: 35000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "7uTLRRNJTB_Evnr5dGhjA.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 61, name: "Delicacy Cotton Candy G5", basePrice: 28000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "7CEEDXkm9RbCfhG6vo2io.png", notas: "Algodón de azúcar, Vainilla, Sándalo, Ámbar" },
+            { id: 62, name: "Space Age G5", basePrice: 25000, category: "Armaf", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Q5-cvM8ZCqlF3YbOoPwyj.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // AL HARAMAIN
+            { id: 63, name: "Al Haramain Aqua Dubai G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "3_97THd2xsAPycsT4BhSc.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 64, name: "Al Haramain Gold Edition G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "3vTtKzdVGAboDSAmZQM8F.png", notas: "Especias, Oud, Ámbar, Vainilla" },
+            { id: 65, name: "Al Haramain Bleu Edition G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "ek4bXIcho2mCc2WhNfuu5.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
+            { id: 66, name: "Al Haramain Private Edition G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Ui7RsoLyJxSZv1tZNJDXt.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 67, name: "Al Haramain Dubai Night 60ml G5", basePrice: 35000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dAvZ9MGwaeGCUiQ6kNl2_.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 68, name: "Al Haramain Gold 100ml G5", basePrice: 35000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "JqltEqbyID3MBvcldqTgE.png", notas: "Especias, Oud, Ámbar, Vainilla" },
+            { id: 69, name: "Al Haramain White G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "ElXLqEq8SjfRJlGRqGI34.png", notas: "Cítricos, Flor blanca, Almizcle, Madera" },
+            { id: 70, name: "Al Haramain Ultra Violet G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "cty6xVPqaJeuEeSQYhvjq.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 71, name: "Al Haramain Ruby G5", basePrice: 30000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "iGW__YovL70NndfQFHdzF.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 72, name: "Al Haramain Gold 120ml G5", basePrice: 37000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "kKo2IYz2N564mdxnfCt2v.png", notas: "Especias, Oud, Ámbar, Vainilla" },
+            { id: 73, name: "Al Haramain Carbon G5", basePrice: 40000, category: "Al Haramain", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "O5b_NAS7HcOaj8t7tK9ny.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 74, name: "Bon Cherie Rojo G5", basePrice: 30000, category: "Al Haramain", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "yza9o0Beug3-tnbPTxXTr.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+
+            // CLUB DE NUIT
+            { id: 75, name: "CDN Intense Man G5", basePrice: 25000, category: "Club De Nuit", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "RZxtGHVGll_onrORoSKOB.png", notas: "Limón, Grosella negra, Abedul, Almizcle" },
+            { id: 76, name: "Club De Nuit Bling G5", basePrice: 45000, category: "Club De Nuit", gender: "Mujer", season: "Noches", featured: false, inStock: true, image: imgBase + "dy9KLSRyW4rR_mmeh0Fkq.png", notas: "Frutas, Jazmín, Vainilla, Sándalo" },
+            { id: 77, name: "CDN Milestone G5", basePrice: 25000, category: "Club De Nuit", gender: "Unisex", season: "Todo el año", featured: false, inStock: true, image: imgBase + "NMvze8l9QQuoPk9U4ykGU.png", notas: "Frutas, Flor de azahar, Vainilla, Sándalo" },
+            { id: 78, name: "CDN Sillage G5", basePrice: 25000, category: "Club De Nuit", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "43qR5JW7VRAb4PtyYXX1S.png", notas: "Cítricos, Especias, Oud, Ámbar" },
+            { id: 79, name: "CDN Urban Man G5", basePrice: 25000, category: "Club De Nuit", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "OUWrJN70XkxCPc8r0uumX.png", notas: "Cítricos, Especias, Cuero, Ámbar" },
+            { id: 80, name: "CDN Urban Man Elixir G5", basePrice: 25000, category: "Club De Nuit", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "gFQynCiyYG1ezkpzIngew.png", notas: "Cítricos, Especias, Cuero, Ámbar" },
+            { id: 81, name: "CDN Maleka G5", basePrice: 25000, category: "Club De Nuit", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "aB_jivT6Kn4P0vUNb_WaR.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 82, name: "CDN Iconic G5", basePrice: 25000, category: "Club De Nuit", gender: "Unisex", season: "Todo el año", featured: false, inStock: true, image: imgBase + "4PaEK_qGf0DO_0mDjTCXG.png", notas: "Cítricos, Especias, Madera, Almizcle" },
+            { id: 83, name: "CDN Untold G5", basePrice: 25000, category: "Club De Nuit", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "I7Dffj35838hfPvFWBLBT.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 84, name: "CDN Imperiale G5", basePrice: 25000, category: "Club De Nuit", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "cnEi-9M-GEUMkyaMIFBz3.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 85, name: "Lionheart G5", basePrice: 35000, category: "Club De Nuit", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "IXml4E_W44twlUdZMsO4P.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 86, name: "CDN Woman G5", basePrice: 25000, category: "Club De Nuit", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "ToKQuTAhJw8deqmwj5wex.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 87, name: "Club De Nuit Oud G5", basePrice: 47000, category: "Club De Nuit", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "6fddOeIkQuRdkLjd8TBwo.png", notas: "Oud, Especias, Ámbar, Cuero" },
+
+            // HAWAS
+            { id: 88, name: "Hawas Fire G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "GIk_X_cpo9vDwfi6ydHGe.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 89, name: "Hawas For Him", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "NaSMB5ICT9ihEerHHOyCG.png", notas: "Canela, Azahar, Ámbar gris, Madera" },
+            { id: 90, name: "Hawas Kobra G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "_vAbC3FEj-FlQQAn9B6q9.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 91, name: "Hawas London G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "AaM4StvA3sHhHi0My7736.png", notas: "Cítricos, Especias, Madera, Almizcle" },
+            { id: 92, name: "Hawas Viper G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "eyrqXsSQt_7ua14kkNfct.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 93, name: "Hawas Malibú G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "fX25RS8Qdgke0HsMal-AZ.png", notas: "Cítricos, Sal marina, Madera, Almizcle" },
+            { id: 94, name: "Hawas Verde G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "7F7Wb86Lrx-7ZUsSVjyh0.png", notas: "Verde, Cítricos, Especias, Madera" },
+            { id: 95, name: "Hawas Diva G5", basePrice: 25000, category: "Hawas", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "J_cL8kWXouoOKIWRvKO46.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 96, name: "Hawas Thunder G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "EuYPUihuzKRCVqqIL5_k4.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 97, name: "Hawas Lava Gold G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "q_z9JPOZgVITF99Zp07nm.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 98, name: "Hawas Black G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "RbuYk5nFDbnxSFtiF8ZrP.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 99, name: "Hawas Ice G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "XiCsAvro1cGcmMf3OPbbe.png", notas: "Menta, Cítricos, Almizcle, Madera" },
+            { id: 100, name: "Hawas Elixir G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "uxRWEmqDVqbr7pqloGKUw.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 101, name: "Hawas Atlantis G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "YsLtn55ZL9U-oEcMjxMPg.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 102, name: "Hawas Eclat G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "mXA_SymRxe9tHMzA8BuM1.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 103, name: "Hawas Tropical G5", basePrice: 25000, category: "Hawas", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "xTMwZ6CkfeSLboyZUXIbm.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 104, name: "Hawas Pink G5", basePrice: 25000, category: "Hawas", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "NjyXbY3-JPFgeESAgL-K6.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+
+            // BHARARA
+            { id: 105, name: "Bharara Rose G5", basePrice: 35000, category: "Bharara", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "qz1h-u06Uu82YEEAhoji5.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+            { id: 106, name: "Bharara Scarlet G5", basePrice: 35000, category: "Bharara", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "RufaXko8eZ49p6C78RyLs.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+            { id: 107, name: "Bharara Queen G5", basePrice: 35000, category: "Bharara", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "pG5WxtkE72XxqBStyfHNV.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 108, name: "Bharara King Soleil G5", basePrice: 40000, category: "Bharara", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "3KbxnAYmZyf9E5RexpFNK.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 109, name: "Bharara King G5", basePrice: 35000, category: "Bharara", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "0Wcii41EUPxNTCLfyNXre.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 110, name: "Bharara Bleu G5", basePrice: 35000, category: "Bharara", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "tSODoLBHpsih2C7D5LwkZ.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
+            { id: 111, name: "Bharara Chocolate G5", basePrice: 35000, category: "Bharara", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "XmLv9bG7FMmCqAf4Go0sx.png", notas: "Chocolate, Vainilla, Sándalo, Ámbar" },
+            { id: 112, name: "Bharara King Gold G5", basePrice: 35000, category: "Bharara", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dpxNa57ITypUzKl-TpyPL.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 113, name: "Bharara Niche Femme G5", basePrice: 35000, category: "Bharara", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "DE0W69XMz_j9DhXrnrftQ.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+
+            // VULCAN
+            { id: 114, name: "Vulcan Feu G5", basePrice: 30000, category: "Vulcan", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ef-kut7AvhAKYIA9igy6l.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 115, name: "Vulcan Sable G5", basePrice: 30000, category: "Vulcan", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "BYcYxCRwrli5pjAiYxoSK.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 116, name: "Vulcan Baie G5", basePrice: 30000, category: "Vulcan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "mZcDFuSzcV_AT7a024kxj.png", notas: "Cítricos, Especias, Madera, Almizcle" },
+            { id: 117, name: "Vulcan Black G5", basePrice: 30000, category: "Vulcan", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "d1Wt3W8rkd2yP9wdyeVO-.png", notas: "Cuero, Especias, Oud, Ámbar" },
+
+            // ORIENTICA
+            { id: 118, name: "Orientica Royal Amber G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "K-BaQtmd86MsPKkD8qb11.png", notas: "Ámbar, Vainilla, Sándalo, Madera" },
+            { id: 119, name: "Orientica Amber Rouge G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dcS_9tZee9eBr6XbKJHKh.png", notas: "Ámbar, Especias, Oud, Cuero" },
+            { id: 120, name: "Orientica Oud Saffron G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "FwQaKlgW1c_XJx5kUgJIn.png", notas: "Azafrán, Oud, Especias, Ámbar" },
+            { id: 121, name: "Orientica Royal Bleu G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "KaFExRZtn_7LZX7yS2-tw.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
+            { id: 122, name: "Orientica Nardo Oud G5", basePrice: 35000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Xc2tcBPapOa7F0j1kvjgg.png", notas: "Oud, Especias, Ámbar, Cuero" },
+            { id: 123, name: "Orientica Velvet Gold G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "pZ5naf9RKxHfNXzxwcd65.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // LATTAFA
+            { id: 124, name: "Atheeri G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "3R5jl6qI1-goNa3ZFANM6.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 125, name: "Angham G5", basePrice: 30000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "WxfwCLEPjnic5lAlmIbLI.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 126, name: "Her Confession G5", basePrice: 35000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "mDy9iNALJakDyj4t_Z-IO.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 127, name: "Teriaq Intense G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "p9hq8iCFNWBaXbwXPdcXn.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 128, name: "Teriaq G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Kls6Y3naDV5PYdQPtgtaO.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 129, name: "Hayaam G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "-wCRdlKNmdeHs9d5HANOm.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 130, name: "Second Song G5", basePrice: 30000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "yxgvlZcVBuCSDHdxctuz-.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 131, name: "Vintage Radio G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "U6x3O2lOhHIE9fiFqcIA1.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 132, name: "Dalal G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "AWvQZTP1aG9PrAGznnzoB.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 133, name: "The Kingdom Fem G5", basePrice: 35000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "lEbeY6WfwBq-29XJ_cuIf.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 134, name: "The Kingdom G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "YqupMuV6be_9pLbQES4Z6.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 135, name: "Art of Universe G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "kvC_LCoSJzyNb9vAUWDwa.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 136, name: "Art of Arabia I G5", basePrice: 40000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "iqZPQt3bt7DQ9u2I8G6Y7.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 137, name: "Afeef G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Y6c1ZC3t1IFbdH4SpESCY.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 138, name: "Now Women G5", basePrice: 20000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "FdRUy1DJheTTNFeSfWqd-.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 139, name: "Victoria G5", basePrice: 30000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "hA90ZPkwRwvIG9z0GsGcd.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 140, name: "His Confession G5", basePrice: 35000, category: "Lattafa", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "o-IDUDECVxUkFVnNwkcGI.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 141, name: "Sakeena G5", basePrice: 30000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "iWGJ3ntd6dB0kVnVXdbAi.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 142, name: "Qaaed Al Shabaab G5", basePrice: 30000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "CrBakPWegTmdzfee83cNe.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 143, name: "Qaaed G5", basePrice: 30000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "eAttDWI9v7XhtojbfNNWL.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 144, name: "Now Intense G5", basePrice: 20000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "5NVukSbQI20CRNO_BcZlB.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 145, name: "Now Rouge G5", basePrice: 20000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "PahfJyD4HcKFPLJGsEL2H.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 146, name: "Now White G5", basePrice: 20000, category: "Lattafa", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "IqfpEFkDQS9PWkaIShFEA.png", notas: "Cítricos, Flor blanca, Almizcle, Madera" },
+            { id: 147, name: "Now Negro G5", basePrice: 20000, category: "Lattafa", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "DClOvzLuITa5M-KvpPVax.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 148, name: "Haya G5", basePrice: 30000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "bIl0hOLXd8YTVTTf_P0TA.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 149, name: "Mayar Rosa G5", basePrice: 25000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "6L6R63JDzMTP8nEK1UzjM.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 150, name: "Confidential Gold G5", basePrice: 20000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "67thDahCW6sWSIAN_YqYL.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 151, name: "Ramz Gold G5", basePrice: 25000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "p6qfgK3LV3MG6wi36aLCx.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // SUPREMACY
+            { id: 152, name: "Supremacy In Oud G5", basePrice: 35000, category: "Supremacy", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "wPKUfL3WBDT1Mfj7u6X3f.png", notas: "Oud, Especias, Cuero, Ámbar" },
+            { id: 153, name: "Supremacy Not Only Intense G5", basePrice: 35000, category: "Supremacy", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "eJvAZpCE4qNVrDUPPAvoc.png", notas: "Especias, Cuero, Oud, Ámbar" },
+            { id: 154, name: "Supremacy Collector's G5", basePrice: 35000, category: "Supremacy", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "zroFZdX2kxs9zXzDg-oNu.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 155, name: "Supremacy Noir G5", basePrice: 25000, category: "Supremacy", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "-x_WJC8RNOIMYGsqTDoqi.png", notas: "Cuero, Especias, Oud, Ámbar" },
+
+            // BADEE AL OUD
+            { id: 156, name: "Oud For Glory G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "jBY1p5FgAnRTh268k8Y7O.png", notas: "Oud, Especias, Ámbar, Cuero" },
+            { id: 157, name: "Noble Blush G5", basePrice: 25000, category: "Badee Al Oud", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "3kkx53txPZ_CnWExT82QQ.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 158, name: "Sublime G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "DWEgf8zT_y6OEArCD6AUV.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 159, name: "Honor and Glory G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "K1gAm1xIH00EBVa47cm9a.png", notas: "Oud, Especias, Ámbar, Cuero" },
+            { id: 160, name: "Amethyst G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "P-HVdLMDDl-MECHVo8Fov.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // KHAMRAH
+            { id: 161, name: "Khamrah G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "h-_jooj3dMsZz8oDV-aSx.png", notas: "Canela, Nuez moscada, Vainilla, Ámbar" },
+            { id: 162, name: "Khamrah Qahwa G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "RRBUmRV3Zld00Rf_bulxu.png", notas: "Café, Canela, Cardamomo, Vainilla" },
+            { id: 163, name: "Khamrah Karaz G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "fs2BIrj0p2j3z6RfaQWNT.png", notas: "Cereza, Canela, Vainilla, Ámbar" },
+            { id: 164, name: "Khamrah Dukhan G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "F8KCoakEsrdkhPYoMqa-q.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 165, name: "Khamrah Zanqam G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Aw9kDJpqsbfQM7QKitzuj.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 166, name: "Khamrah Waha G5", basePrice: 35000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "JIfVMTTYrqNzlhrtzfm6_.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // FURSAN
+            { id: 167, name: "Qaed Al Fursan Blanco G5", basePrice: 20000, category: "Fursan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "GZbJO1BDIiUNOSVsA5CuK.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 168, name: "Fursan Marrón G5", basePrice: 20000, category: "Fursan", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "hYFk1dUGJYmMvrFpdKyK_.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 169, name: "Qaed Al Fursan Negro G5", basePrice: 20000, category: "Fursan", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "z68OWizJSWzeCEigWRidw.png", notas: "Cuero, Especias, Oud, Ámbar" },
+
+            // FRENCH AVENUE
+            { id: 170, name: "Irida Extrait G5", basePrice: 30000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "pbXxmJDcmSNeXnTyjV2tC.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 171, name: "Veneno Scarlet G5", basePrice: 35000, category: "French Avenue", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "Z_K3dqLGhGBdkS3kZjECN.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 172, name: "Veneno Negro G5", basePrice: 35000, category: "French Avenue", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "KD-K3etJ45hxZ5GC4Ndhc.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 173, name: "Jade Giallo G5", basePrice: 37000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "C2hpYlh2IXtxMls3ieT9x.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 174, name: "Liquid Brun G5", basePrice: 35000, category: "French Avenue", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "rQORiWTjI63KRKvsoAbte.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 175, name: "Azzure Aoud G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "hhsjg5XQqsb6F35LUGKOv.png", notas: "Oud, Especias, Ámbar, Cuero" },
+            { id: 176, name: "Chaos Extrait G5", basePrice: 30000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "oXoAVYHjEuj3EeBTDE5wC.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 177, name: "Luscious G5", basePrice: 30000, category: "French Avenue", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "fTVxxyHBWlK7EpG0ix0_F.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 178, name: "Veneno Bianco G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "9idYVEvWkiXylOsCTCE6W.png", notas: "Cítricos, Flor blanca, Almizcle, Madera" },
+            { id: 179, name: "Jade Verde G5", basePrice: 37000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "78d_GLtM2qhr_8Q7CWI-p.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 180, name: "Royal Blend Bourbon G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "LkMpr6I4zzQJsyFmaKWrz.png", notas: "Bourbon, Canela, Cardamomo, Vainilla, Madera" },
+            { id: 181, name: "Royal Blend Sequoia G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "SwYu8Gro48TosvmyzIXsl.png", notas: "Pino, Cedro, Musgo, Cuero" },
+            { id: 182, name: "Royal Blend Nero G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "9VCxmQntcno41RPEkOpHd.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 183, name: "Liquid Brun Limited Edition 150ml G5", basePrice: 40000, category: "French Avenue", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ZZ5p02-089i-7VL2jqcOw.png", notas: "Cuero, Especias, Oud, Ámbar" },
+
+            // AROMATIX
+            { id: 184, name: "Aromatix Royal Taboo G5", basePrice: 30000, category: "Aromatix", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "9OyrGMmU_VzXivPeXmx6-.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 185, name: "Aromatix Carnal Desire G5", basePrice: 30000, category: "Aromatix", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "hGInxiUgL9zlXFT1NmX4B.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 186, name: "Aromatix Forbidden Fruit G5", basePrice: 30000, category: "Aromatix", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "s7z4hJNxn5LGhJPc9G5Rr.png", notas: "Frutas, Flor tropical, Almizcle, Madera" },
+            { id: 187, name: "Aromatix Sun Kissed G5", basePrice: 26000, category: "Aromatix", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "yDAZZv2fZL6wMWGrC4Nxb.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 188, name: "Aromatix Teas Me G5", basePrice: 26000, category: "Aromatix", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "1un5Ji1gUrZYjibxkxTh2.png", notas: "Té, Especias, Vainilla, Sándalo" },
+
+            // XERJOFF
+            { id: 189, name: "Erba Pura con Pañuelo G5", basePrice: 35000, category: "Xerjoff", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "IGvNVIVYzZAluCPLrXu6c.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 190, name: "Homme Anniversary G5", basePrice: 30000, category: "Xerjoff", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "tFn2AOcop9__-wzc4m_gs.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 191, name: "Naxos Xerjoff G5", basePrice: 45000, category: "Xerjoff", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "PCK-_PUGOzzoA-ULduwWx.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 192, name: "Coro con Pañuelo G5", basePrice: 35000, category: "Xerjoff", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dRIbyaFaf1tQC0omGOYeB.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 193, name: "Accento con Pañuelo G5", basePrice: 35000, category: "Xerjoff", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "1MHYKCdKLTbd9AIiNX4sB.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 194, name: "Erba Gold con Pañuelo G5", basePrice: 35000, category: "Xerjoff", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "wXM5zJhDiva4pv5SERdST.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // ECLAIRE
+            { id: 195, name: "Eclaire Pistacho G5", basePrice: 25000, category: "Eclaire", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "IaVSJjcGGkfkdoR8UAw0V.png", notas: "Pistacho, Jazmín, Almizcle, Vainilla" },
+            { id: 196, name: "Eclaire G5", basePrice: 30000, category: "Eclaire", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "A4_iF-ISyIzHKkLDta1r1.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 197, name: "Eclaire Banoffi G5", basePrice: 25000, category: "Eclaire", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "WdjWyZCSLnVeJC26JkK70.png", notas: "Banana, Caramelo, Vainilla, Sándalo" },
+
+            // RAYHAAN
+            { id: 198, name: "Tropical Vibe G5", basePrice: 25000, category: "Rayhaan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "7NdpXkvtt6W4g7eS3BlAW.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 199, name: "Terra Rayhaan G5", basePrice: 20000, category: "Rayhaan", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "89SMoP1wjR30rbsyMbQV8.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 200, name: "Aquatica Rayhaan G5", basePrice: 20000, category: "Rayhaan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "bowTQXeAHoSJoqlEtPQ7e.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
+            { id: 201, name: "Rayhaan Elixir G5", basePrice: 20000, category: "Rayhaan", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "tj0wlfgatj12SbCaH7Qpl.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 202, name: "Pacific Aura G5", basePrice: 20000, category: "Rayhaan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "4s2AsAvh41xlsEIUC-Lk0.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+
+            // AHMED
+            { id: 203, name: "Ahmed Marj G5", basePrice: 30000, category: "Ahmed", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "MA--s2iDpliZ5mIcwRbvo.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 204, name: "Ahmed Ahl G5", basePrice: 30000, category: "Ahmed", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "G67GzEBWCBfb4v0gKqu2k.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 205, name: "Rose Noir G5", basePrice: 30000, category: "Ahmed", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "Fas3vnC65vHOi8PgXs9C0.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+
+            // FAKHAR
+            { id: 206, name: "Fakhar Rose G5", basePrice: 25000, category: "Fakhar", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "69qg3H7awgHzJs4gPRLA5.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+            { id: 207, name: "Fakhar Silver G5", basePrice: 25000, category: "Fakhar", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "aJAhGI2bsqmwXsKKzPxR7.png", notas: "Cítricos, Flor blanca, Almizcle, Madera" },
+            { id: 208, name: "Fakhar Gold G5", basePrice: 25000, category: "Fakhar", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "NlXpV0C3a59waL1irD8h1.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // AMEERAT
+            { id: 209, name: "Ameerat Al Arab G5", basePrice: 20000, category: "Ameerat", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "6NBl84-Jvp5MbL7j4FOv7.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 210, name: "Ameerat Prive Rose G5", basePrice: 20000, category: "Ameerat", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "17o8apnVA3hYjrWECNxSs.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+            { id: 211, name: "Ameerat Al Arab Black G5", basePrice: 20000, category: "Ameerat", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "MzXu0jpxVBIxAtroVXXPI.png", notas: "Cuero, Especias, Oud, Ámbar" },
+
+            // PARIS CORNER
+            { id: 212, name: "Eshal G5", basePrice: 25000, category: "Paris Corner", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "dI6lUw6qRhN2a9xRKHom2.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 213, name: "Marshmallow Blush G5", basePrice: 30000, category: "Paris Corner", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "zMVWOZbPgPPTmg1blIfDY.png", notas: "Malvavisco, Vainilla, Almizcle, Sándalo" },
+            { id: 214, name: "Taskeen Caramel G5", basePrice: 25000, category: "Paris Corner", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "KBhlUpxaa5RVVanxY2pQN.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+            { id: 215, name: "Khair Confection G5", basePrice: 20000, category: "Paris Corner", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "SUomMFQzcsrNbjbHxvPGH.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+
+            // SABRINA CARPENTER
+            { id: 216, name: "Sabrina Carpenter Caramel G5", basePrice: 20000, category: "Sabrina Carpenter", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "YyHcUSphMyuYxnpuMaA9q.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+            { id: 217, name: "Sabrina Carpenter Espresso G5", basePrice: 20000, category: "Sabrina Carpenter", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "18jAdq3DLVgTyW08gqkGx.png", notas: "Café, Caramelo, Vainilla, Sándalo" },
+            { id: 218, name: "Sabrina Carpenter Rosa G5", basePrice: 20000, category: "Sabrina Carpenter", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "Gqvd32VQUvThlvN5Sg-Ay.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+
+            // JPG
+            { id: 219, name: "JPG Le Male Elixir G5", basePrice: 30000, category: "JPG", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "a_5f-5gfVVocymTZrswv4.png", notas: "Menta, Lavanda, Vainilla, Ámbar" },
+            { id: 220, name: "JPG Le Male G5", basePrice: 32000, category: "JPG", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "e8bq-5Yy4K3wnx9FsqjSG.png", notas: "Menta, Lavanda, Vainilla, Ámbar" },
+            { id: 221, name: "JPG Le Beau G5", basePrice: 35000, category: "JPG", gender: "Hombre", season: "Verano", featured: false, inStock: true, image: imgBase + "SeEH2KeAD-TONaHx5NSWf.png", notas: "Cítricos, Especias, Madera, Almizcle" },
+            { id: 222, name: "JPG Garden G5", basePrice: 35000, category: "JPG", gender: "Unisex", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "Dr-dKTWjPdO93f0UxR7uP.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 223, name: "JPG Ultra Elixir G5", basePrice: 35000, category: "JPG", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "jRdXxYzvZwIOkgejZnmN_.png", notas: "Menta, Lavanda, Vainilla, Ámbar" },
+            { id: 224, name: "JPG Le Male G5 (2)", basePrice: 35000, category: "JPG", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "vLmbzXDFtA2431zOaXy4m.png", notas: "Menta, Lavanda, Vainilla, Ámbar" },
+
+            // GIVE ME GOURMAND
+            { id: 225, name: "Give Me Gourmand Choco Overdose G5", basePrice: 30000, category: "Give Me Gourmand", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "YCTt8eyOBbrf3HkdsuYo7.png", notas: "Chocolate, Vainilla, Sándalo, Ámbar" },
+            { id: 226, name: "Cookie Grave G5", basePrice: 30000, category: "Give Me Gourmand", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "BzZFB5wqhg5FeIawzAJHB.png", notas: "Galleta, Vainilla, Sándalo, Ámbar" },
+            { id: 227, name: "Vainilla Freak G5", basePrice: 30000, category: "Give Me Gourmand", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "E1Sk7BOAz1HcAuaeggII7.png", notas: "Vainilla, Caramelo, Sándalo, Ámbar" },
+            { id: 228, name: "Give Me Gourmand Mallow Madness G5", basePrice: 30000, category: "Give Me Gourmand", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "6x0DBbvIstKBW5o4YXtsO.png", notas: "Malvavisco, Vainilla, Sándalo, Ámbar" },
+            { id: 229, name: "Give Me Gourmand Berry On Top G5", basePrice: 30000, category: "Give Me Gourmand", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "f5zodS38RbI7E44SmmcpL.png", notas: "Frutas rojas, Vainilla, Sándalo, Ámbar" },
+
+            // MUSAMAM
+            { id: 230, name: "Musamam Black G5", basePrice: 35000, category: "Musamam", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dqNlQfHpQLGbGbbp5z5j-.png", notas: "Cuero, Especias, Oud, Ámbar" },
+            { id: 231, name: "Musamam White G5", basePrice: 30000, category: "Musamam", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "Zq6k-FQtoh_rPNLRRDQ41.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
+            { id: 232, name: "Musamam Intense G5", basePrice: 30000, category: "Musamam", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "UJLLxTetUVYB3vA4O5XbN.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // KAYALI
+            { id: 233, name: "Kayali Burning Cherry G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "UnS4Q2qcDXTfF11wecGcX.png", notas: "Cereza, Vainilla, Sándalo, Ámbar" },
+            { id: 234, name: "Kayali Juicy Apple G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "XmyqMaS9iNcvhxmPF2kFi.png", notas: "Manzana, Cítricos, Flor blanca, Vainilla" },
+            { id: 235, name: "Kayali Vainilla G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "esQOUN-n7_klac2d5HWjO.png", notas: "Vainilla, Caramelo, Sándalo, Ámbar" },
+            { id: 236, name: "Kayali White Flowers G5", basePrice: 25000, category: "Kayali", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "NK4R1MqYAmSmTIL355NIc.png", notas: "Flor blanca, Jazmín, Almizcle, Vainilla" },
+            { id: 237, name: "Kayali Sparkling Lychee G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "p4HzPbIqXunmuyxchrqkq.png", notas: "Lichi, Cítricos, Flor blanca, Vainilla" },
+
+            // JO MILANO
+            { id: 238, name: "Game of Spades Bonus", basePrice: 35000, category: "Jo Milano", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ftbELxZLnMvnx6u43LbEO.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 239, name: "Game of Spades Boston G5", basePrice: 35000, category: "Jo Milano", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "67cxkDRlWLIf4x3fU0eQq.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 240, name: "Game of Spades Moon G5", basePrice: 35000, category: "Jo Milano", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "D5xtZVfG9RHjj2iLntIbz.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // SPECTRE
+            { id: 241, name: "Sprectre G5", basePrice: 35000, category: "Spectre", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "K4IoYc29TGa9yI3JGguHA.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 242, name: "Spectre Wraith G5", basePrice: 35000, category: "Spectre", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Sir3neVdOJIak5tHMQNuz.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 243, name: "Spectre Ghost G5", basePrice: 35000, category: "Spectre", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "kpMWIMigEjnR_tNNjA7Uc.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // MAISON ASRAR
+            { id: 244, name: "Vanilla Voyage G5", basePrice: 35000, category: "Maison Asrar", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "X2mB7VNReXfo7akMrANE0.png", notas: "Vainilla, Caramelo, Sándalo, Ámbar" },
+            { id: 245, name: "Oh Honey G5", basePrice: 30000, category: "Maison Asrar", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "_0YHJ8pbkqKGpx-tsmwO3.png", notas: "Miel, Vainilla, Sándalo, Ámbar" },
+
+            // KHSAFA
+            { id: 246, name: "Dignity G5", basePrice: 35000, category: "Khsafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "eCjkV7OPVGFZ_pCrZ9TrJ.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 247, name: "Faith G5", basePrice: 35000, category: "Khsafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "CuNu_pmoghuwpQGUmd3-2.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 248, name: "New Women Rave G5", basePrice: 35000, category: "Khsafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "MvxI9Mdo1tit1K3V7SKag.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 249, name: "Exclusive Private Gold G5", basePrice: 35000, category: "Khsafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "w8c0puJQzh8CUR22x1KR.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 250, name: "Layla Eclusif G5", basePrice: 35000, category: "Khsafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "mkcQOXqSULszklkew2XN2.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 251, name: "Aurelia G5", basePrice: 35000, category: "Khsafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "XJS4OTfcg-7z2xqdftt9d.png", notas: "Especias, Oud, Ámbar, Cuero" },
+
+            // OTROS
+            { id: 252, name: "La Bomba CH G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "tIi0dBqeob0fk1xhByABJ.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 253, name: "Lateen Rojo G5", basePrice: 35000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "e_E7L-Mu2yM2qXT_v6mP9.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 254, name: "Billie Eilish G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "PETlsjOUoM_R_NiWE-FLg.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 255, name: "Kiaana Ángel G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dMiNGdend6OIUmBOy10HZ.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 256, name: "Sabah Al Ward G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "kAk7yu776rO3QEc-BxZFC.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 257, name: "Sabah Al Ward Sugar G5", basePrice: 26000, category: "Otros", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "WEna38vJiy92p0_bC9_di.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
+            { id: 258, name: "Game of Spades Wildcar G5", basePrice: 35000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "08OcJ1-oj0MjCSTt4dsY_.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 259, name: "Milky Way G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "1j5GUl7gCBrh307aD3rEj.png", notas: "Leche, Vainilla, Sándalo, Ámbar" },
+            { id: 260, name: "Bonita Femme Marrón G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "6P4_Be3AcyXgQP2RZAoVH.png", notas: "Chocolate, Vainilla, Sándalo, Ámbar" },
+            { id: 261, name: "Kiaana Crush G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "lZ_C0l7RG4nNfCWtpcQ9A.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 262, name: "Bonita Femme Rojo G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "4Ib_jJgRA3QHUyhzOQeQQ.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 263, name: "Bonita La Rose G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "ByiSTmUzMk1MyyVNHOtMr.png", notas: "Rosa, Jazmín, Almizcle, Vainilla" },
+            { id: 264, name: "Bonita Hot Pink G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "7TCha9LcmT3cDP7SMws_v.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" }
+        ];
+
+        let products = [];
+        const filterNames = ["Todas", "Yara", "Asad", "9PM", "Odyssey", "Armaf", "Al Haramain", "Club De Nuit", "Hawas", "Bharara", "Vulcan", "Orientica", "Lattafa", "Supremacy", "Badee Al Oud", "Khamrah", "Fursan", "French Avenue", "Aromatix", "Xerjoff", "Eclaire", "Rayhaan", "Ahmed", "Fakhar", "Ameerat", "Paris Corner", "Sabrina Carpenter", "JPG", "Give Me Gourmand", "Musamam", "Kayali", "Jo Milano", "Spectre", "Maison Asrar", "Khsafa", "Otros"];
+        let currentFilter = "Todas";
+
+        function getPrices(basePrice) {
+            const total = Math.round(basePrice * 1.8);
+            const deposit = Math.round(total / 2);
+            return { total, deposit };
+        }
+
+        function formatMoney(amount) {
+            return '$' + amount.toLocaleString('es-AR');
+        }
+
+        function createCardHtml(p) {
+            const { total, deposit } = getPrices(p.basePrice);
+            const imageSrc = p.image || fallbackImage;
+            const isOutOfStock = !p.inStock;
+
+            let badgeBg = "rgba(212, 175, 55, 0.1)";
+            let badgeColor = "#E5C158";
+            let badgeBorder = "rgba(212, 175, 55, 0.3)";
+            if (p.gender === 'Mujer') { badgeBg = "rgba(236, 72, 153, 0.1)"; badgeColor = "#F472B6"; badgeBorder = "rgba(236, 72, 153, 0.3)"; }
+            if (p.gender === 'Hombre') { badgeBg = "rgba(59, 130, 246, 0.1)"; badgeColor = "#60A5FA"; badgeBorder = "rgba(59, 130, 246, 0.3)"; }
+
+            const seasonIcon = p.season.includes('Verano') ? 'fa-sun' : p.season.includes('Invierno') ? 'fa-snowflake' : p.season.includes('Primavera') ? 'fa-seedling' : p.season.includes('Otoño') ? 'fa-leaf' : 'fa-calendar';
+
+            const waText = encodeURIComponent(`¡Hola! Quisiera consultar disponibilidad y reservar:\n\n*${p.name}*\n- Precio Total: ${formatMoney(total)}\n- Seña (50%): ${formatMoney(deposit)}\n\n(Acepto envío sin cargo en Córdoba)`);
+            const waLink = `https://wa.me/?text=${waText}`;
+
+            const cardClass = isOutOfStock ? 'sp-card out-of-stock' : 'sp-card';
+
+            return `
+                <div class="${cardClass}">
+                    <div class="sp-img-container">
+                        <img src="${imageSrc}" alt="${p.name}">
+                        <div style="position: absolute; top: 10px; left: 10px; z-index: 10;">
+                            <span style="font-size: 9px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; border: 1px solid ${badgeBorder}; background: ${badgeBg}; color: ${badgeColor}; letter-spacing: 0.05em;">
+                                ${p.gender}
+                            </span>
+                        </div>
+                        ${isOutOfStock ? '<div class="stock-overlay"><span>Sin Stock</span></div>' : ''}
+                    </div>
+                    
+                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column; background: #0A0A0A;">
+                        <div style="font-size: 9px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 4px;">${p.category}</div>
+                        <h3 class="font-serif-luxury" style="color: #FFFFFF; font-weight: 700; font-size: 14px; line-height: 1.3; margin: 0 0 0.5rem 0; min-height: 2.6rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${p.name}</h3>
+                        
+                        <div style="margin-bottom: 0.5rem;">
+                            <div style="font-size: 9px; color: #9CA3AF; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.05em;">Perfil Olfativo:</div>
+                            <div style="font-size: 10px; color: #D1D5DB; line-height: 1.4;">${p.notas}</div>
+                        </div>
+
+                        <div style="margin-bottom: 0.75rem;">
+                            <span class="season-tag"><i class="fa-solid ${seasonIcon}"></i> ${p.season}</span>
+                        </div>
+                        
+                        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                            <div style="background: #050505; padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #9CA3AF; margin-bottom: 4px;">
+                                    <span style="text-transform: uppercase; letter-spacing: 0.05em;">Precio Final:</span>
+                                    <span style="color: #FFFFFF; font-weight: 500;">${formatMoney(total)}</span>
+                                </div>
+                                <div style="height: 1px; width: 100%; background: rgba(255,255,255,0.05); margin: 6px 0;"></div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: #E5C158; font-weight: 700; letter-spacing: 0.05em;">50% SEÑA:</span>
+                                    <span style="color: #E5C158; font-weight: 700;">${formatMoney(deposit)}</span>
+                                </div>
+                            </div>
+                            
+                            ${isOutOfStock ? 
+                                `<button disabled style="background: #374151; color: #9CA3AF; padding: 12px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; cursor: not-allowed; border: none;">
+                                    <i class="fa-solid fa-ban" style="margin-right: 4px;"></i> Sin Stock
+                                </button>` :
+                                `<a href="${waLink}" target="_blank" style="text-decoration: none; display: block; text-align: center; background: #FFFFFF; color: #000000; padding: 12px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; transition: background 0.2s;">
+                                    <i class="fa-brands fa-whatsapp" style="margin-right: 4px; font-size: 13px;"></i> Consulta
+                                </a>`
+                            }
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderFilters() {
+            const container = document.getElementById('filter-bar');
+            container.innerHTML = filterNames.map(f => {
+                const isActive = f === currentFilter;
+                const bg = isActive ? '#D4AF37' : '#0A0A0A';
+                const col = isActive ? '#000000' : '#9CA3AF';
+                const bdr = isActive ? '#D4AF37' : 'rgba(255,255,255,0.1)';
+                const fw = isActive ? '700' : '500';
+                return `<button onclick="setFilter('${f}')" style="background: ${bg}; color: ${col}; border: 1px solid ${bdr}; padding: 8px 16px; border-radius: 50px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: ${fw}; cursor: pointer; white-space: nowrap; transition: all 0.2s;">${f}</button>`;
+            }).join('');
+        }
+
+        function setFilter(f) {
+            currentFilter = f;
+            renderFilters();
+            renderCatalog();
+        }
+
+        function renderCatalog() {
+            const featuredGrid = document.getElementById('featured-grid');
+            const catalogGrid = document.getElementById('catalog-grid');
+
+            const featured = products.filter(p => p.featured && p.inStock).slice(0, 10);
+            featuredGrid.innerHTML = featured.map(createCardHtml).join('');
+
+            let filtered = products.filter(p => !p.featured);
+            if (currentFilter !== "Todas") {
+                filtered = products.filter(p => p.category === currentFilter);
+            }
+
+            if (filtered.length === 0) {
+                catalogGrid.innerHTML = `<div style="grid-column: 1 / -1; padding: 3rem; text-align: center; color: #6B7280; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: #0A0A0A;">No se encontraron productos en esta categoría.</div>`;
+            } else {
+                catalogGrid.innerHTML = filtered.map(createCardHtml).join('');
+            }
+        }
+
+        function initApp() {
+            const saved = localStorage.getItem('mistycalould_db');
+            if (saved) {
+                try {
+                    products = JSON.parse(saved);
+                } catch(e) {
+                    products = [...defaultData];
+                }
+            } else {
+                products = [...defaultData];
+            }
+            renderFilters();
+            renderCatalog();
+        }
+
+        function toggleAdmin() {
+            const modal = document.getElementById('admin-modal');
+            const isHidden = modal.style.display === 'none' || modal.style.display === '';
+            modal.style.display = isHidden ? 'flex' : 'none';
+            if (isHidden) renderAdminTable();
+        }
+
+        function saveAdmin() {
+            localStorage.setItem('mistycalould_db', JSON.stringify(products));
+            renderCatalog();
+            const msg = document.getElementById('admin-msg');
+            msg.textContent = "¡Cambios guardados correctamente!";
+            msg.style.display = 'block';
+            setTimeout(() => msg.style.display = 'none', 2000);
+        }
+
+        function renderAdminTable() {
+            const tbody = document.getElementById('admin-table-body');
+            tbody.innerHTML = products.map((p, i) => `
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 8px;"><input type="text" value="${p.name}" onchange="updateRow(${i}, 'name', this.value)" style="width: 100%; background: #050505; border: 1px solid #333; color: #fff; padding: 5px; border-radius: 4px; font-size: 11px;"></td>
+                    <td style="padding: 8px; width: 90px;"><input type="number" value="${p.basePrice}" onchange="updateRow(${i}, 'basePrice', parseInt(this.value))" style="width: 100%; background: #050505; border: 1px solid #333; color: #D4AF37; padding: 5px; border-radius: 4px; font-size: 11px;"></td>
+                    <td style="padding: 8px; width: 100px;"><input type="text" value="${p.category}" onchange="updateRow(${i}, 'category', this.value)" style="width: 100%; background: #050505; border: 1px solid #333; color: #fff; padding: 5px; border-radius: 4px; font-size: 11px;"></td>
+                    <td style="padding: 8px; width: 90px;">
+                        <select onchange="updateRow(${i}, 'gender', this.value)" style="width: 100%; background: #050505; border: 1px solid #333; color: #fff; padding: 5px; border-radius: 4px; font-size: 11px;">
+                            <option value="Hombre" ${p.gender==='Hombre'?'selected':''}>Hombre</option>
+                            <option value="Mujer" ${p.gender==='Mujer'?'selected':''}>Mujer</option>
+                            <option value="Unisex" ${p.gender==='Unisex'?'selected':''}>Unisex</option>
+                        </select>
+                    </td>
+                    <td style="padding: 8px; width: 100px;"><input type="text" value="${p.season}" onchange="updateRow(${i}, 'season', this.value)" style="width: 100%; background: #050505; border: 1px solid #333; color: #fff; padding: 5px; border-radius: 4px; font-size: 11px;"></td>
+                    <td style="padding: 8px; width: 70px; text-align: center;">
+                        <select onchange="updateRow(${i}, 'inStock', this.value === '1')" style="width: 100%; background: #050505; border: 1px solid #333; color: ${p.inStock ? '#4ADE80' : '#F87171'}; padding: 5px; border-radius: 4px; font-size: 11px;">
+                            <option value="1" ${p.inStock?'selected':''}>Sí</option>
+                            <option value="0" ${!p.inStock?'selected':''}>No</option>
+                        </select>
+                    </td>
+                    <td style="padding: 8px; text-align: center; width: 50px;"><input type="checkbox" ${p.featured ? 'checked' : ''} onchange="updateRow(${i}, 'featured', this.checked)" style="accent-color: #D4AF37; width: 14px; height: 14px; cursor: pointer;"></td>
+                    <td style="padding: 8px; text-align: center; width: 40px;"><button onclick="delRow(${i})" style="background: none; border: none; color: #EF4444; cursor: pointer;"><i class="fa-solid fa-trash-can"></i></button></td>
+                </tr>
+            `).join('');
+        }
+
+        function updateRow(index, field, value) {
+            products[index][field] = value;
+            saveAdmin();
+        }
+
+        function delRow(index) {
+            if(confirm("¿Seguro que deseas eliminar este perfume?")) {
+                products.splice(index, 1);
+                saveAdmin();
+                renderAdminTable();
+            }
+        }
+
+        function addProduct() {
+            const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
+            products.unshift({
+                id: newId,
+                name: "Nuevo Perfume",
+                basePrice: 20000,
+                category: "Otros",
+                gender: "Unisex",
+                season: "Todo el año",
+                featured: false,
+                inStock: true,
+                image: fallbackImage,
+                notas: "Notas por definir"
+            });
+            saveAdmin();
+            renderAdminTable();
+        }
+
+        function resetData() {
+            if(confirm("¿Restaurar todo a los valores originales?")) {
+                products = [...defaultData];
+                saveAdmin();
+                renderAdminTable();
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
+           </longcat_think>
