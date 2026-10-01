@@ -675,7 +675,7 @@
             const seasonIcon = p.season.includes('Verano') ? 'fa-sun' : p.season.includes('Invierno') ? 'fa-snowflake' : p.season.includes('Primavera') ? 'fa-seedling' : p.season.includes('Otoño') ? 'fa-leaf' : 'fa-calendar';
 
             const waText = encodeURIComponent(`¡Hola! Quisiera consultar disponibilidad y reservar:\n\n*${p.name}*\n- Precio Total: ${formatMoney(total)}\n- Seña (50%): ${formatMoney(deposit)}\n\n(Acepto envío sin cargo en Córdoba)`);
-            const waLink = `https://wa.me/?text=${waText}`;
+            const waLink = `https://wa.me/543515210477?text=${waText}`;
 
             const cardClass = isOutOfStock ? 'sp-card out-of-stock' : 'sp-card';
 
