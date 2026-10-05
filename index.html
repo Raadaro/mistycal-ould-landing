@@ -222,6 +222,8 @@
         .save-bar{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:200;background:var(--ok);color:var(--paper);padding:12px 24px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
         .editing .save-bar{display:block}
         .save-bar:hover{background:color-mix(in srgb,var(--ok) 80%,var(--ink))}
+        .export-btn{position:fixed;bottom:20px;left:20px;z-index:200;background:var(--ink);color:var(--paper);border:none;padding:12px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;transition:all .2s}
+        .export-btn:hover{background:var(--accent);transform:scale(1.05)}
     </style>
 </head>
 <body>
@@ -246,6 +248,9 @@
     <div class="edit-hint">Hacé click en cualquier texto para editarlo</div>
     <button class="save-bar" onclick="saveAllChanges()">
         <i class="fa-solid fa-check"></i> Guardar cambios
+    </button>
+    <button class="export-btn" onclick="exportHTML()">
+        <i class="fa-solid fa-download"></i> Exportar HTML
     </button>
 
     <!-- Topbar -->
@@ -967,6 +972,27 @@
             });
             localStorage.setItem('mistycalould_texts', JSON.stringify(texts));
             alert('¡Cambios guardados!');
+        }
+
+        function exportHTML() {
+            // Guardar cambios actuales primero
+            saveAllChanges();
+
+            // Obtener el HTML completo del documento
+            const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+
+            // Crear blob y descargar
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mistycal-ould-editado.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            alert('¡Archivo HTML descargado! Subilo a GitHub para actualizar tu página.');
         }
 
         function loadSavedTexts() {
