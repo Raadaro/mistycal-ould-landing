@@ -223,107 +223,49 @@
         .save-bar:hover{background:color-mix(in srgb,var(--ok) 80%,var(--ink))}
         .export-btn{position:fixed;bottom:20px;left:20px;z-index:200;background:var(--ink);color:var(--paper);border:none;padding:12px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;transition:all .2s}
         .export-btn:hover{background:var(--accent);transform:scale(1.05)}
-            .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
-        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
-        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
+        /* ===== Precio de oferta + botón RESERVAR ===== */
+        .var__old{font-size:15px;color:var(--muted);text-decoration:line-through;line-height:1;margin-top:12px}
+        .var__price.var__price--now{margin:2px 0 0}
+        .var__offer{font-size:12px;color:#DC2626;font-weight:700;letter-spacing:.02em;margin-top:2px}
+        .var__dep{font-size:11px;color:var(--muted);margin-top:4px}
+        .var__dep strong{color:var(--accent)}
+        .var__cta{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--ink);color:var(--paper);border:0;padding:12px;border-radius:4px;font-family:var(--font-body);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;cursor:pointer;margin-top:12px;transition:background .2s}
+        .var__cta:hover{background:var(--accent)}
+        .var__cta i{font-size:15px}
+
+        /* ===== Modal de reserva ===== */
+        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:300;align-items:center;justify-content:center;padding:1rem}
         .reserve-modal.is-open{display:flex}
-        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
-        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
+        .reserve-box{background:var(--paper);color:var(--ink);border-radius:12px;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;position:relative}
+        .reserve-head{padding:1.1rem 3rem 1.1rem 1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
         .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
+        .reserve-close{position:absolute;top:10px;right:10px;width:34px;height:34px;border:0;background:transparent;color:var(--muted);font-size:24px;line-height:1;cursor:pointer;border-radius:50%}
+        .reserve-close:hover{background:var(--line);color:var(--ink)}
         .reserve-body{padding:1.2rem}
         .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
-        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
+        .reserve-product h4{font-family:var(--font-display);font-size:19px;color:var(--ink);margin:0 0 .5rem}
+        .reserve-price{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted);margin-bottom:.25rem}
         .reserve-price strong{color:var(--ink)}
-        .reserve-form{display:grid;gap:0.75rem}
-        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
-        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
+        .reserve-price--dep strong{color:var(--accent)}
+        .reserve-notes{list-style:none;margin:0 0 1.1rem;padding:0;display:grid;gap:6px;font-size:13px;color:var(--muted);line-height:1.4}
+        .reserve-notes li{display:flex;gap:8px;align-items:flex-start}
+        .reserve-notes i{color:var(--accent);margin-top:2px;font-size:12px}
+        .reserve-form{display:grid;gap:.8rem}
+        .reserve-form label{display:block;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+        .reserve-form input{width:100%;padding:11px 10px;border:1px solid var(--line);border-radius:6px;font-size:16px;font-family:var(--font-body);background:var(--paper);color:var(--ink)}
         .reserve-form input:focus{outline:none;border-color:var(--accent)}
-        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
+        .reserve-confirm{background:var(--accent);color:var(--accent-ink);border:0;padding:15px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:.06em;transition:background .2s;margin-top:.2rem}
         .reserve-confirm:hover{background:var(--ink)}
-        .reserve-success{text-align:center;padding:1rem}
-        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
-        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
-        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
-        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
-        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
-</style>
-<style>        .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
-        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
-        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
-        .reserve-modal.is-open{display:flex}
-        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
-        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
-        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
-        .reserve-body{padding:1.2rem}
-        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
-        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
-        .reserve-price strong{color:var(--ink)}
-        .reserve-form{display:grid;gap:0.75rem}
-        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
-        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
-        .reserve-form input:focus{outline:none;border-color:var(--accent)}
-        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
-        .reserve-confirm:hover{background:var(--ink)}
-        .reserve-success{text-align:center;padding:1rem}
-        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
-        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
-        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
-        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
-        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
-</style><style>        .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
-        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
-        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
-        .reserve-modal.is-open{display:flex}
-        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
-        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
-        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
-        .reserve-body{padding:1.2rem}
-        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
-        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
-        .reserve-price strong{color:var(--ink)}
-        .reserve-form{display:grid;gap:0.75rem}
-        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
-        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
-        .reserve-form input:focus{outline:none;border-color:var(--accent)}
-        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
-        .reserve-confirm:hover{background:var(--ink)}
-        .reserve-success{text-align:center;padding:1rem}
-        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
-        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
-        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
-        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
-        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
-</style><style>        .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
-        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
-        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
-        .reserve-modal.is-open{display:flex}
-        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
-        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
-        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
-        .reserve-body{padding:1.2rem}
-        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
-        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
-        .reserve-price strong{color:var(--ink)}
-        .reserve-form{display:grid;gap:0.75rem}
-        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
-        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
-        .reserve-form input:focus{outline:none;border-color:var(--accent)}
-        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
-        .reserve-confirm:hover{background:var(--ink)}
-        .reserve-success{text-align:center;padding:1rem}
-        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
-        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
-        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
-        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
-        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
-        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+        .reserve-success{text-align:center}
+        .reserve-success .icon{width:54px;height:54px;border-radius:50%;background:var(--ok);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 12px}
+        .reserve-success h4{font-family:var(--font-display);font-size:24px;color:var(--ink);margin:0 0 .4rem}
+        .reserve-success p{color:var(--muted);font-size:14px;margin:0 0 .6rem;line-height:1.45}
+        .reserve-alias{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:1rem;margin:1rem 0}
+        .reserve-alias .alias{font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--accent);margin:.35rem 0 .6rem;word-break:break-all}
+        .reserve-copy{background:transparent;border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer}
+        .reserve-copy:hover{border-color:var(--accent);color:var(--accent)}
+        .reserve-whatsapp{background:#25D366;color:#fff;border:0;padding:15px 18px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;width:100%;text-transform:uppercase;letter-spacing:.04em}
+        .reserve-whatsapp:hover{filter:brightness(.95)}
 </style></head>
 <body class="">
 
@@ -7967,6 +7909,7 @@
 
         function createCardHtml(p) {
             const { total, deposit } = getPrices(p.basePrice);
+            const oldPrice = Math.round(total * 1.2);
             const imageSrc = p.image || fallbackImage;
             const isOutOfStock = !p.inStock;
 
@@ -7977,9 +7920,6 @@
             if (p.gender === 'Hombre') { badgeBg = "color-mix(in srgb, #3B82F6 10%, transparent)"; badgeColor = "#3B82F6"; badgeBorder = "color-mix(in srgb, #3B82F6 30%, transparent)"; }
 
             const seasonIcon = p.season.includes('Verano') ? 'fa-sun' : p.season.includes('Invierno') ? 'fa-snowflake' : p.season.includes('Primavera') ? 'fa-seedling' : p.season.includes('Otoño') ? 'fa-leaf' : 'fa-calendar';
-
-            const waText = encodeURIComponent(`¡Hola! Quisiera consultar disponibilidad y reservar:\n\n*${p.name}*\n- Precio Total: ${formatMoney(total)}\n- Seña (50%): ${formatMoney(deposit)}\n\n(Acepto envío sin cargo en Córdoba)`);
-            const waLink = `https://wa.me/543515210477?text=${waText}`;
 
             const cardClass = isOutOfStock ? 'var__card out-of-stock' : 'var__card';
 
@@ -7999,19 +7939,17 @@
                                 <i class="fa-solid ${seasonIcon}"></i> ${p.season}
                             </span>
                         </div>
-                        <div class="var__price" style="margin-top:12px">
-                            ${formatMoney(total)}
-                        </div>
-                        <div style="font-size:11px;color:var(--muted);margin-top:4px">
-                            50% seña: <strong style="color:var(--accent)">${formatMoney(deposit)}</strong>
-                        </div>
+                        <div class="var__old">${formatMoney(oldPrice)}</div>
+                        <div class="var__price var__price--now">${formatMoney(total)}</div>
+                        <div class="var__offer">🔥 Oferta limitada</div>
+                        <div class="var__dep">50% seña: <strong>${formatMoney(deposit)}</strong></div>
                         ${isOutOfStock ?
                             `<button disabled style="background:var(--surface);color:var(--muted);padding:12px;border-radius:4px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:not-allowed;border:1px solid var(--line);margin-top:12px">
                                 <i class="fa-solid fa-ban" style="margin-right:4px;"></i> Sin Stock
                             </button>` :
-                            `<a href="${waLink}" target="_blank" style="text-decoration:none;display:block;text-align:center;background:var(--ink);color:var(--paper);padding:12px;border-radius:4px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;transition:background 0.2s;margin-top:12px">
-                                <i class="fa-brands fa-whatsapp" style="margin-right:4px;font-size:14px;"></i> Consulta
-                            </a>`
+                            `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})">
+                                <i class="fa-brands fa-whatsapp"></i> RESERVAR
+                            </button>`
                         }
                     </div>
                 </article>
@@ -8283,77 +8221,113 @@
             const scrollAmount = 200;
             filterBar.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
-            // ===== MODAL DE RESERVA =====
-        function openReserveModal(productName, total, deposit) {
-            const modal = document.getElementById('reserve-modal');
-            const content = document.getElementById('reserve-content');
-            const saldo = total - deposit;
+        // ===== MODAL DE RESERVA =====
+        const RESERVE_ALIAS = "MISTYCAL.OULD";   // <-- alias para recibir la seña
+        const WA_NUMBER = "543515210477";
+        let reserveCurrent = null;
 
-            content.innerHTML = `
+        function esc(t) {
+            return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        function setReserveTitle(t) {
+            document.getElementById('reserve-title').textContent = t;
+        }
+
+        function openReserveModal(productId) {
+            const p = products.find(x => x.id === productId);
+            if (!p) return;
+            const { total, deposit } = getPrices(p.basePrice);
+            reserveCurrent = { name: p.name, total, deposit, saldo: total - deposit };
+
+            setReserveTitle('RESERVAR TU PERFUME');
+            document.getElementById('reserve-content').innerHTML = `
                 <div class="reserve-product">
-                    <h4>${productName}</h4>
+                    <h4>${esc(p.name)}</h4>
                     <div class="reserve-price"><span>Precio total:</span><strong>${formatMoney(total)}</strong></div>
-                    <div class="reserve-price"><span>SeÃ±a 50%:</span><strong>${formatMoney(deposit)}</strong></div>
-                    <div class="reserve-price"><span>Saldo contra entrega:</span><strong>${formatMoney(saldo)}</strong></div>
+                    <div class="reserve-price reserve-price--dep"><span>Seña 50%:</span><strong>${formatMoney(deposit)}</strong></div>
+                    <div class="reserve-price"><span>Saldo contra entrega:</span><strong>${formatMoney(total - deposit)}</strong></div>
                 </div>
-                <form class="reserve-form" onsubmit="confirmReserve(event, '${productName}', ${total}, ${deposit})">
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" name="nombre" required placeholder="Tu nombre">
-                    </div>
-                    <div>
-                        <label>WhatsApp</label>
-                        <input type="tel" name="whatsapp" required placeholder="Tu WhatsApp">
-                    </div>
-                    <div>
-                        <label>DirecciÃ³n</label>
-                        <input type="text" name="direccion" required placeholder="Tu direcciÃ³n">
-                    </div>
-                    <div>
-                        <label>Barrio</label>
-                        <input type="text" name="barrio" required placeholder="Tu barrio">
-                    </div>
-                    <button type="submit" class="reserve-confirm">CONFIRMAR RESERVA</button>
+                <ul class="reserve-notes">
+                    <li><i class="fa-solid fa-lock"></i><span>Tu perfume queda reservado al confirmar la transferencia.</span></li>
+                    <li><i class="fa-solid fa-clock"></i><span>Tenés 15 minutos para realizar la transferencia.</span></li>
+                    <li><i class="fa-brands fa-whatsapp"></i><span>Una vez realizada, enviá el comprobante por WhatsApp.</span></li>
+                </ul>
+                <form class="reserve-form" onsubmit="confirmReserve(event)">
+                    <div><label for="rf-nombre">Nombre</label><input id="rf-nombre" type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre"></div>
+                    <div><label for="rf-wsp">WhatsApp</label><input id="rf-wsp" type="tel" name="whatsapp" required inputmode="tel" autocomplete="tel" placeholder="Ej: 351 123 4567"></div>
+                    <div><label for="rf-dir">Dirección</label><input id="rf-dir" type="text" name="direccion" required autocomplete="street-address" placeholder="Calle y número"></div>
+                    <div><label for="rf-barrio">Barrio</label><input id="rf-barrio" type="text" name="barrio" required placeholder="Tu barrio"></div>
+                    <button type="submit" class="reserve-confirm">Confirmar reserva</button>
                 </form>
             `;
-            modal.classList.add('is-open');
+            document.getElementById('reserve-box').scrollTop = 0;
+            document.getElementById('reserve-modal').classList.add('is-open');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeReserveModal() {
             document.getElementById('reserve-modal').classList.remove('is-open');
+            document.body.style.overflow = '';
         }
 
-        function confirmReserve(event, productName, total, deposit) {
+        function confirmReserve(event) {
             event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const saldo = total - deposit;
+            if (!reserveCurrent) return;
+            const f = new FormData(event.target);
+            const r = reserveCurrent;
+            const msg = `¡Hola! Te envío el comprobante de la seña para reservar:\n\n` +
+                `*${r.name}*\n` +
+                `- Precio total: ${formatMoney(r.total)}\n` +
+                `- Seña 50% (transferida): ${formatMoney(r.deposit)}\n` +
+                `- Saldo contra entrega: ${formatMoney(r.saldo)}\n\n` +
+                `*Mis datos*\n` +
+                `Nombre: ${f.get('nombre')}\n` +
+                `WhatsApp: ${f.get('whatsapp')}\n` +
+                `Dirección: ${f.get('direccion')}\n` +
+                `Barrio: ${f.get('barrio')}\n\n` +
+                `(Adjunto el comprobante de la transferencia)`;
+            const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
-            const content = document.getElementById('reserve-content');
-            content.innerHTML = `
+            setReserveTitle('CASI LISTO');
+            document.getElementById('reserve-content').innerHTML = `
                 <div class="reserve-success">
-                    <div class="icon">âœ“</div>
-                    <h4>CASI LISTO</h4>
-                    <p>Tu perfume queda reservado al confirmar la transferencia.</p>
-                    <p>TenÃ©s 15 minutos para realizar la transferencia.</p>
-                    <p>Una vez realizada, enviÃ¡ el comprobante por WhatsApp.</p>
+                    <div class="icon">✓</div>
+                    <h4>Reservá ${esc(r.name)}</h4>
+                    <p>Tu perfume queda reservado al confirmar la transferencia. Tenés 15 minutos para realizarla.</p>
                     <div class="reserve-alias">
-                        <p>TransferÃ­ ${formatMoney(deposit)} al alias:</p>
-                        <div class="alias">MISTYCAL.OULD</div>
+                        <p style="margin:0">Transferí <strong>${formatMoney(r.deposit)}</strong> al alias:</p>
+                        <div class="alias" id="reserve-alias-text">${esc(RESERVE_ALIAS)}</div>
+                        <button type="button" class="reserve-copy" onclick="copyAlias(this)">Copiar alias</button>
                     </div>
-                    <a href="https://wa.me/543515210477?text=${encodeURIComponent(`Hola! RealicÃ© la transferencia para:\n\n*${productName}*\nSeÃ±a 50%: ${formatMoney(deposit)}\n\nNombre: ${formData.get('nombre')}\nWhatsApp: ${formData.get('whatsapp')}\nDirecciÃ³n: ${formData.get('direccion')}\nBarrio: ${formData.get('barrio')}`)}" target="_blank" class="reserve-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> ENVIAR COMPROBANTE POR WHATSAPP
+                    <p>Una vez realizada la transferencia:</p>
+                    <a href="${waLink}" target="_blank" rel="noopener" class="reserve-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar comprobante por WhatsApp
                     </a>
+                    <p style="margin:.9rem 0 0;font-size:12px">Saldo contra entrega: ${formatMoney(r.saldo)}</p>
                 </div>
             `;
+            document.getElementById('reserve-box').scrollTop = 0;
         }
 
-        // Cerrar modal al hacer clic fuera
-        document.addEventListener('click', function(e) {
-            const modal = document.getElementById('reserve-modal');
-            if (e.target === modal) {
-                closeReserveModal();
+        function copyAlias(btn) {
+            const done = () => { btn.textContent = '¡Copiado!'; setTimeout(() => btn.textContent = 'Copiar alias', 1800); };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(RESERVE_ALIAS).then(done).catch(done);
+            } else {
+                const t = document.createElement('textarea');
+                t.value = RESERVE_ALIAS; document.body.appendChild(t); t.select();
+                try { document.execCommand('copy'); } catch (e) {}
+                document.body.removeChild(t); done();
             }
+        }
+
+        // Cerrar modal: clic afuera o tecla Escape
+        document.addEventListener('click', function(e) {
+            if (e.target === document.getElementById('reserve-modal')) closeReserveModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeReserveModal();
         });
 </script>
 
@@ -8361,14 +8335,13 @@
 
 
     <!-- Modal de Reserva -->
-    <div id="reserve-modal" class="reserve-modal">
-        <div class="reserve-box">
+    <div id="reserve-modal" class="reserve-modal" role="dialog" aria-modal="true" aria-labelledby="reserve-title">
+        <div class="reserve-box" id="reserve-box">
             <div class="reserve-head">
-                <h3>RESERVAR TU PERFUME</h3>
+                <h3 id="reserve-title">RESERVAR TU PERFUME</h3>
             </div>
-            <div class="reserve-body" id="reserve-content">
-                <!-- Contenido dinÃ¡mico -->
-            </div>
+            <button type="button" class="reserve-close" onclick="closeReserveModal()" aria-label="Cerrar">&times;</button>
+            <div class="reserve-body" id="reserve-content"></div>
         </div>
     </div>
 </body></html>
