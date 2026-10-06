@@ -16,9 +16,8 @@ function sameList(a, b) {
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 }, locale: 'es-AR' });
-    await page.goto(CATEGORY_URL, { waitUntil: 'networkidle', timeout: 60000 });
-    await page.waitForSelector('a[href*="/producto/"]', { timeout: 30000 });
-
+       await page.goto(CATEGORY_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForSelector('a[href*="/producto/"]', { timeout: 60000 });
     // Pedix carga los productos a medida que se baja: scrolleamos hasta que deje de aparecer gente nueva
     let last = -1, still = 0;
     for (let i = 0; i < 200 && still < 6; i++) {
