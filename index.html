@@ -8089,13 +8089,40 @@
         // ===== MODO EDICIÓN =====
         let isEditing = false;
 
+        // Textos editables: se les asigna una clave estable (data-field) por bloque
+        const EDIT_SELECTOR = 'h1,h2,h3,h4,p,li,.eyebrow,blockquote';
+        function getEditableEls() {
+            const out = [];
+            document.querySelectorAll('[data-bloque]').forEach(sec => {
+                const bloque = sec.getAttribute('data-bloque');
+                let i = 0;
+                sec.querySelectorAll(EDIT_SELECTOR).forEach(el => {
+                    // no tocar productos (se generan solos), modales, ni elementos que contienen otros textos
+                    if (el.closest('#featured-grid, #catalog-grid, #filter-bar, .reserve-modal, .admin-modal')) return;
+                    if (el.querySelector(EDIT_SELECTOR)) return;
+                    el.setAttribute('data-field', bloque + '-' + (i++));
+                    out.push(el);
+                });
+            });
+            return out;
+        }
+
         function toggleEditMode() {
             isEditing = !isEditing;
             document.body.classList.toggle('editing', isEditing);
+            getEditableEls().forEach(el => {
+                if (isEditing) el.setAttribute('contenteditable', 'true');
+                else el.removeAttribute('contenteditable');
+            });
             const btn = document.getElementById('edit-toggle');
             btn.classList.toggle('active', isEditing);
             btn.innerHTML = isEditing ? '<i class="fa-solid fa-check"></i> Listo' : '<i class="fa-solid fa-pen"></i> Editar';
         }
+
+        // En modo edición, los links no deben navegar al tocar un texto
+        document.addEventListener('click', function(e) {
+            if (isEditing && e.target.closest('[contenteditable]') && e.target.closest('a')) e.preventDefault();
+        }, true);
 
         function saveAllChanges() {
             const editables = document.querySelectorAll('[contenteditable][data-field]');
@@ -8115,7 +8142,10 @@
             saveAllChanges();
 
             // Obtener el HTML completo del documento
-            const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+            const clone = document.documentElement.cloneNode(true);
+            clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+            clone.querySelector('body').classList.remove('editing');
+            const htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
 
             // Crear blob y descargar
             const blob = new Blob([htmlContent], { type: 'text/html' });
@@ -8132,6 +8162,7 @@
         }
 
         function loadSavedTexts() {
+            getEditableEls();
             const saved = localStorage.getItem('mistycalould_texts');
             if (!saved) return;
             let texts = {};
