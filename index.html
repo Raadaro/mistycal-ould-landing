@@ -223,8 +223,108 @@
         .save-bar:hover{background:color-mix(in srgb,var(--ok) 80%,var(--ink))}
         .export-btn{position:fixed;bottom:20px;left:20px;z-index:200;background:var(--ink);color:var(--paper);border:none;padding:12px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;transition:all .2s}
         .export-btn:hover{background:var(--accent);transform:scale(1.05)}
-    </style>
-<style></style><style></style><style></style></head>
+            .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
+        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
+        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
+        .reserve-modal.is-open{display:flex}
+        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
+        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
+        .reserve-body{padding:1.2rem}
+        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
+        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
+        .reserve-price strong{color:var(--ink)}
+        .reserve-form{display:grid;gap:0.75rem}
+        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
+        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
+        .reserve-form input:focus{outline:none;border-color:var(--accent)}
+        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
+        .reserve-confirm:hover{background:var(--ink)}
+        .reserve-success{text-align:center;padding:1rem}
+        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
+        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
+        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
+        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
+        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+</style>
+<style>        .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
+        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
+        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
+        .reserve-modal.is-open{display:flex}
+        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
+        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
+        .reserve-body{padding:1.2rem}
+        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
+        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
+        .reserve-price strong{color:var(--ink)}
+        .reserve-form{display:grid;gap:0.75rem}
+        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
+        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
+        .reserve-form input:focus{outline:none;border-color:var(--accent)}
+        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
+        .reserve-confirm:hover{background:var(--ink)}
+        .reserve-success{text-align:center;padding:1rem}
+        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
+        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
+        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
+        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
+        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+</style><style>        .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
+        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
+        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
+        .reserve-modal.is-open{display:flex}
+        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
+        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
+        .reserve-body{padding:1.2rem}
+        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
+        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
+        .reserve-price strong{color:var(--ink)}
+        .reserve-form{display:grid;gap:0.75rem}
+        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
+        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
+        .reserve-form input:focus{outline:none;border-color:var(--accent)}
+        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
+        .reserve-confirm:hover{background:var(--ink)}
+        .reserve-success{text-align:center;padding:1rem}
+        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
+        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
+        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
+        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
+        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+</style><style>        .var__price--old{font-family:var(--font-body);font-size:16px;color:var(--muted);text-decoration:line-through;margin-bottom:4px}
+        .var__offer{font-size:11px;color:#DC2626;font-weight:600;margin-top:4px}
+        .reserve-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center;padding:1rem}
+        .reserve-modal.is-open{display:flex}
+        .reserve-box{background:var(--paper);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+        .reserve-head{padding:1.2rem;border-bottom:1px solid var(--line);background:var(--surface);border-radius:12px 12px 0 0}
+        .reserve-head h3{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0}
+        .reserve-body{padding:1.2rem}
+        .reserve-product{background:var(--surface);border-radius:8px;padding:1rem;margin-bottom:1rem}
+        .reserve-product h4{font-family:var(--font-display);font-size:18px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-price{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:0.25rem}
+        .reserve-price strong{color:var(--ink)}
+        .reserve-form{display:grid;gap:0.75rem}
+        .reserve-form label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
+        .reserve-form input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-family:var(--font-body)}
+        .reserve-form input:focus{outline:none;border-color:var(--accent)}
+        .reserve-confirm{background:var(--accent);color:var(--paper);border:none;padding:14px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;width:100%;text-transform:uppercase;letter-spacing:0.05em;transition:background .2s}
+        .reserve-confirm:hover{background:var(--ink)}
+        .reserve-success{text-align:center;padding:1rem}
+        .reserve-success .icon{font-size:48px;color:var(--ok);margin-bottom:1rem}
+        .reserve-success h4{font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 0.5rem 0}
+        .reserve-success p{color:var(--muted);font-size:14px;margin-bottom:1rem}
+        .reserve-alias{background:var(--surface);border-radius:8px;padding:1rem;margin:1rem 0;text-align:center}
+        .reserve-alias .alias{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--accent);margin:0.5rem 0}
+        .reserve-whatsapp{background:#25D366;color:#fff;border:none;padding:14px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+</style></head>
 <body class="">
 
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -252,9 +352,9 @@
 
     <!-- Topbar -->
     <section class="topbar" data-bloque="topbar">
-        <span contenteditable="true" data-field="topbar-msg1"><i class="fa-solid fa-circle-exclamation" style="margin-right:6px;color:var(--gold-light)"></i>Consultar stock disponible por WhatsApp antes de señar</span>
+        <span><i class="fa-solid fa-circle-exclamation" style="margin-right:6px;color:var(--gold-light)"></i>Consultar stock disponible por WhatsApp antes de señar</span>
         <span style="margin:0 8px;opacity:50">|</span>
-        <span contenteditable="true" data-field="topbar-msg2"><i class="fa-solid fa-truck" style="margin-right:6px;color:var(--gold-light)"></i>Envío Gratis en Córdoba Capital</span>
+        <span><i class="fa-solid fa-truck" style="margin-right:6px;color:var(--gold-light)"></i>Envío Gratis en Córdoba Capital</span>
     </section>
 
     <!-- Header -->
@@ -262,14 +362,14 @@
         <div class="wrap cab__in">
             <div class="logo-area">
                 <div>
-                    <div class="logo" contenteditable="true" data-field="logo">MISTYCAL</div>
-                    <div class="logo-sub" contenteditable="true" data-field="logo-sub">Parfumerie Exclusive</div>
+                    <div class="logo">MISTYCAL</div>
+                    <div class="logo-sub">Parfumerie Exclusive</div>
                 </div>
             </div>
             <nav class="cab-nav">
-                <a href="#hero" contenteditable="true" data-field="nav-inicio">Inicio</a>
-                <a href="#destacados" contenteditable="true" data-field="nav-destacados">Destacados</a>
-                <a href="#catalogo" contenteditable="true" data-field="nav-catalogo">Catálogo</a>
+                <a href="#hero">Inicio</a>
+                <a href="#destacados">Destacados</a>
+                <a href="#catalogo">Catálogo</a>
             </nav>
         </div>
     </section>
@@ -299,24 +399,24 @@
                 </div>
             </div>
             <div>
-                <p class="eyebrow" contenteditable="true" data-field="hero-eyebrow">EAU DE PARFUM · COLECCION OUD MODERNA · CORDOBA</p>
-                <h1 contenteditable="true" data-field="hero-title">La esencia de oriente, en una fragancia</h1>
-                <p style="margin-top:18px;color:var(--muted)" contenteditable="true" data-field="hero-desc">Selección exclusiva de fragancias. Descubre nuestra colección G5 con los más altos estándares de calidad.</p>
+                <p class="eyebrow">EAU DE PARFUM · COLECCION OUD MODERNA · CORDOBA</p>
+                <h1>La esencia de oriente, en una fragancia</h1>
+                <p style="margin-top:18px;color:var(--muted)">Selección exclusiva de fragancias. Descubre nuestra colección G5 con los más altos estándares de calidad.</p>
                 <ul class="checks">
-                    <li><svg class="ic"><use href="#i-check"></use></svg><span contenteditable="true" data-field="hero-check1">Fragancias de marcas exclusivas</span></li>
-                    <li><svg class="ic"><use href="#i-check"></use></svg><span contenteditable="true" data-field="hero-check2">Modalidad: 50% seña + 50% contra entrega</span></li>
-                    <li><svg class="ic"><use href="#i-check"></use></svg><span contenteditable="true" data-field="hero-check3">Envío gratis en Córdoba Capital</span></li>
+                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Fragancias de marcas exclusivas</span></li>
+                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Modalidad: 50% seña + 50% contra entrega</span></li>
+                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Envío gratis en Córdoba Capital</span></li>
                 </ul>
                 <div class="hero__price">
-                    <span class="hero__now" contenteditable="true" data-field="hero-price">Desde $44.900</span>
-                    <span class="chip" contenteditable="true" data-field="hero-chip">G5 Quality</span>
+                    <span class="hero__now">Desde $44.900</span>
+                    <span class="chip">G5 Quality</span>
                 </div>
-                <p class="hero__sub" contenteditable="true" data-field="hero-sub">&nbsp;Consulta de stock por WhatsApp.</p>
+                <p class="hero__sub">&nbsp;Consulta de stock por WhatsApp.</p>
                 <div class="hero__cta">
-                    <a class="btn" href="#catalogo" contenteditable="true" data-field="hero-cta1">Ver Catálogo</a>
-                    <a class="btn btn--ghost" href="#destacados" contenteditable="true" data-field="hero-cta2">Destacados</a>
+                    <a class="btn" href="#catalogo">Ver Catálogo</a>
+                    <a class="btn btn--ghost" href="#destacados">Destacados</a>
                 </div>
-                <p class="hero__risk" contenteditable="true" data-field="hero-risk">Reserva con seña del 50%. Abona el saldo contra entrega.</p>
+                <p class="hero__risk">Reserva con seña del 50%. Abona el saldo contra entrega.</p>
             </div>
         </div>
     </section>
@@ -324,10 +424,10 @@
     <!-- Confianza -->
     <section class="conf" data-bloque="confianza">
         <div class="wrap conf__grid">
-            <div class="conf__it"><svg class="ic"><use href="#i-escudo"></use></svg><span><b contenteditable="true" data-field="conf-title1">Reserva segura</b><span contenteditable="true" data-field="conf-desc1">50% seña + 50% entrega</span></span></div>
-            <div class="conf__it"><svg class="ic"><use href="#i-camion"></use></svg><span><b contenteditable="true" data-field="conf-title2">Envío gratis</b><span contenteditable="true" data-field="conf-desc2">En Córdoba Capital</span></span></div>
-            <div class="conf__it"><svg class="ic"><use href="#i-regalo"></use></svg><span><b contenteditable="true" data-field="conf-title3">Calidad G5</b><span contenteditable="true" data-field="conf-desc3">Réplicas premium</span></span></div>
-            <div class="conf__it"><svg class="ic"><use href="#i-tarjeta"></use></svg><span><b contenteditable="true" data-field="conf-title4">Consulta WhatsApp</b><span contenteditable="true" data-field="conf-desc4">+54 351 521-0477</span></span></div>
+            <div class="conf__it"><svg class="ic"><use href="#i-escudo"></use></svg><span><b>Reserva segura</b><span>50% seña + 50% entrega</span></span></div>
+            <div class="conf__it"><svg class="ic"><use href="#i-camion"></use></svg><span><b>Envío gratis</b><span>En Córdoba Capital</span></span></div>
+            <div class="conf__it"><svg class="ic"><use href="#i-regalo"></use></svg><span><b>Calidad G5</b><span>Réplicas premium</span></span></div>
+            <div class="conf__it"><svg class="ic"><use href="#i-tarjeta"></use></svg><span><b>Consulta WhatsApp</b><span>+54 351 521-0477</span></span></div>
         </div>
     </section>
 
@@ -335,16 +435,16 @@
     <section class="ben" data-bloque="beneficios">
         <div class="wrap">
             <div class="sec-head">
-                <p class="eyebrow" contenteditable="true" data-field="ben-eyebrow">Por qué Mistycal Ould</p>
-                <h2 contenteditable="true" data-field="ben-title">La alta calidad de esencias usadas aseguran entre 8hs y 12hs de duración en piel.</h2>
+                <p class="eyebrow">Por qué Mistycal Ould</p>
+                <h2>La alta calidad de esencias usadas aseguran entre 8hs y 12hs de duración en piel.</h2>
             </div>
             <div class="ben__grid">
-                <div class="ben__card"><svg class="ic"><use href="#i-sparkle"></use></svg><div><h3 contenteditable="true" data-field="ben-card1-title">Calidad G5</h3><p contenteditable="true" data-field="ben-card1-desc">Réplicas de perfumes de la más alta calidad, elaboradas con ingredientes premium que capturan la esencia de las fragancias originales.</p></div></div>
-                <div class="ben__card"><svg class="ic"><use href="#i-gota"></use></svg><div><h3 contenteditable="true" data-field="ben-card2-title">Fragancias</h3><p contenteditable="true" data-field="ben-card2-desc">Amplia selección de marcas exclusivas: Yara, Asad, Lattafa, Armaf, Hawas, Bharara y muchas más.</p></div></div>
-                <div class="ben__card"><svg class="ic"><use href="#i-tienda"></use></svg><div><h3 contenteditable="true" data-field="ben-card3-title">Reserva fácil</h3><p contenteditable="true" data-field="ben-card3-desc">Señá con el 50% y aboná el saldo al recibir tu pedido. Sin complicaciones.</p></div></div>
-                <div class="ben__card"><svg class="ic"><use href="#i-camion"></use></svg><div><h3 contenteditable="true" data-field="ben-card4-title">Envío gratis</h3><p contenteditable="true" data-field="ben-card4-desc">Envío sin cargo en Córdoba Capital. Consultá por envíos a otras zonas.</p></div></div>
-                <div class="ben__card"><svg class="ic"><use href="#i-reloj"></use></svg><div><h3 contenteditable="true" data-field="ben-card5-title">Atención personalizada</h3><p contenteditable="true" data-field="ben-card5-desc">Consultá disponibilidad y precios por WhatsApp. Te ayudamos a elegir tu fragancia ideal.</p></div></div>
-                <div class="ben__card"><svg class="ic"><use href="#i-hoja"></use></svg><div><h3 contenteditable="true" data-field="ben-card6-title">Notas detalladas</h3><p contenteditable="true" data-field="ben-card6-desc">Cada perfume incluye su perfil olfativo, género y estación recomendada.</p></div></div>
+                <div class="ben__card"><svg class="ic"><use href="#i-sparkle"></use></svg><div><h3>Calidad G5</h3><p>Réplicas de perfumes de la más alta calidad, elaboradas con ingredientes premium que capturan la esencia de las fragancias originales.</p></div></div>
+                <div class="ben__card"><svg class="ic"><use href="#i-gota"></use></svg><div><h3>Fragancias</h3><p>Amplia selección de marcas exclusivas: Yara, Asad, Lattafa, Armaf, Hawas, Bharara y muchas más.</p></div></div>
+                <div class="ben__card"><svg class="ic"><use href="#i-tienda"></use></svg><div><h3>Reserva fácil</h3><p>Señá con el 50% y aboná el saldo al recibir tu pedido. Sin complicaciones.</p></div></div>
+                <div class="ben__card"><svg class="ic"><use href="#i-camion"></use></svg><div><h3>Envío gratis</h3><p>Envío sin cargo en Córdoba Capital. Consultá por envíos a otras zonas.</p></div></div>
+                <div class="ben__card"><svg class="ic"><use href="#i-reloj"></use></svg><div><h3>Atención personalizada</h3><p>Consultá disponibilidad y precios por WhatsApp. Te ayudamos a elegir tu fragancia ideal.</p></div></div>
+                <div class="ben__card"><svg class="ic"><use href="#i-hoja"></use></svg><div><h3>Notas detalladas</h3><p>Cada perfume incluye su perfil olfativo, género y estación recomendada.</p></div></div>
             </div>
         </div>
     </section>
@@ -353,8 +453,8 @@
     <section id="destacados" data-bloque="destacados" style="padding-top:var(--space-section)">
         <div class="wrap">
             <div class="sec-head">
-                <p class="eyebrow" contenteditable="true" data-field="dest-eyebrow">Selección especial</p>
-                <h2 contenteditable="true" data-field="dest-title">Destacados</h2>
+                <p class="eyebrow">Selección especial</p>
+                <h2>Destacados</h2>
             </div>
             <div id="featured-grid" class="var__grid">
                 <article class="var__card">
@@ -634,9 +734,9 @@
     <section class="var" id="catalogo" data-bloque="catalogo">
         <div class="wrap">
             <div class="sec-head">
-                <p class="eyebrow" contenteditable="true" data-field="cat-eyebrow">Colección completa</p>
-                <h2 contenteditable="true" data-field="cat-title">Catálogo G5</h2>
-                <p style="color:var(--muted);font-size:15px;margin-top:8px" contenteditable="true" data-field="cat-desc">Explora nuestra colección completa con precios actualizados.</p>
+                <p class="eyebrow">Colección completa</p>
+                <h2>Catálogo G5</h2>
+                <p style="color:var(--muted);font-size:15px;margin-top:8px">Explora nuestra colección completa con precios actualizados.</p>
             </div>
             <div class="filter-nav">
                 <span class="filter-nav__label">Filtrar por marca:</span>
@@ -7476,7 +7576,7 @@
                     </div>
                 </article>
             </div>
-            <p class="var__note" contenteditable="true" data-field="cat-note">¿Qué es un perfume G5? Son réplicas de perfumes de la más alta calidad, elaboradas con ingredientes premium que capturan la esencia y el aroma de las fragancias originales más exclusivas del mercado.</p>
+            <p class="var__note">¿Qué es un perfume G5? Son réplicas de perfumes de la más alta calidad, elaboradas con ingredientes premium que capturan la esencia y el aroma de las fragancias originales más exclusivas del mercado.</p>
         </div>
     </section>
 
@@ -7484,9 +7584,9 @@
     <section class="gar" data-bloque="garantia">
         <div class="wrap">
             <svg class="ic"><use href="#i-escudo"></use></svg>
-            <h2 contenteditable="true" data-field="gar-title">Reserva con confianza.</h2>
-            <p contenteditable="true" data-field="gar-desc">Señá con el 50% y aboná el saldo al recibir. Si tenés dudas, consultá por WhatsApp antes de reservar.</p>
-            <a class="btn" href="https://wa.me/543515210477" target="_blank" contenteditable="true" data-field="gar-btn">
+            <h2>Reserva con confianza.</h2>
+            <p>Señá con el 50% y aboná el saldo al recibir. Si tenés dudas, consultá por WhatsApp antes de reservar.</p>
+            <a class="btn" href="https://wa.me/543515210477" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
             </a>
         </div>
@@ -7495,26 +7595,26 @@
     <!-- FAQ -->
     <section class="faq" data-bloque="faq">
         <div class="wrap">
-            <h2 style="margin-bottom:28px" contenteditable="true" data-field="faq-title">Preguntas frecuentes</h2>
+            <h2 style="margin-bottom:28px">Preguntas frecuentes</h2>
             <details>
-                <summary contenteditable="true" data-field="faq-q1">¿Qué es un perfume G5?</summary>
-                <p contenteditable="true" data-field="faq-a1">Son réplicas de perfumes de la más alta calidad, elaboradas con ingredientes premium que capturan la esencia y el aroma de las fragancias originales más exclusivas del mercado.</p>
+                <summary>¿Qué es un perfume G5?</summary>
+                <p>Son réplicas de perfumes de la más alta calidad, elaboradas con ingredientes premium que capturan la esencia y el aroma de las fragancias originales más exclusivas del mercado.</p>
             </details>
             <details>
-                <summary contenteditable="true" data-field="faq-q2">¿Cómo funciona la reserva?</summary>
-                <p contenteditable="true" data-field="faq-a2">Reservás con una seña del 50% del precio total y abonás el saldo al recibir tu pedido en tu domicilio.</p>
+                <summary>¿Cómo funciona la reserva?</summary>
+                <p>Reservás con una seña del 50% del precio total y abonás el saldo al recibir tu pedido en tu domicilio.</p>
             </details>
             <details>
-                <summary contenteditable="true" data-field="faq-q3">¿Hacen envíos?</summary>
-                <p contenteditable="true" data-field="faq-a3">Sí, envío gratis en Córdoba Capital. Para otras zonas, consultá por WhatsApp.</p>
+                <summary>¿Hacen envíos?</summary>
+                <p>Sí, envío gratis en Córdoba Capital. Para otras zonas, consultá por WhatsApp.</p>
             </details>
             <details>
-                <summary contenteditable="true" data-field="faq-q4">¿Cómo consulto disponibilidad?</summary>
-                <p contenteditable="true" data-field="faq-a4">Escribinos por WhatsApp al +54 351 521-0477 y te confirmamos stock y precios actualizados.</p>
+                <summary>¿Cómo consulto disponibilidad?</summary>
+                <p>Escribinos por WhatsApp al +54 351 521-0477 y te confirmamos stock y precios actualizados.</p>
             </details>
             <details>
-                <summary contenteditable="true" data-field="faq-q5">¿Qué marcas tienen?</summary>
-                <p contenteditable="true" data-field="faq-a5">Trabajamos con marcas como Yara, Asad, 9PM, Lattafa, Armaf, Hawas, Bharara, Club De Nuit, y muchas más.</p>
+                <summary>¿Qué marcas tienen?</summary>
+                <p>Trabajamos con marcas como Yara, Asad, 9PM, Lattafa, Armaf, Hawas, Bharara, Club De Nuit, y muchas más.</p>
             </details>
         </div>
     </section>
@@ -7522,21 +7622,21 @@
     <!-- CTA Final -->
     <section class="fin" data-bloque="cta-final">
         <div class="wrap">
-            <p class="eyebrow" contenteditable="true" data-field="cta-eyebrow">Tu fragancia te espera</p>
-            <h2 contenteditable="true" data-field="cta-title">Descubrí tu próximo perfume favorito.</h2>
-            <p contenteditable="true" data-field="cta-desc">Fragancias Calidad G5 · Envío gratis en Córdoba</p>
+            <p class="eyebrow">Tu fragancia te espera</p>
+            <h2>Descubrí tu próximo perfume favorito.</h2>
+            <p>Fragancias Calidad G5 · Envío gratis en Córdoba</p>
             <div class="hero__price">
-                <span class="hero__now" contenteditable="true" data-field="cta-price">Desde $44.900</span>
+                <span class="hero__now">Desde $44.900</span>
             </div>
-            <a class="btn btn--light" href="#catalogo" contenteditable="true" data-field="cta-btn">Ver Catálogo</a>
+            <a class="btn btn--light" href="#catalogo">Ver Catálogo</a>
         </div>
     </section>
 
     <!-- Footer -->
     <section class="foot" data-bloque="footer">
         <div class="wrap">
-            <small contenteditable="true" data-field="footer-copy">© 2026 · Mistycal Ould · Perfumería de Autor · Córdoba, Argentina · +54 351 521-0477</small>
-            <div class="foot__eco" aria-hidden="true" contenteditable="true" data-field="footer-brand">MISTYCAL OULD</div>
+            <small>© 2026 · Mistycal Ould · Perfumería de Autor · Córdoba, Argentina · +54 351 521-0477</small>
+            <div class="foot__eco" aria-hidden="true">MISTYCAL OULD</div>
             <button onclick="toggleAdmin()" style="background:none;border:none;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.2em;cursor:pointer;padding:6px 14px;margin-top:16px">
                 <i class="fa-solid fa-gear" style="margin-right:4px;"></i> Modo Edición / Admin
             </button>
@@ -7545,8 +7645,8 @@
 
     <!-- Buybar -->
     <div class="buybar is-on" id="buybar" data-bloque="buybar">
-        <div class="buybar__p"><span contenteditable="true" data-field="buybar-price">Desde $18.000</span><small contenteditable="true" data-field="buybar-sub">Calidad G5</small></div>
-        <a class="btn" href="#catalogo" contenteditable="true" data-field="buybar-btn">Ver Catálogo</a>
+        <div class="buybar__p"><span>Desde $18.000</span><small>Calidad G5</small></div>
+        <a class="btn" href="#catalogo">Ver Catálogo</a>
     </div>
 
     <!-- Admin Modal -->
@@ -8183,9 +8283,92 @@
             const scrollAmount = 200;
             filterBar.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
-    </script>
+            // ===== MODAL DE RESERVA =====
+        function openReserveModal(productName, total, deposit) {
+            const modal = document.getElementById('reserve-modal');
+            const content = document.getElementById('reserve-content');
+            const saldo = total - deposit;
+
+            content.innerHTML = `
+                <div class="reserve-product">
+                    <h4>${productName}</h4>
+                    <div class="reserve-price"><span>Precio total:</span><strong>${formatMoney(total)}</strong></div>
+                    <div class="reserve-price"><span>SeÃ±a 50%:</span><strong>${formatMoney(deposit)}</strong></div>
+                    <div class="reserve-price"><span>Saldo contra entrega:</span><strong>${formatMoney(saldo)}</strong></div>
+                </div>
+                <form class="reserve-form" onsubmit="confirmReserve(event, '${productName}', ${total}, ${deposit})">
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" required placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label>WhatsApp</label>
+                        <input type="tel" name="whatsapp" required placeholder="Tu WhatsApp">
+                    </div>
+                    <div>
+                        <label>DirecciÃ³n</label>
+                        <input type="text" name="direccion" required placeholder="Tu direcciÃ³n">
+                    </div>
+                    <div>
+                        <label>Barrio</label>
+                        <input type="text" name="barrio" required placeholder="Tu barrio">
+                    </div>
+                    <button type="submit" class="reserve-confirm">CONFIRMAR RESERVA</button>
+                </form>
+            `;
+            modal.classList.add('is-open');
+        }
+
+        function closeReserveModal() {
+            document.getElementById('reserve-modal').classList.remove('is-open');
+        }
+
+        function confirmReserve(event, productName, total, deposit) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const saldo = total - deposit;
+
+            const content = document.getElementById('reserve-content');
+            content.innerHTML = `
+                <div class="reserve-success">
+                    <div class="icon">âœ“</div>
+                    <h4>CASI LISTO</h4>
+                    <p>Tu perfume queda reservado al confirmar la transferencia.</p>
+                    <p>TenÃ©s 15 minutos para realizar la transferencia.</p>
+                    <p>Una vez realizada, enviÃ¡ el comprobante por WhatsApp.</p>
+                    <div class="reserve-alias">
+                        <p>TransferÃ­ ${formatMoney(deposit)} al alias:</p>
+                        <div class="alias">MISTYCAL.OULD</div>
+                    </div>
+                    <a href="https://wa.me/543515210477?text=${encodeURIComponent(`Hola! RealicÃ© la transferencia para:\n\n*${productName}*\nSeÃ±a 50%: ${formatMoney(deposit)}\n\nNombre: ${formData.get('nombre')}\nWhatsApp: ${formData.get('whatsapp')}\nDirecciÃ³n: ${formData.get('direccion')}\nBarrio: ${formData.get('barrio')}`)}" target="_blank" class="reserve-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> ENVIAR COMPROBANTE POR WHATSAPP
+                    </a>
+                </div>
+            `;
+        }
+
+        // Cerrar modal al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('reserve-modal');
+            if (e.target === modal) {
+                closeReserveModal();
+            }
+        });
+</script>
 
 
 
 
+    <!-- Modal de Reserva -->
+    <div id="reserve-modal" class="reserve-modal">
+        <div class="reserve-box">
+            <div class="reserve-head">
+                <h3>RESERVAR TU PERFUME</h3>
+            </div>
+            <div class="reserve-body" id="reserve-content">
+                <!-- Contenido dinÃ¡mico -->
+            </div>
+        </div>
+    </div>
 </body></html>
