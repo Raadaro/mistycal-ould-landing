@@ -8380,14 +8380,32 @@ fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
 .then(r=>r.json()).then(data=>{
   const mapa={};
   data.perfumes.forEach(p=>{ mapa[p.nombre.toLowerCase().trim()] = p.stock; });
-  document.querySelectorAll('[data-perfume]').forEach(el=>{
-    const key = el.getAttribute('data-perfume').toLowerCase().trim();
-    if(mapa[key]===false){
-      el.style.opacity='0.5';
-      el.querySelector('button').textContent='SIN STOCK';
-      el.querySelector('button').disabled=true;
+  <script>
+fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
+.then(r=>r.json()).then(data=>{
+  const mapa={};
+  (data.perfumes||[]).forEach(p=>{
+    mapa[p.nombre.toLowerCase().trim()] = p.stock;
+    mapa[p.nombre.toLowerCase()] = p.stock;
+  });
+  // Busca por el título del perfume en la página
+  document.querySelectorAll('h3').forEach(h=>{
+    const key = h.textContent.toLowerCase().trim();
+    if(mapa[key]===false || mapa[key]===0 || mapa[key]==='0'){
+      const card = h.closest('div');
+      if(card){
+        card.style.opacity='0.5';
+        card.style.filter='grayscale(0.8)';
+        const btn = card.querySelector('button');
+        if(btn){
+          btn.textContent='SIN STOCK';
+          btn.disabled=true;
+          btn.style.background='#555';
+        }
+      }
     }
   });
 });
 </script>
+<script src="./volaron.js?v=1"></script>
 </body></html>
