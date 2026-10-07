@@ -8375,4 +8375,53 @@
             <div class="reserve-body" id="reserve-content"></div>
         </div>
     </div>
+   <script>
+// --- MISTYCAL STOCK LIVE desde Google Sheets ---
+fetch('./stock.json?v=' + Date.now())
+ .then(r => r.json())
+ .then(data => {
+    const mapaStock = {};
+    data.perfumes.forEach(p => {
+      // normalizamos nombre para comparar
+      const key = p.nombre.toLowerCase().replace(/\s+g5/g,'').trim();
+      mapaStock[key] = p.stock;
+      mapaStock[p.nombre.toLowerCase().trim()] = p.stock;
+    });
+
+    document.querySelectorAll('[class*="card"], [class*="product"], article,.group').forEach(card => {
+      const textoCard = card.innerText.toLowerCase();
+      // buscamos qué perfume es esta card
+      for (const [nombreKey, tieneStock] of Object.entries(mapaStock)) {
+        if (textoCard.includes(nombreKey) && nombreKey.length > 4) {
+          if (tieneStock === false) {
+            // --- ES SIN STOCK ---
+            if (!card.querySelector('.badge-sin-stock')) {
+              card.style.position = 'relative';
+              card.style.opacity = '0.6';
+              card.style.filter = 'grayscale(0.3)';
+
+              const badge = document.createElement('div');
+              badge.className = 'badge-sin-stock';
+              badge.innerHTML = '✕ SIN STOCK HOY';
+              badge.style.cssText = 'position:absolute;top:12px;left:12px;background:#991b1b;color:white;padding:6px 12px;border-radius:99px;font-weight:800;font-size:12px;z-index:10;';
+              card.prepend(badge);
+
+              // Desactivar botón RESERVAR
+              card.querySelectorAll('a, button').forEach(btn => {
+                if (btn.innerText.toLowerCase().includes('reservar')) {
+                  btn.style.background = '#e5e7eb';
+                  btn.style.color = '#9ca3af';
+                  btn.style.pointerEvents = 'none';
+                  btn.innerText = 'SIN STOCK';
+                }
+              });
+            }
+          }
+          break;
+        }
+      }
+    });
+    console.log(`Mistycal Stock: ${data.con_stock} con stock de ${data.total}`);
+  });
+</script> 
 </body></html>
