@@ -8375,4 +8375,19 @@
             <div class="reserve-body" id="reserve-content"></div>
         </div>
     </div>
+    <script>
+fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
+.then(r=>r.json()).then(data=>{
+  const mapa={};
+  data.perfumes.forEach(p=>{ mapa[p.nombre.toLowerCase().trim()] = p.stock; });
+  document.querySelectorAll('[data-perfume]').forEach(el=>{
+    const key = el.getAttribute('data-perfume').toLowerCase().trim();
+    if(mapa[key]===false){
+      el.style.opacity='0.5';
+      el.querySelector('button').textContent='SIN STOCK';
+      el.querySelector('button').disabled=true;
+    }
+  });
+});
+</script>
 </body></html>
