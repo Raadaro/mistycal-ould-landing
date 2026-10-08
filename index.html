@@ -120,6 +120,10 @@
         .var__grid{display:grid;gap:20px}
         .var__card{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);transition:all 0.3s ease}
         .var__card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 10px 25px -5px rgba(122,31,61,0.15)}
+        .var__card.out-of-stock{opacity:0.42!important;filter:grayscale(100%);pointer-events:none!important;position:relative}
+        .var__card.out-of-stock:hover{transform:none!important;box-shadow:none!important;border-color:var(--line)!important}
+        .var__card.out-of-stock .var__img img{filter:grayscale(100%)}
+
         .var__img{position:relative}
         .var__img .ph{aspect-ratio:1/1;border-radius:0;border:0;border-bottom:1.5px dashed color-mix(in srgb,var(--ink) 30%,transparent)}
         .var__badge{position:absolute;top:12px;left:12px;background:var(--ink);color:var(--paper);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px}
@@ -321,45 +325,7 @@
     </section>
 
     <!-- Hero -->
-    <section class="hero" data-bloque="hero">
-        <div class="wrap hero__grid">
-            <div>
-                <div class="hero__media">
-                    <div class="carousel" id="hero-carousel">
-                        <div class="carousel__track" id="carousel-track">
-                        </div>
-                        <button class="carousel__btn carousel__btn--prev" onclick="carouselPrev()">❮</button>
-                        <button class="carousel__btn carousel__btn--next" onclick="carouselNext()">❯</button>
-                        <div class="carousel__dots" id="carousel-dots"><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot active"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button></div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="eyebrow">EAU DE PARFUM · COLECCION OUD MODERNA · CORDOBA</p>
-                <h1>La esencia de oriente, en una fragancia</h1>
-                <p style="margin-top:18px;color:var(--muted)">Selección exclusiva de fragancias. Descubre nuestra colección G5 con los más altos estándares de calidad.</p>
-                <ul class="checks">
-                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Fragancias de marcas exclusivas</span></li>
-                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Modalidad: 50% seña + 50% contra entrega</span></li>
-                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Envío gratis en Córdoba Capital</span></li>
-                </ul>
-                <div class="hero__price">
-                    <span class="hero__now">Desde $44.900</span>
-                    <span class="chip">G5 Quality</span>
-                </div>
-                <p class="hero__sub">&nbsp;Consulta de stock por WhatsApp.</p>
-                <div class="hero__cta">
-                    <a class="btn" href="#catalogo">Ver Catálogo</a>
-                    <a class="btn btn--ghost" href="#destacados">Destacados</a>
-                </div>
-                <p class="hero__risk">Reserva con seña del 50%. Abona el saldo contra entrega.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Confianza -->
-    
-    <!-- ALTERNATIVAS PARA MAMA - CON FALLBACK AUTOMATICO -->
+        <!-- ALTERNATIVAS PARA MAMA - CON FALLBACK AUTOMATICO -->
     <section id="alternativas-madre" style="padding:56px 0;background:#FBFBF9;border-top:1px solid #E9E9E6;border-bottom:1px solid #E9E9E6;">
         <div class="wrap">
             <div style="text-align:center;max-width:640px;margin:0 auto 36px;">
@@ -480,6 +446,47 @@
     <style>
         @media(min-width:750px){ .destacados-grid{grid-template-columns:repeat(3,1fr)!important;} }
     </style>
+
+    <!-- Hero original ahora debajo de alternativas -->
+    <section class="hero" data-bloque="hero">
+        <div class="wrap hero__grid">
+            <div>
+                <div class="hero__media">
+                    <div class="carousel" id="hero-carousel">
+                        <div class="carousel__track" id="carousel-track">
+                        </div>
+                        <button class="carousel__btn carousel__btn--prev" onclick="carouselPrev()">❮</button>
+                        <button class="carousel__btn carousel__btn--next" onclick="carouselNext()">❯</button>
+                        <div class="carousel__dots" id="carousel-dots"><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot active"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button><button class="carousel__dot"></button></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="eyebrow">EAU DE PARFUM · COLECCION OUD MODERNA · CORDOBA</p>
+                <h1>La esencia de oriente, en una fragancia</h1>
+                <p style="margin-top:18px;color:var(--muted)">Selección exclusiva de fragancias. Descubre nuestra colección G5 con los más altos estándares de calidad.</p>
+                <ul class="checks">
+                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Fragancias de marcas exclusivas</span></li>
+                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Modalidad: 50% seña + 50% contra entrega</span></li>
+                    <li><svg class="ic"><use href="#i-check"></use></svg><span>Envío gratis en Córdoba Capital</span></li>
+                </ul>
+                <div class="hero__price">
+                    <span class="hero__now">Desde $44.900</span>
+                    <span class="chip">G5 Quality</span>
+                </div>
+                <p class="hero__sub">&nbsp;Consulta de stock por WhatsApp.</p>
+                <div class="hero__cta">
+                    <a class="btn" href="#catalogo">Ver Catálogo</a>
+                    <a class="btn btn--ghost" href="#destacados">Destacados</a>
+                </div>
+                <p class="hero__risk">Reserva con seña del 50%. Abona el saldo contra entrega.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confianza -->
+    
+
 
     <section class="conf" data-bloque="confianza">
         <div class="wrap conf__grid">
@@ -8092,13 +8099,17 @@
             const featuredGrid = document.getElementById('featured-grid');
             const catalogGrid = document.getElementById('catalog-grid');
 
-            const featured = products.filter(p => p.featured && p.inStock).slice(0, 10);
+            // CORREGIDO: mostrar también sin stock sombreado, no desaparecer
+            const featured = products.filter(p => p.featured).slice(0, 10);
             featuredGrid.innerHTML = featured.map(createCardHtml).join('');
 
             let filtered = products.filter(p => !p.featured);
             if (currentFilter !== "Todas") {
                 filtered = products.filter(p => p.category === currentFilter);
             }
+            // Ordenar: con stock primero, sin stock después
+            filtered.sort((a,b) => (b.inStock===true) - (a.inStock===true));
+
 
             if (filtered.length === 0) {
                 catalogGrid.innerHTML = `<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)">No se encontraron productos en esta categoría.</div>`;
