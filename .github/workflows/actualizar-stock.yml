@@ -1,11 +1,9 @@
-
 name: Actualizar stock - CORREGIDO
 
 on:
   schedule:
-    # 11:00 UTC = 8:00 AM Argentina
     - cron: '0 11 * * *'
-  workflow_dispatch:  # Permite ejecutarlo manual desde Actions
+  workflow_dispatch:
 
 jobs:
   update-stock:
@@ -26,7 +24,7 @@ jobs:
       - name: Update stock.json desde Google Sheets
         env:
           SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
-        run: python scripts/update_stock.py
+        run: python scripts/update_stock_from_sheets.py
       
       - name: Commit y push si hay cambios
         run: |
