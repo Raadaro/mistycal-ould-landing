@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-10-08T03:22:43.860347",
-  "total": 64,
+  "actualizado": "2026-10-08T03:47:24.035236",
+  "total": 100,
   "con_stock": 20,
-  "sin_stock": 44,
+  "sin_stock": 80,
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
@@ -14,7 +14,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "YARA CANDY G5",
+      "nombre": "YARA FEM G6",
       "categoria": "YARA",
       "costo": 18000,
       "stock": false,
@@ -23,7 +23,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "YARA TOUS G5",
+      "nombre": "YARA FEM G7",
       "categoria": "YARA",
       "costo": 18000,
       "stock": false,
@@ -32,7 +32,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "YARA ELIXIR G5",
+      "nombre": "YARA FEM G8",
       "categoria": "YARA",
       "costo": 18000,
       "stock": false,
@@ -41,7 +41,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "YARA MOI G5",
+      "nombre": "YARA FEM G9",
       "categoria": "YARA",
       "costo": 18000,
       "stock": false,
@@ -50,7 +50,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ASAD BOURBON G5",
+      "nombre": "YARA FEM G10",
       "categoria": "ASAD",
       "costo": 18000,
       "stock": false,
@@ -59,7 +59,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ASAD G5",
+      "nombre": "YARA FEM G11",
       "categoria": "ASAD",
       "costo": 18000,
       "stock": false,
@@ -68,7 +68,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ASAD ELIXIR",
+      "nombre": "YARA FEM G12",
       "categoria": "ASAD",
       "costo": 18000,
       "stock": false,
@@ -77,7 +77,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ASAD ZANZÍBAR G5",
+      "nombre": "YARA FEM G13",
       "categoria": "ASAD",
       "costo": 18000,
       "stock": false,
@@ -86,7 +86,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "9AM DIVE G5",
+      "nombre": "YARA FEM G14",
       "categoria": "9PM",
       "costo": 25000,
       "stock": true,
@@ -95,7 +95,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "9PM REBEL G5",
+      "nombre": "YARA FEM G15",
       "categoria": "9PM",
       "costo": 25000,
       "stock": true,
@@ -104,7 +104,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "9PM NIGHT OUT G5",
+      "nombre": "YARA FEM G16",
       "categoria": "9PM",
       "costo": 35000,
       "stock": true,
@@ -113,7 +113,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "9PM ELIXIR G5",
+      "nombre": "YARA FEM G17",
       "categoria": "9PM",
       "costo": 30000,
       "stock": true,
@@ -122,7 +122,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "9PM BLACK G5",
+      "nombre": "YARA FEM G18",
       "categoria": "9PM",
       "costo": 25000,
       "stock": true,
@@ -131,7 +131,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "9 AM POUR FEMME G5",
+      "nombre": "YARA FEM G19",
       "categoria": "9PM",
       "costo": 25000,
       "stock": true,
@@ -140,7 +140,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY MANDARÍN SKY G5",
+      "nombre": "YARA FEM G20",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": false,
@@ -149,7 +149,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "MANDARÍN SKY VINTAGE G5",
+      "nombre": "YARA FEM G21",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -158,7 +158,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY BLACK FOREST G5",
+      "nombre": "YARA FEM G22",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": false,
@@ -167,7 +167,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "OSYSSEY TYRANT G5",
+      "nombre": "YARA FEM G23",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -176,7 +176,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY MARSHMALLOW G5",
+      "nombre": "YARA FEM G24",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": false,
@@ -185,7 +185,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY AQUA G5",
+      "nombre": "YARA FEM G25",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": false,
@@ -194,7 +194,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY BAHAMAS G5",
+      "nombre": "YARA FEM G26",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -203,7 +203,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY EAU DE MONTAGNE G5",
+      "nombre": "YARA FEM G27",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -212,7 +212,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "MEGA G5",
+      "nombre": "YARA FEM G28",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -221,7 +221,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ARTISTO G5",
+      "nombre": "YARA FEM G29",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -230,7 +230,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY LICHI LUSH G5",
+      "nombre": "YARA FEM G30",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -239,7 +239,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY GO MANGO G5",
+      "nombre": "YARA FEM G31",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -248,7 +248,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY REVOLUTION G5",
+      "nombre": "YARA FEM G32",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -257,7 +257,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "LIMONI G5",
+      "nombre": "YARA FEM G33",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -266,7 +266,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "HOMME WHITE G5",
+      "nombre": "YARA FEM G34",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -275,7 +275,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY PINK POP G5",
+      "nombre": "YARA FEM G35",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -284,7 +284,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY DUBAI CHOCOLATE",
+      "nombre": "YARA FEM G36",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -293,7 +293,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "ODYSSEY CANDEE G5",
+      "nombre": "YARA FEM G37",
       "categoria": "ODYSSEY",
       "costo": 25000,
       "stock": true,
@@ -302,7 +302,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME ARMAF - Revisar en Pedix",
+      "nombre": "YARA FEM G38",
       "categoria": "ARMAF",
       "costo": 25000,
       "stock": false,
@@ -311,7 +311,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME AL HARAMAIN - Revisar en Pedix",
+      "nombre": "YARA FEM G39",
       "categoria": "AL HARAMAIN",
       "costo": 25000,
       "stock": false,
@@ -320,7 +320,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME CLUB DE NUIT - Revisar en Pedix",
+      "nombre": "YARA FEM G40",
       "categoria": "CLUB DE NUIT",
       "costo": 25000,
       "stock": false,
@@ -329,7 +329,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME HAWAS - Revisar en Pedix",
+      "nombre": "YARA FEM G41",
       "categoria": "HAWAS",
       "costo": 25000,
       "stock": false,
@@ -338,7 +338,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME BHARARA - Revisar en Pedix",
+      "nombre": "YARA FEM G42",
       "categoria": "BHARARA",
       "costo": 25000,
       "stock": false,
@@ -347,7 +347,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME VULCAN - Revisar en Pedix",
+      "nombre": "YARA FEM G43",
       "categoria": "VULCAN",
       "costo": 25000,
       "stock": false,
@@ -356,7 +356,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME ORIENTICA - Revisar en Pedix",
+      "nombre": "YARA FEM G44",
       "categoria": "ORIENTICA",
       "costo": 25000,
       "stock": false,
@@ -365,7 +365,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME LATTAFA - Revisar en Pedix",
+      "nombre": "YARA FEM G45",
       "categoria": "LATTAFA",
       "costo": 25000,
       "stock": false,
@@ -374,7 +374,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME SUPREMACY - Revisar en Pedix",
+      "nombre": "YARA FEM G46",
       "categoria": "SUPREMACY",
       "costo": 25000,
       "stock": false,
@@ -383,7 +383,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME BADEE AL OUD - Revisar en Pedix",
+      "nombre": "YARA FEM G47",
       "categoria": "BADEE AL OUD",
       "costo": 25000,
       "stock": false,
@@ -392,7 +392,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME KHAMRAH - Revisar en Pedix",
+      "nombre": "YARA FEM G48",
       "categoria": "KHAMRAH",
       "costo": 25000,
       "stock": false,
@@ -401,7 +401,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME FURSAN - Revisar en Pedix",
+      "nombre": "YARA FEM G49",
       "categoria": "FURSAN",
       "costo": 25000,
       "stock": false,
@@ -410,7 +410,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME FRENCH AVENUE - Revisar en Pedix",
+      "nombre": "YARA FEM G50",
       "categoria": "FRENCH AVENUE",
       "costo": 25000,
       "stock": false,
@@ -419,7 +419,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME AROMATIX - Revisar en Pedix",
+      "nombre": "YARA FEM G51",
       "categoria": "AROMATIX",
       "costo": 25000,
       "stock": false,
@@ -428,7 +428,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME XERJOFF - Revisar en Pedix",
+      "nombre": "YARA FEM G52",
       "categoria": "XERJOFF",
       "costo": 25000,
       "stock": false,
@@ -437,7 +437,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME ECLAIRE - Revisar en Pedix",
+      "nombre": "YARA FEM G53",
       "categoria": "ECLAIRE",
       "costo": 25000,
       "stock": false,
@@ -446,7 +446,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME RAYHAAN - Revisar en Pedix",
+      "nombre": "YARA FEM G54",
       "categoria": "RAYHAAN",
       "costo": 25000,
       "stock": false,
@@ -455,7 +455,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME AHMED - Revisar en Pedix",
+      "nombre": "YARA FEM G55",
       "categoria": "AHMED",
       "costo": 25000,
       "stock": false,
@@ -464,7 +464,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME FAKHAR - Revisar en Pedix",
+      "nombre": "YARA FEM G56",
       "categoria": "FAKHAR",
       "costo": 25000,
       "stock": false,
@@ -473,7 +473,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME AMEERAT - Revisar en Pedix",
+      "nombre": "YARA FEM G57",
       "categoria": "AMEERAT",
       "costo": 25000,
       "stock": false,
@@ -482,7 +482,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME PARIS CORNER - Revisar en Pedix",
+      "nombre": "YARA FEM G58",
       "categoria": "PARIS CORNER",
       "costo": 25000,
       "stock": false,
@@ -491,7 +491,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME SABRINA CARPENTER - Revisar en Pedix",
+      "nombre": "YARA FEM G59",
       "categoria": "SABRINA CARPENTER",
       "costo": 25000,
       "stock": false,
@@ -500,7 +500,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME JPG - Revisar en Pedix",
+      "nombre": "YARA FEM G60",
       "categoria": "JPG",
       "costo": 25000,
       "stock": false,
@@ -509,7 +509,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME GIVE ME GOURMAND - Revisar en Pedix",
+      "nombre": "YARA FEM G61",
       "categoria": "GIVE ME GOURMAND",
       "costo": 25000,
       "stock": false,
@@ -518,7 +518,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME MUSAMAM - Revisar en Pedix",
+      "nombre": "YARA FEM G62",
       "categoria": "MUSAMAM",
       "costo": 25000,
       "stock": false,
@@ -527,7 +527,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME KAYALI - Revisar en Pedix",
+      "nombre": "YARA FEM G63",
       "categoria": "KAYALI",
       "costo": 25000,
       "stock": false,
@@ -536,7 +536,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME JO MILANO - Revisar en Pedix",
+      "nombre": "YARA FEM G64",
       "categoria": "JO MILANO",
       "costo": 25000,
       "stock": false,
@@ -545,7 +545,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME SPECTRE - Revisar en Pedix",
+      "nombre": "YARA FEM G65",
       "categoria": "SPECTRE",
       "costo": 25000,
       "stock": false,
@@ -554,7 +554,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME MAISON ASRAR - Revisar en Pedix",
+      "nombre": "YARA FEM G66",
       "categoria": "MAISON ASRAR",
       "costo": 25000,
       "stock": false,
@@ -563,7 +563,7 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME KHSAFA - Revisar en Pedix",
+      "nombre": "YARA FEM G67",
       "categoria": "KHSAFA",
       "costo": 25000,
       "stock": false,
@@ -572,13 +572,337 @@
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
     },
     {
-      "nombre": "PERFUME Otros - Revisar en Pedix",
+      "nombre": "YARA FEM G68",
       "categoria": "Otros",
       "costo": 25000,
       "stock": false,
       "stock_text": "NO",
       "precio": 62360,
       "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G69",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G70",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G71",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G72",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G73",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G74",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G75",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G76",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G77",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G78",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G79",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G80",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G81",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G82",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G83",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G84",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G85",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "Y",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G87",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G88",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G89",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G90",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G91",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G92",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G93",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G94",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G95",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G96",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G97",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G98",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G99",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G100",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G101",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G102",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G103",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G104",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
     }
   ]
 }
