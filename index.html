@@ -123,6 +123,9 @@
         .var__card.out-of-stock{opacity:0.38!important;filter:grayscale(100%);pointer-events:none!important;position:relative}
         .var__card.out-of-stock:hover{transform:none!important;box-shadow:none!important;border-color:var(--line)!important}
         .var__card.out-of-stock .var__img img{filter:grayscale(100%)}
+        .editing .var__card.out-of-stock{pointer-events:auto!important;}
+        .editing .var__card{pointer-events:auto!important;}
+
 
         .var__img{position:relative}
         .var__img .ph{aspect-ratio:1/1;border-radius:0;border:0;border-bottom:1.5px dashed color-mix(in srgb,var(--ink) 30%,transparent)}
@@ -291,6 +294,8 @@
     </defs></svg>
 
     <!-- Botón de edición -->
+    <div id="edit-hint" class="edit-hint">Hacé click en cualquier texto para editarlo</div>
+    <div id="save-bar" class="save-bar" onclick="saveAllChanges()"><i class="fa-solid fa-floppy-disk"></i> Guardar cambios</div>
     <button class="edit-toggle" id="edit-toggle" onclick="toggleEditMode()"><i class="fa-solid fa-pen"></i> Editar</button>
     <div class="edit-hint">Hacé click en cualquier texto para editarlo</div>
     <button class="save-bar" onclick="saveAllChanges()">
@@ -325,74 +330,97 @@
     </section>
 
     <!-- Hero -->
-        <!-- ALTERNATIVAS PARA MAMA - CON FALLBACK AUTOMATICO -->
-    <section id="alternativas-madre" style="padding:56px 0;background:#FBFBF9;border-top:1px solid #E9E9E6;border-bottom:1px solid #E9E9E6;">
+        
+    <!-- BANNER PRINCIPAL DIA DE LA MADRE - 3 PERSONALIDADES CON 2 SUPLENTES -->
+    <section id="alternativas-madre" data-bloque="alternativas" style="padding:56px 0;background:#FBFBF9;border-top:1px solid #E9E9E6;border-bottom:1px solid #E9E9E6;">
         <div class="wrap">
-            <div style="text-align:center;max-width:640px;margin:0 auto 36px;">
-                <p style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:#D4AF37;font-weight:700;">Mistycal · Día de la Madre</p>
-                <h2 style="font-family:var(--font-display);font-size:32px;margin:12px 0 8px;">Si voló, te dejamos el reemplazo</h2>
-                <p style="color:#5F5A57;font-size:14px;">Si tu Yara favorito no tiene stock, mostramos automático la alternativa igual de rica que SÍ tiene stock HOY.</p>
+            <div style="text-align:center;max-width:720px;margin:0 auto 36px;">
+                <p style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:#D4AF37;font-weight:700;" data-bloque="alternativas">MISTYCAL · DÍA DE LA MADRE</p>
+                <h2 style="font-family:var(--font-display);font-size:32px;margin:12px 0 8px;" data-bloque="alternativas">Si voló, te dejamos el reemplazo</h2>
+                <p style="color:#5F5A57;font-size:14px;" data-bloque="alternativas">Si tu Yara favorito no tiene stock, mostramos automático la alternativa igual de rica que SÍ tiene stock HOY. Elegí por personalidad.</p>
             </div>
-            <div style="display:grid;grid-template-columns:1fr;gap:18px;max-width:980px;margin:0 auto;" class="destacados-grid">
-                <!-- Cards con data-titular / data-suplente -->
-                <div data-card="" data-titular="YARA-CANDY-G5" data-suplente="CLUB-DE-NUIT-WOMAN-G5" style="position: relative; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgb(233, 233, 230); border-radius: 20px; padding: 18px; opacity: 1;">
+            <div class="destacados-grid" style="display:grid;grid-template-columns:1fr;gap:18px;max-width:1100px;margin:0 auto;">
+                <!-- 1 MADRE DULCE -->
+                <div data-card data-personalidad="MADRE DULCE Y FEMENINA" data-titular="YARA-CANDY-G5" data-suplente1="ODYSSEY-CANDEE-G5" data-suplente2="ODYSSEY-PINK-POP-G5" style="position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid #E9E9E6;border-radius:20px;padding:18px;">
+                    <div style="margin-bottom:10px;">
+                        <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#EC4899;font-weight:700;">1 · MADRE DULCE Y FEMENINA</span>
+                        <p style="font-size:12px;color:#5F5A57;margin-top:4px;">Abrazo, vainilla, dulce, tierna</p>
+                    </div>
                     <div style="position:relative;aspect-ratio:1/1;background:#F6F2EE;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-                        <span style="font-family:var(--font-display);font-size:22px;font-weight:600;">YARA CANDY</span>
-                        <span data-badge="" style="position:absolute;top:10px;left:10px;background:#7A1F3D;color:#fff;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">SIN STOCK</span>
-                        <span data-repl-badge="" style="position: absolute; top: 10px; left: 10px; background: rgb(212, 175, 55); color: rgb(0, 0, 0); font-size: 10px; padding: 4px 8px; border-radius: 99px; display: block;">REEMPLAZO CON STOCK</span>
+                        <span data-initial style="font-family:var(--font-display);font-size:22px;font-weight:600;">YARA CANDY</span>
+                        <span data-badge style="position:absolute;top:10px;left:10px;background:#7A1F3D;color:#fff;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">SIN STOCK</span>
+                        <span data-repl-badge style="position:absolute;top:10px;left:10px;background:#D4AF37;color:#000;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">REEMPLAZO CON STOCK</span>
                     </div>
                     <div style="margin-top:14px;">
-                        <p data-name="" style="font-weight:600;font-size:15px;">CLUB DE NUIT WOMAN G5</p>
-                        <p style="font-size:12px;color:#5F5A57;">Lattafa · 100ML</p>
-                        <p data-price="" style="margin-top:8px;font-weight:700;">$44.899</p>
-                        <button data-btn="" style="margin-top:12px;width:100%;height:44px;border-radius:9999px;background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;">Reservar</button>
+                        <p data-name style="font-weight:600;font-size:15px;">YARA CANDY G5</p>
+                        <p data-nota style="font-size:12px;color:#5F5A57;">Lattafa · 100ML</p>
+                        <p data-price style="margin-top:8px;font-weight:700;">$44.899</p>
+                        <p data-info style="font-size:11px;color:#9A9A96;margin-top:6px;">Mostrando: Titular</p>
+                        <button data-btn style="margin-top:12px;width:100%;height:44px;border-radius:9999px;background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;">Reservar</button>
                     </div>
                 </div>
-                <div data-card="" data-titular="9PM-POUR-FEMME-G5" data-suplente="VALAYA-G5" style="position: relative; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgb(233, 233, 230); border-radius: 20px; padding: 18px; opacity: 1;">
+                <!-- 2 INTENSA Y SENSUAL -->
+                <div data-card data-personalidad="INTENSA Y SENSUAL" data-titular="9PM-POUR-FEMME-G5" data-suplente1="9PM-ELIXIR-G5" data-suplente2="9PM-BLACK-G5" style="position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid #E9E9E6;border-radius:20px;padding:18px;">
+                    <div style="margin-bottom:10px;">
+                        <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#7A1F3D;font-weight:700;">2 · INTENSA Y SENSUAL</span>
+                        <p style="font-size:12px;color:#5F5A57;margin-top:4px;">Noche, fiesta, deja estela, seductora</p>
+                    </div>
                     <div style="position:relative;aspect-ratio:1/1;background:#F6F2EE;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-                        <span style="font-family:var(--font-display);font-size:22px;font-weight:600;">9PM POUR FEMME</span>
-                        <span data-badge="" style="position:absolute;top:10px;left:10px;background:#7A1F3D;color:#fff;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">SIN STOCK</span>
-                        <span data-repl-badge="" style="position:absolute;top:10px;left:10px;background:#D4AF37;color:#000;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">REEMPLAZO CON STOCK</span>
+                        <span data-initial style="font-family:var(--font-display);font-size:20px;font-weight:600;">9PM POUR FEMME</span>
+                        <span data-badge style="position:absolute;top:10px;left:10px;background:#7A1F3D;color:#fff;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">SIN STOCK</span>
+                        <span data-repl-badge style="position:absolute;top:10px;left:10px;background:#D4AF37;color:#000;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">REEMPLAZO CON STOCK</span>
                     </div>
                     <div style="margin-top:14px;">
-                        <p data-name="" style="font-weight:600;font-size:15px;">9PM POUR FEMME G5</p>
-                        <p style="font-size:12px;color:#5F5A57;">Afnan · 100ML</p>
-                        <p data-price="" style="margin-top:8px;font-weight:700;">$44.899</p>
-                        <button data-btn="" style="margin-top:12px;width:100%;height:44px;border-radius:9999px;background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;">Reservar</button>
+                        <p data-name style="font-weight:600;font-size:15px;">9PM POUR FEMME G5</p>
+                        <p data-nota style="font-size:12px;color:#5F5A57;">Afnan · 100ML</p>
+                        <p data-price style="margin-top:8px;font-weight:700;">$44.899</p>
+                        <p data-info style="font-size:11px;color:#9A9A96;margin-top:6px;">Mostrando: Titular</p>
+                        <button data-btn style="margin-top:12px;width:100%;height:44px;border-radius:9999px;background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;">Reservar</button>
                     </div>
                 </div>
-                <div data-card="" data-titular="HOMME-WHITE-G5" data-suplente="ASAD-G5" style="position: relative; display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgb(233, 233, 230); border-radius: 20px; padding: 18px; opacity: 1;">
+                <!-- 3 FRESCA DEPORTIVA -->
+                <div data-card data-personalidad="FRESCA DEPORTIVA" data-titular="HOMME-WHITE-G5" data-suplente1="ODYSSEY-BAHAMAS-G5" data-suplente2="9AM-DIVE-G5" style="position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid #E9E9E6;border-radius:20px;padding:18px;">
+                    <div style="margin-bottom:10px;">
+                        <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#3B82F6;font-weight:700;">3 · FRESCA DEPORTIVA</span>
+                        <p style="font-size:12px;color:#5F5A57;margin-top:4px;">Limpia, gym, todos los días, fresca</p>
+                    </div>
                     <div style="position:relative;aspect-ratio:1/1;background:#F6F2EE;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-                        <span style="font-family:var(--font-display);font-size:22px;font-weight:600;">HOMME WHITE</span>
-                        <span data-badge="" style="position:absolute;top:10px;left:10px;background:#7A1F3D;color:#fff;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">SIN STOCK</span>
-                        <span data-repl-badge="" style="position:absolute;top:10px;left:10px;background:#D4AF37;color:#000;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">REEMPLAZO CON STOCK</span>
+                        <span data-initial style="font-family:var(--font-display);font-size:22px;font-weight:600;">HOMME WHITE</span>
+                        <span data-badge style="position:absolute;top:10px;left:10px;background:#7A1F3D;color:#fff;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">SIN STOCK</span>
+                        <span data-repl-badge style="position:absolute;top:10px;left:10px;background:#D4AF37;color:#000;font-size:10px;padding:4px 8px;border-radius:99px;display:none;">REEMPLAZO CON STOCK</span>
                     </div>
                     <div style="margin-top:14px;">
-                        <p data-name="" style="font-weight:600;font-size:15px;">HOMME WHITE G5</p>
-                        <p style="font-size:12px;color:#5F5A57;">Milestone · 100ML</p>
-                        <p data-price="" style="margin-top:8px;font-weight:700;">$62.360</p>
-                        <button data-btn="" style="margin-top:12px;width:100%;height:44px;border-radius:9999px;background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;">Reservar</button>
+                        <p data-name style="font-weight:600;font-size:15px;">HOMME WHITE G5</p>
+                        <p data-nota style="font-size:12px;color:#5F5A57;">Milestone · 100ML</p>
+                        <p data-price style="margin-top:8px;font-weight:700;">$62.360</p>
+                        <p data-info style="font-size:11px;color:#9A9A96;margin-top:6px;">Mostrando: Titular</p>
+                        <button data-btn style="margin-top:12px;width:100%;height:44px;border-radius:9999px;background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;">Reservar</button>
                     </div>
                 </div>
             </div>
-            <p style="text-align:center;margin-top:18px;font-size:11px;color:#9A9A96;">Solo CBA Capital · Día de la Madre · Si el titular no tiene stock, se muestra el suplente automático</p>
+            <p style="text-align:center;margin-top:18px;font-size:11px;color:#9A9A96;" data-bloque="alternativas">Solo CBA Capital · Día de la Madre · Si el titular no tiene stock, se muestra automático suplente 1, luego suplente 2</p>
         </div>
     </section>
     <script>
     (async function(){
       const CATALOGO = {
-        "YARA-CANDY-G5": { nombre: "YARA CANDY G5", precio: "$44.899", nota: "Lattafa · 100ML" },
-        "9PM-POUR-FEMME-G5": { nombre: "9PM POUR FEMME G5", precio: "$44.899", nota: "Afnan · 100ML" },
-        "HOMME-WHITE-G5": { nombre: "HOMME WHITE G5", precio: "$62.360", nota: "Milestone · 100ML" },
-        "CLUB-DE-NUIT-WOMAN-G5": { nombre: "CLUB DE NUIT WOMAN G5", precio: "$44.899", nota: "Armaf · 100ML" },
-        "VALAYA-G5": { nombre: "VALAYA G5", precio: "$44.899", nota: "Paris Corner · 100ML" },
-        "ASAD-G5": { nombre: "ASAD G5", precio: "$62.360", nota: "Lattafa · 100ML" }
+        "YARA-CANDY-G5": { nombre: "YARA CANDY G5", precio: "$44.899", nota: "Lattafa · 100ML", id: 2 },
+        "ODYSSEY-CANDEE-G5": { nombre: "ODYSSEY CANDEE G5", precio: "$44.899", nota: "Odyssey · 100ML", id: 29 },
+        "ODYSSEY-PINK-POP-G5": { nombre: "ODYSSEY PINK POP G5", precio: "$44.899", nota: "Odyssey · 100ML", id: 25 },
+        "9PM-POUR-FEMME-G5": { nombre: "9PM POUR FEMME G5", precio: "$44.899", nota: "Afnan · 100ML", id: 14 },
+        "9PM-ELIXIR-G5": { nombre: "9PM ELIXIR G5", precio: "$44.899", nota: "Afnan · 100ML", id: 12 },
+        "9PM-BLACK-G5": { nombre: "9PM BLACK G5", precio: "$44.899", nota: "Afnan · 100ML", id: 13 },
+        "HOMME-WHITE-G5": { nombre: "HOMME WHITE G5", precio: "$62.360", nota: "Milestone · 100ML", id: 36 },
+        "ODYSSEY-BAHAMAS-G5": { nombre: "ODYSSEY BAHAMAS G5", precio: "$44.899", nota: "Odyssey · 100ML", id: 21 },
+        "9AM-DIVE-G5": { nombre: "9AM DIVE G5", precio: "$44.899", nota: "Afnan · 100ML", id: 9 },
+        "CLUB-DE-NUIT-WOMAN-G5": { nombre: "CLUB DE NUIT WOMAN G5", precio: "$44.899", nota: "Armaf · 100ML", id: 75 },
+        "VALAYA-G5": { nombre: "VALAYA G5", precio: "$44.899", nota: "Paris Corner · 100ML", id: 127 },
+        "ASAD-G5": { nombre: "ASAD G5", precio: "$62.360", nota: "Lattafa · 100ML", id: 7 }
       };
       try {
-        const res = await fetch('./stock.json', { cache: 'no-store' });
+        const res = await fetch('./stock.json?v=' + Date.now(), { cache: 'no-store' });
         if(!res.ok) throw new Error('no stock.json');
         const raw = await res.json();
-        // stock.json puede venir en formato {perfumes:[{nombre,stock}]} o formato simple {ID:true}
         let stock = {};
         if (raw.perfumes) {
             raw.perfumes.forEach(p=>{
@@ -402,50 +430,83 @@
         } else {
             stock = raw;
         }
-        document.querySelectorAll('[data-card]').forEach(card => {
+        document.querySelectorAll('#alternativas-madre [data-card]').forEach(card => {
           const titular = card.getAttribute('data-titular');
-          const suplente = card.getAttribute('data-suplente');
+          const suplente1 = card.getAttribute('data-suplente1');
+          const suplente2 = card.getAttribute('data-suplente2');
           const nameEl = card.querySelector('[data-name]');
+          const notaEl = card.querySelector('[data-nota]');
           const priceEl = card.querySelector('[data-price]');
+          const infoEl = card.querySelector('[data-info]');
           const btn = card.querySelector('[data-btn]');
           const badge = card.querySelector('[data-badge]');
           const replBadge = card.querySelector('[data-repl-badge]');
-          const titularHay = stock[titular] !== false;
+          const initialEl = card.querySelector('[data-initial]');
+
+          // logica con 2 suplentes
           let idMostrar = titular;
+          let nivel = 'Titular';
           let esReemplazo = false;
-          if(!titularHay){
-            idMostrar = suplente;
-            esReemplazo = true;
+          const hay = (id) => stock[id] !== false;
+
+          if(!hay(titular)){
+            if(suplente1 && hay(suplente1)){
+                idMostrar = suplente1; nivel='Suplente 1'; esReemplazo=true;
+            } else if(suplente2 && hay(suplente2)){
+                idMostrar = suplente2; nivel='Suplente 2'; esReemplazo=true;
+            } else {
+                idMostrar = titular; nivel='Sin stock'; 
+            }
           }
-          const hayStockFinal = stock[idMostrar] !== false;
+
+          const hayStockFinal = hay(idMostrar);
           const data = CATALOGO[idMostrar];
+
           if(data){
             if(nameEl) nameEl.textContent = data.nombre;
+            if(notaEl) notaEl.textContent = data.nota;
             if(priceEl) priceEl.textContent = data.precio;
+            if(initialEl) initialEl.textContent = data.nombre.replace(' G5','');
+            if(infoEl) infoEl.textContent = hayStockFinal ? 'Mostrando: '+nivel : 'Sin stock en los 3';
+            // boton reservar abre modal si hay stock
+            if(btn){
+                if(hayStockFinal){
+                    btn.textContent = 'Reservar';
+                    btn.disabled = false;
+                    btn.style.background='#111'; btn.style.color='#fff'; btn.style.cursor='pointer';
+                    btn.onclick = ()=> openReserveModal(data.id);
+                } else {
+                    btn.textContent = 'No disponible';
+                    btn.disabled = true;
+                    btn.style.background='#E9E9E6'; btn.style.color='#9A9A96'; btn.style.cursor='not-allowed';
+                    btn.onclick = null;
+                }
+            }
           }
+
           if(esReemplazo && hayStockFinal){
             replBadge && (replBadge.style.display='block');
-          } else {
-            replBadge && (replBadge.style.display='none');
-          }
-          if(!hayStockFinal){
-            card.style.opacity = '0.55';
-            badge && (badge.style.display='block');
-            if(btn){ btn.textContent = 'No disponible'; btn.disabled = true; btn.style.background='#E9E9E6'; btn.style.color='#9A9A96'; btn.style.cursor='not-allowed'; }
-          } else {
-            card.style.opacity = '1';
             badge && (badge.style.display='none');
-            if(btn){ btn.textContent = 'Reservar'; btn.disabled = false; btn.style.background='#111'; btn.style.color='#fff'; btn.style.cursor='pointer'; }
+            card.style.opacity='1';
+          } else if(!hayStockFinal){
+            badge && (badge.style.display='block');
+            replBadge && (replBadge.style.display='none');
+            card.style.opacity='0.55';
+          } else {
+            badge && (badge.style.display='none');
+            replBadge && (replBadge.style.display='none');
+            card.style.opacity='1';
           }
         });
       } catch(e){
-        console.warn('[MISTYCAL] No se pudo leer stock.json, se muestran titulares', e);
+        console.warn('[MISTYCAL] No se pudo leer stock.json', e);
       }
     })();
     </script>
     <style>
         @media(min-width:750px){ .destacados-grid{grid-template-columns:repeat(3,1fr)!important;} }
     </style>
+
 
 <section class="hero" data-bloque="hero">
         <div class="wrap hero__grid">
@@ -8528,16 +8589,52 @@
         }
 
         function toggleEditMode() {
-            isEditing = !isEditing;
-            document.body.classList.toggle('editing', isEditing);
-            getEditableEls().forEach(el => {
-                if (isEditing) el.setAttribute('contenteditable', 'true');
-                else el.removeAttribute('contenteditable');
-            });
-            const btn = document.getElementById('edit-toggle');
-            btn.classList.toggle('active', isEditing);
-            btn.innerHTML = isEditing ? '<i class="fa-solid fa-check"></i> Listo' : '<i class="fa-solid fa-pen"></i> Editar';
+            try{
+                isEditing = !isEditing;
+                document.body.classList.toggle('editing', isEditing);
+                const els = getEditableEls();
+                console.log('[EDIT] elementos encontrados:', els.length, 'modo:', isEditing);
+                els.forEach(el => {
+                    if (isEditing) el.setAttribute('contenteditable', 'true');
+                    else el.removeAttribute('contenteditable');
+                });
+                const btn = document.getElementById('edit-toggle');
+                if(btn){
+                    btn.classList.toggle('active', isEditing);
+                    btn.innerHTML = isEditing ? '<i class="fa-solid fa-check"></i> Listo' : '<i class="fa-solid fa-pen"></i> Editar';
+                }
+                // mostrar/ocultar hint
+                const hint = document.getElementById('edit-hint');
+                if(hint) hint.style.display = isEditing ? 'block' : 'none';
+                const saveBar = document.getElementById('save-bar');
+                if(saveBar) saveBar.style.display = isEditing ? 'block' : 'none';
+            }catch(err){
+                console.error('[EDIT] error', err);
+                alert('Error modo edición: '+err.message);
+            }
         }
+        // Asegurar que el botón funcione aunque el onclick inline falle
+        document.addEventListener('DOMContentLoaded', function(){
+            const b = document.getElementById('edit-toggle');
+            if(b){
+                b.addEventListener('click', function(e){
+                    e.preventDefault();
+                    toggleEditMode();
+                });
+            }
+            // init textos guardados
+            try{
+                const saved = localStorage.getItem('mistycalould_texts');
+                if(saved){
+                    const texts = JSON.parse(saved);
+                    getEditableEls().forEach(el=>{
+                        const f = el.getAttribute('data-field');
+                        if(texts[f]) el.innerHTML = texts[f];
+                    });
+                }
+            }catch(e){}
+        });
+
 
         // En modo edición, los links no deben navegar al tocar un texto
         document.addEventListener('click', function(e) {
@@ -8789,6 +8886,6 @@
             <div class="reserve-body" id="reserve-content"></div>
         </div>
     </div>
-    <script src="./volaron.js?v=3"></script>
+    <!-- volaron.js removido - no necesario, causaba 404 -->
 
 </body></html>
