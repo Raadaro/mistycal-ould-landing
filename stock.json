@@ -1,508 +1,266 @@
 {
-  "actualizado": "2026-10-08T03:55:32.318Z",
-  "total": 100,
-  "con_stock": 20,
-  "sin_stock": 80,
-  "perfumes": [
-    {
-      "nombre": "YARA FEM G5",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G6",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G7",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G8",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G9",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G10",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G11",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G12",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G13",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G14",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G15",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G16",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G17",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G18",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G19",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G20",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G21",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G22",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G23",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G24",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G25",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G26",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G27",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G28",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G29",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G30",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G31",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G32",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G33",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G34",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G35",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G36",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G37",
-      "stock": true,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G38",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G39",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G40",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G41",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G42",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G43",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G44",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G45",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G46",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G47",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G48",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G49",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G50",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G51",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G52",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G53",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G54",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G55",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G56",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G57",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G58",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G59",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G60",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G61",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G62",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G63",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G64",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G65",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G66",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G67",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G68",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G69",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G70",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G71",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G72",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G73",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G74",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G75",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G76",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G77",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G78",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G79",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G80",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G81",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G82",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G83",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G84",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G85",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "Y",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G87",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G88",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G89",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G90",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G91",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G92",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G93",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G94",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G95",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G96",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G97",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G98",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G99",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G100",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G101",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G102",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G103",
-      "stock": false,
-      "reemplazo": ""
-    },
-    {
-      "nombre": "YARA FEM G104",
-      "stock": false,
-      "reemplazo": ""
-    }
-  ]
+  "YARA-FEM-G5": true,
+  "YARA-CANDY-G5": true,
+  "YARA-TOUS-G5": true,
+  "YARA-ELIXIR-G5": true,
+  "YARA-MOI-G5": true,
+  "ASAD-BOURBON-G5": true,
+  "ASAD-G5": true,
+  "ASAD-ZANZIBAR-G5": true,
+  "9AM-DIVE-G5": true,
+  "9PM-REBEL-G5": true,
+  "9PM-NIGHT-OUT-G5": true,
+  "9PM-ELIXIR-G5": true,
+  "9PM-BLACK-G5": true,
+  "9-AM-POUR-FEMME-G5": true,
+  "ODYSSEY-MANDARIN-SKY-G5": true,
+  "MANDARIN-SKY-VINTAGE-G5": true,
+  "ODYSSEY-BLACK-FOREST-G5": true,
+  "OSYSSEY-TYRANT-G5": true,
+  "ODYSSEY-MARSHMALLOW-G5": true,
+  "ODYSSEY-AQUA-G5": true,
+  "ODYSSEY-BAHAMAS-G5": true,
+  "ODYSSEY-EAU-DE-MONTAGNE-G5": true,
+  "MEGA-G5": true,
+  "ARTISTO-G5": true,
+  "ODYSSEY-PINK-POP-G5": true,
+  "ODYSSEY-LICHI-LUSH-G5": true,
+  "ODYSSEY-GO-MANGO-G5": true,
+  "ODYSSEY-DUBAI-CHOCOLATE-G5": true,
+  "ODYSSEY-CANDEE-G5": true,
+  "ODYSSEY-REVOLUTION-G5": true,
+  "ODYSSEY-MANDARIN-SKY-ELIXIR-G5": true,
+  "ODYSSEY-AOUD-G5": true,
+  "ODYSSEY-TOFFEE-COFFEE-G5": true,
+  "ODYSSEY-WILD-ONE-G5": true,
+  "LIMONI-G5": true,
+  "HOMME-WHITE-G5": true,
+  "SPECTRA-RAINBOW-G5": true,
+  "SPECTRA-BLU-G5": true,
+  "INFINITY-GOLD-G5": true,
+  "INFINITY-SILVER-G5": true,
+  "ISLAND-BREEZE-G5": true,
+  "DELICACY-KUNAFA-CHOCOLATE-G5": true,
+  "DELICACY-RED-VELVET-G5": true,
+  "ETER-ARABIAN-SKY-G5": true,
+  "BEACH-PARTY-G5": true,
+  "YUM-YUM-G5": true,
+  "BON-BON-G5": true,
+  "ISLAND-BLISS-G5": true,
+  "SHK-SAOUD-ALKAABI-G5": true,
+  "DELICACY-COTTON-CANDY-G5": true,
+  "SPACE-AGE-G5": true,
+  "AL-HARAMAIN-AQUA-DUBAI-G5": true,
+  "AL-HARAMAIN-GOLD-EDITION-G5": true,
+  "AL-HARAMAIN-BLEU-EDITION-G5": true,
+  "AL-HARAMAIN-PRIVATE-EDITION-G5": true,
+  "AL-HARAMAIN-DUBAI-NIGHT-60ML-G5": true,
+  "AL-HARAMAIN-GOLD-100ML-G5": true,
+  "AL-HARAMAIN-WHITE-G5": true,
+  "AL-HARAMAIN-ULTRA-VIOLET-G5": true,
+  "AL-HARAMAIN-RUBY-G5": true,
+  "AL-HARAMAIN-GOLD-120ML-G5-DORADO-Y-NEGRO": true,
+  "AL-HARAMAIN-CARBON-G5": true,
+  "BON-CHERIE-ROJO-G5": true,
+  "CDN-INTENSE-MAN-G5": true,
+  "CLUB-DE-NUIT-BLING-G5": true,
+  "CDN-MILESTONE-G5": true,
+  "CDN-SILLAGE-G5": true,
+  "CDN-URBAN-MAN-G5": true,
+  "CDN-URBAN-MAN-ELIXIR-G5": true,
+  "CDN-MALEKA-G5": true,
+  "CDN-ICONIC-G5": true,
+  "CDN-UNTOLD-G5": true,
+  "CDN-IMPERIALE-G5": true,
+  "LIONHEART-G5": true,
+  "CDN-WOMAN-G5": true,
+  "CLUB-DE-NUIT-OUD-G5": true,
+  "HAWAS-FIRE-G5": true,
+  "HAWAS-KOBRA-G5": true,
+  "HAWAS-LONDON-G5": true,
+  "HAWAS-VIPER-G5": true,
+  "HAWAS-MALIBU-G5": true,
+  "HAWAS-VERDE-G5": true,
+  "HAWAS-DIVA-G5": true,
+  "HAWAS-THUNDER-G5": true,
+  "HAWAS-LAVA-GOLD-G5": true,
+  "HAWAS-BLACK-G5": true,
+  "HAWAS-ICE-G5": true,
+  "HAWAS-ELIXIR-G5": true,
+  "HAWAS-ATLANTIS-G5": true,
+  "HAWAS-ECLAT-G5": true,
+  "HAWAS-TROPICAL-G5": true,
+  "HAWAS-PINK-G5": true,
+  "BHARARA-ROSE-G5": true,
+  "BHARARA-SCARLET-G5": true,
+  "BHARARA-QUEEN-G5": true,
+  "BHARARA-KING-SOLEIL-G5": true,
+  "BHARARA-KING-G5": true,
+  "BHARARA-BLEU-G5": true,
+  "BHARARA-CHOCOLATE-G5": true,
+  "BHARARA-KING-GOLD-G5": true,
+  "BHARARA-NICHE-FEMME-G5": true,
+  "VULCAN-FEU-G5": true,
+  "VULVAN-SABLE-G5": true,
+  "VULCAN-BAIE-G5": true,
+  "VULCAN-BLACK-G5": true,
+  "ORIENTICA-ROYAL-AMBER-G5": true,
+  "ORIENTICA-AMBER-ROUGE-G5": true,
+  "ORIENTICA-OUD-SAFFRON-G5": true,
+  "ORIENTICA-ROYAL-BLEU-G5": true,
+  "ORIENTICA-NARDO-OUD-G5": true,
+  "ORIENTICA-VELVET-GOLD-G5": true,
+  "ATHEERI-G5": true,
+  "ANGHAM-G5": true,
+  "HER-CONFESSION-G5": true,
+  "TERIAQ-INTENSE-G5": true,
+  "TERIAQ-G5": true,
+  "HAYAAM-G5": true,
+  "SECOND-SONG-G5": true,
+  "VINTAGE-RADIO-G5": true,
+  "DALAL-G5": true,
+  "THE-KINGDOM-FEM-G5": true,
+  "THE-KINGDOM-G5": true,
+  "ART-OF-UNIVERSE-G5": true,
+  "ART-OF-ARABIA-I-G5": true,
+  "AFEEF-G5": true,
+  "NOW-WOMEN-G5": true,
+  "VICTORIA-G5": true,
+  "HIS-CONFESSION-G5": true,
+  "SAKEENA-G5": true,
+  "QAAED-AL-SHABAAB-G5": true,
+  "QAAED-G5": true,
+  "NOW-INTENSE-G5": true,
+  "NOW-ROUGE-G5": true,
+  "NOW-WHITE-G5": true,
+  "NOW-NEGRO-G5": true,
+  "HAYA-G5": true,
+  "MAYAR-ROSA-G5": true,
+  "CONFIDENTIAL-GOLD-G5": true,
+  "RAMZ-GOLD-G5": true,
+  "SUPREMACY-IN-OUD-G5": true,
+  "SUPREMACY-NOT-ONLY-INTENSE-G5": true,
+  "SUPREMACY-COLLECTORS-G5": true,
+  "SUPREMACY-NOIR-G5": true,
+  "OUD-FOR-GLORY-G5": true,
+  "NOBLE-BLUSH-G5": true,
+  "SUBLIME-G5": true,
+  "HONOR-AND-GLORY-G5": true,
+  "AMETHYST-G5": true,
+  "KHAMRAH-G5": true,
+  "KHAMRAH-QAHWA-G5": true,
+  "KHAMRAH-KARAZ-G5": true,
+  "KHARMRAH-DUKHAN-G5": true,
+  "KHAMRAH-ZANQAM-G5": true,
+  "KHARMRAH-WAHA-G5": true,
+  "QAED-AL-FURSAN-BLANCO-G5": true,
+  "FURSAN-MARRON-G5": true,
+  "QAED-AL-FURSAN-NEGRO-G5": true,
+  "IRIDA-EXTRAIT-G5": true,
+  "VENENO-SCARLET-G5": true,
+  "VENENO-NEGRO-G5": true,
+  "JADE-GIALLO-G5": true,
+  "LIQUID-BRUN-G5": true,
+  "AZZURE-AOUD-G5": true,
+  "CHAOS-EXTRAIT-G5": true,
+  "LUSCIOUS-G5": true,
+  "VENENO-BIANCO-G5": true,
+  "JADE-VERDE-G5": true,
+  "ROYAL-BLEND-BOURBON-G5": true,
+  "ROYAL-BLEND-SEQUOIA-G5": true,
+  "ROYAL-BLEND-NERO-G5": true,
+  "LIQUID-BRUN-LIMITED-EDITION-150ML-G5": true,
+  "AROMATIX-ROYAL-TABOO-G5": true,
+  "AROMATIX-CARNAL-DESIRE-G5": true,
+  "AROMATIX-FORBIDDEN-FRUIT-G5": true,
+  "AROMATIX-SUN-KISSED-G5": true,
+  "AROMATIX-TEAS-ME-G5": true,
+  "ERBA-PURA-CON-PAUELO-G5": true,
+  "HOMME-ANIVERSARY-G5": true,
+  "NAXOS-XERJOFF-G5": true,
+  "CORO-CON-PAUELO-G5": true,
+  "ACCENTO-CON-PAUELO-G5": true,
+  "ERBA-GOLD-CON-PAUELO-G5": true,
+  "ECLAIRE-PISTACHO-G5": true,
+  "ECLAIRE-G5": true,
+  "ECLAIRE-BANOFFI-G5": true,
+  "TROPICAL-VIBE-G5": true,
+  "TERRA-RAYHAAN-G5": true,
+  "AQUATICA-RAYHAAN-G5": true,
+  "RAYHAAN-ELIXIR-G5": true,
+  "PACIFIC-AURA-G5": true,
+  "AHMED-MARJ-G5": true,
+  "AHMED-AHL-G5": true,
+  "ROSE-NOIR-G5": true,
+  "FAKHAR-ROSE-G5": true,
+  "FAKHAR-SILVER-G5": true,
+  "FAKHAR-GOLD-G5": true,
+  "AMEERAT-AL-ARAB-G5": true,
+  "AMEERAT-PRIVE-ROSE-G5": true,
+  "AMEERAT-AL-ARAB-BLACK-G5": true,
+  "ESHAL-G5": true,
+  "MARSHMALLOW-BLUSH-G5": true,
+  "TASKEEN-CARAMEL-G5": true,
+  "KHAIR-CONFECTION-G5": true,
+  "SABRINA-CARPENTER-CARAMEL-G5": true,
+  "SABRINA-CARPENTER-ESPRESSO-G5": true,
+  "SABRINA-CARPENTER-ROSA-G5": true,
+  "JPG-LE-MALE-ELIXIR-G5": true,
+  "JPG-LE-MALE-G5": true,
+  "JPG-LE-BEAU-G5": true,
+  "JPG-GARDEN-G5": true,
+  "JPG-ULTRA-ELIXIR-G5": true,
+  "GIVE-ME-GOURMAND-CHOCO-OVERDOSE-G5": true,
+  "COOKIE-GRAVE-G5": true,
+  "VAINILLA-FREAK-G5": true,
+  "GIVE-ME-GOURMAND-MALLOW-MADNESS-G5": true,
+  "GIVE-ME-GOURMAND-BERRY-ON-TOP-G5": true,
+  "MUSAMAM-BLACK-G5": true,
+  "MUSAMAM-WHITE-G5": true,
+  "MUSAMAM-INTENSE-G5": true,
+  "KAYALI-BURNING-CHERRY-G5": true,
+  "KAYALI-JUICY-APPLE-G5": true,
+  "KAYALI-VAINILLA-G5": true,
+  "KAYALI-WHITE-FLOWERS-G5": true,
+  "KAYALI-SPARKLING-LYCHEE-G5": true,
+  "GAME-OF-SPADES-BOSTON-G5": true,
+  "GAME-OF-SPADES-MOON-G5": true,
+  "SPRECTRE-G5": true,
+  "SPECTRE-WRAITH-G5": true,
+  "SPECTRE-GHOST-G5": true,
+  "VANILLA-VOYAGE-G5": true,
+  "OH-HONEY-G5": true,
+  "DIGNITY-G5": true,
+  "FAITH-G5": true,
+  "NEW-WOMEN-RAVE-G5": true,
+  "EXCLUSIVE-PRIVATE-GOLD-G5": true,
+  "LAYLA-ECLUSIF-G5": true,
+  "AURELIA-G5": true,
+  "LA-BOMBA-CH-G5": true,
+  "LATEEN-ROJO-G5": true,
+  "BILLIE-EILISH-G5": true,
+  "KIAANA-ANGEL-G5": true,
+  "SABAH-AL-WARD-G5": true,
+  "SABAH-AL-WARD-SUGAR-G5": true,
+  "GAME-OF-SPADES-WILDCAR-G5": true,
+  "BONITA-FEMME-MARRON-G5": true,
+  "KIAANA-CRUSH-G5": true,
+  "BONITA-FEMME-ROJO-G5": true,
+  "BONITA-LA-ROSE-G5": true,
+  "BONITA-HOT-PINK-G5": true,
+  "KIT-LATTAFA-PRIDE-MASCULINO-G5": true,
+  "NITRO-RED-G5": true,
+  "RANEEN-G5": true,
+  "BACCARAT-ROUGE-540-G5": true,
+  "SHIYAAKA-G5": true,
+  "LATEEN-VERDE-G5": true,
+  "SHIYAAKA-NEGRO-G5": true,
+  "KHAIR-FUSION-G5": true,
+  "SUPREMACY-POUR-FEMME-G5": true,
+  "MILKY-WAY-G5": true,
+  "AL-HARAMAIN-FUTURE-DUBAI-100ML--G5": true,
+  "WHIPPED-PLEASURE-G5": true,
+  "HISTORIC-DORIA-G5": true,
+  "TURATHI-ELECTRICA-G5": true,
+  "ISHQ-AL-SHUYUKH-SILVER-G5": true
 }
