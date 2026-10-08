@@ -266,6 +266,10 @@
         .reserve-copy:hover{border-color:var(--accent);color:var(--accent)}
         .reserve-whatsapp{background:#25D366;color:#fff;border:0;padding:15px 18px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;width:100%;text-transform:uppercase;letter-spacing:.04em}
         .reserve-whatsapp:hover{filter:brightness(.95)}
+        <style>
+  .sin-stock { opacity: 0.4; filter: grayscale(100%); pointer-events: none; position: relative; }
+  .sin-stock::after { content: "SIN STOCK"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: black; color: white; padding: 5px 12px; font-size: 12px; font-weight: bold; border-radius: 20px; z-index: 2; }
+</style>
 </style></head>
 <body class="">
 
@@ -8408,4 +8412,18 @@ fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
 });
 </script>
 <script src="./volaron.js?v=1"></script>
+    <script>
+fetch('stock.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    const sinStock = data.perfumes.filter(p => !p.stock).map(p => p.nombre.toLowerCase().trim());
+    document.querySelectorAll('[data-perfume], .perfume-card, .producto').forEach(el => {
+      const nombre = (el.getAttribute('data-perfume') || el.innerText || '').toLowerCase();
+      if (sinStock.some(s => nombre.includes(s.replace('vara','').trim()) || s.includes(nombre))) {
+        el.classList.add('sin-stock');
+      }
+    });
+    console.log('Stock aplicado: ' + data.sin_stock + ' sin stock');
+  });
+</script>
 </body></html>
