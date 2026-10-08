@@ -2,7 +2,7 @@
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
-      "stock": true
+      "stock": false
     },
     {
       "nombre": "YARA CANDY G5",
