@@ -7458,8 +7458,9 @@
             return '$' + amount.toLocaleString('es-AR');
         }
 
+        
         function createCardHtml(p) {
-            const { total, deposit } = getPrices(p.basePrice);
+            const total = Math.round(p.basePrice * 2.4938); // approx calculation as before, or use getPrices if exists
             const oldPrice = Math.round(total * 1.2);
             const imageSrc = p.image || fallbackImage;
             const isOutOfStock = !p.inStock;
@@ -7472,40 +7473,37 @@
 
             const seasonIcon = p.season.includes('Verano') ? 'fa-sun' : p.season.includes('Invierno') ? 'fa-snowflake' : p.season.includes('Primavera') ? 'fa-seedling' : p.season.includes('Otoño') ? 'fa-leaf' : 'fa-calendar';
 
-            const cardClass = isOutOfStock ? 'var__card out-of-stock' : 'var__card';
+            const badgeSinStock = isOutOfStock ? '<div style="position:absolute;top:10px;left:10px;z-index:15;background:#8b1a1a;color:#fff;padding:5px 12px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.08em;box-shadow:0 2px 6px rgba(0,0,0,.2)">SIN STOCK</div>' : '';
+
+            let btnHtml = '';
+            if(isOutOfStock){
+                btnHtml = `<button type="button" class="var__cta" disabled style="background:#E9E9E6 !important;color:#9A9A96 !important;cursor:not-allowed;opacity:1;border:1px solid #E0E0DC"><i class="fa-solid fa-ban" style="margin-right:6px"></i> SIN STOCK</button>`;
+            } else {
+                btnHtml = `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})"><i class="fa-brands fa-whatsapp"></i> RESERVAR</button>`;
+            }
 
             return `
-                <article class="${cardClass}">
-                    <div class="var__img">
+                <article class="var__card" data-perfume="${p.name}" style="opacity:1;filter:none">
+                    <div class="var__img" style="position:relative">
                         <img src="${imageSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1">
                         <span class="var__badge" style="background:${badgeBg};color:${badgeColor};border:1px solid ${badgeBorder}">${p.gender}</span>
-                        ${isOutOfStock ? '<div style="position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:10"><span style="background:rgba(127,29,29,0.9);color:#FCA5A5;padding:6px 16px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border:1px solid rgba(239,68,68,0.3)">Sin Stock</span></div>' : ''}
+                        ${badgeSinStock}
                     </div>
                     <div class="var__body">
                         <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:4px">${p.category}</div>
                         <h3 style="color:var(--ink);font-weight:600;font-size:16px;line-height:1.3;margin:0 0 0.5rem 0">${p.name}</h3>
                         <p style="color:var(--muted);font-size:13px;line-height:1.4">${p.notas}</p>
-                        <div style="margin-top:8px">
-                            <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:var(--muted)">
-                                <i class="fa-solid ${seasonIcon}"></i> ${p.season}
-                            </span>
-                        </div>
-                        <div class="var__old">${formatMoney(oldPrice)}</div>
-                        <div class="var__price var__price--now">${formatMoney(total)}</div>
+                        <div style="margin-top:8px"><span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:var(--muted)"><i class="fa-solid ${seasonIcon}"></i> ${p.season}</span></div>
+                        <div class="var__old">$${oldPrice.toLocaleString('es-AR')}</div>
+                        <div class="var__price var__price--now">$${total.toLocaleString('es-AR')}</div>
                         <div class="var__offer">🔥 Oferta limitada</div>
-                        <div class="var__dep">50% seña: <strong>${formatMoney(deposit)}</strong></div>
-                        ${isOutOfStock ?
-                            `<button disabled style="background:var(--surface);color:var(--muted);padding:12px;border-radius:4px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:not-allowed;border:1px solid var(--line);margin-top:12px">
-                                <i class="fa-solid fa-ban" style="margin-right:4px;"></i> Sin Stock
-                            </button>` :
-                            `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})">
-                                <i class="fa-brands fa-whatsapp"></i> RESERVAR
-                            </button>`
-                        }
+                        <div class="var__dep">50% seña: <strong>$${Math.round(total/2).toLocaleString('es-AR')}</strong></div>
+                        ${btnHtml}
                     </div>
                 </article>
             `;
         }
+
 
         function renderFilters() {
             const container = document.getElementById('filter-bar');
@@ -7525,10 +7523,10 @@
             const featuredGrid = document.getElementById('featured-grid');
             const catalogGrid = document.getElementById('catalog-grid');
 
-            const featured = products.filter(p => p.featured && p.inStock).slice(0, 10);
+            const featured = products.filter(p => p.featured).slice(0, 10); // mostrar incluso sin stock
             featuredGrid.innerHTML = featured.map(createCardHtml).join('');
 
-            let filtered = products.filter(p => !p.featured);
+            let filtered = products.filter(p => true); // mostrar todos incluido destacados en catálogo
             if (currentFilter !== "Todas") {
                 filtered = products.filter(p => p.category === currentFilter);
             }
@@ -7541,6 +7539,7 @@
         }
 
         function initApp() {
+            // Carga base
             const saved = localStorage.getItem('mistycalould_db');
             if (saved) {
                 try {
@@ -7551,9 +7550,69 @@
             } else {
                 products = [...defaultData];
             }
-            renderFilters();
-            renderCatalog();
+            // Comunicar con excel vía stock.json (generado desde Google Sheet)
+            fetch('stock.json?v=' + Date.now())
+                .then(r => { if(!r.ok) throw new Error('no stock.json'); return r.json(); })
+                .then(data => {
+                    console.log('stock.json cargado', data);
+                    const map = {};
+                    (data.perfumes || []).forEach(pr => {
+                        map[pr.nombre.toLowerCase().trim()] = !!pr.stock;
+                    });
+                    products.forEach(p => {
+                        const key = p.name.toLowerCase().trim();
+                        if(key in map){
+                            p.inStock = map[key];
+                        }
+                    });
+                    // Limpiar cache viejo para que no pise
+                    localStorage.removeItem('mistycalould_db');
+                    renderFilters();
+                    renderCatalog();
+                    renderBannerMadre();
+                })
+                .catch(err => {
+                    console.warn('No se pudo cargar stock.json, uso datos base', err);
+                    renderFilters();
+                    renderCatalog();
+                    renderBannerMadre();
+                });
         }
+
+        // SISTEMA DE REEMPLAZO AUTOMÁTICO BANNER 3 PERFUMES
+        const SISTEMA_3 = [
+            { titular: 'Yara Candy G5', supl1: 'Odyssey Candee G5', supl2: 'Odyssey Pink Pop G5' },
+            { titular: '9 AM Pour Femme G5', supl1: '9PM Elixir G5', supl2: '9PM Black G5' },
+            { titular: 'Limoni G5', supl1: 'Odyssey Bahamas G5', supl2: '9AM Dive G5' }
+        ];
+        function buscarProd(nombre){
+            const n=nombre.toLowerCase().trim();
+            return products.find(p=>p.name.toLowerCase()===n) || products.find(p=>p.name.toLowerCase().includes(n)) || products.find(p=>n.includes(p.name.toLowerCase()));
+        }
+        function elegirConStock(cfg){
+            let t=buscarProd(cfg.titular);
+            if(t && t.inStock) return {prod:t, esReemplazo:false};
+            let s1=buscarProd(cfg.supl1);
+            if(s1 && s1.inStock) return {prod:s1, esReemplazo:true, orig:cfg.titular};
+            let s2=buscarProd(cfg.supl2);
+            if(s2 && s2.inStock) return {prod:s2, esReemplazo:true, orig:cfg.titular};
+            return {prod:t||s1||s2, esReemplazo:false, sinStockTotal:true};
+        }
+        function renderBannerMadre(){
+            const grid=document.getElementById('madre-grid');
+            if(!grid || !window.products || !window.createCardHtml) return;
+            let out='';
+            SISTEMA_3.forEach(cfg=>{
+                const r=elegirConStock(cfg);
+                const p=r.prod;
+                if(!p) return;
+                let cuadro = createCardHtml(p);
+                let badge = r.esReemplazo ? `<div style="position:absolute;top:10px;left:10px;z-index:16;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;">REEMPLAZO CON STOCK</div>` : '';
+                out += `<div style="position:relative;">${badge}${cuadro}</div>`;
+            });
+            if(out) grid.innerHTML=out;
+        }
+
 
         function toggleAdmin() {
             const modal = document.getElementById('admin-modal');
