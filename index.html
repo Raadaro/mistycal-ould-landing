@@ -7458,7 +7458,6 @@
             return '$' + amount.toLocaleString('es-AR');
         }
 
-        
         function createCardHtml(p) {
             const { total, deposit } = getPrices(p.basePrice);
             const oldPrice = Math.round(total * 1.2);
@@ -7472,36 +7471,453 @@
             if (p.gender === 'Hombre') { badgeBg = "color-mix(in srgb, #3B82F6 10%, transparent)"; badgeColor = "#3B82F6"; badgeBorder = "color-mix(in srgb, #3B82F6 30%, transparent)"; }
 
             const seasonIcon = p.season.includes('Verano') ? 'fa-sun' : p.season.includes('Invierno') ? 'fa-snowflake' : p.season.includes('Primavera') ? 'fa-seedling' : p.season.includes('Otoño') ? 'fa-leaf' : 'fa-calendar';
-            const cardClass = 'var__card';
-            const badgeSinStock = isOutOfStock ? '<div style="position:absolute;top:10px;left:10px;z-index:15;background:#8b1a1a;color:#fff;padding:5px 12px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.08em;box-shadow:0 2px 6px rgba(0,0,0,.2)">SIN STOCK</div>' : '';
-            let btnHtml = '';
-            if(isOutOfStock){
-                btnHtml = `<button type="button" class="var__cta" disabled style="background:#E9E9E6 !important;color:#9A9A96 !important;cursor:not-allowed;opacity:1;border:1px solid #E0E0DC"><i class="fa-solid fa-ban" style="margin-right:6px"></i> SIN STOCK</button>`;
-            } else {
-                btnHtml = `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})"><i class="fa-brands fa-whatsapp"></i> RESERVAR</button>`;
-            }
+
+            const cardClass = isOutOfStock ? 'var__card out-of-stock' : 'var__card';
+
             return `
-                <article class="${cardClass}" data-perfume="${p.name}" style="opacity:1;filter:none">
-                    <div class="var__img" style="position:relative">
+                <article class="${cardClass}">
+                    <div class="var__img">
                         <img src="${imageSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1">
                         <span class="var__badge" style="background:${badgeBg};color:${badgeColor};border:1px solid ${badgeBorder}">${p.gender}</span>
-                        ${badgeSinStock}
+                        ${isOutOfStock ? '<div style="position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:10"><span style="background:rgba(127,29,29,0.9);color:#FCA5A5;padding:6px 16px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border:1px solid rgba(239,68,68,0.3)">Sin Stock</span></div>' : ''}
                     </div>
                     <div class="var__body">
                         <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:4px">${p.category}</div>
                         <h3 style="color:var(--ink);font-weight:600;font-size:16px;line-height:1.3;margin:0 0 0.5rem 0">${p.name}</h3>
                         <p style="color:var(--muted);font-size:13px;line-height:1.4">${p.notas}</p>
-                        <div style="margin-top:8px"><span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:var(--muted)"><i class="fa-solid ${seasonIcon}"></i> ${p.season}</span></div>
-                        <div class="var__old">$${oldPrice.toLocaleString('es-AR')}</div>
-                        <div class="var__price var__price--now">$${total.toLocaleString('es-AR')}</div>
+                        <div style="margin-top:8px">
+                            <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:var(--muted)">
+                                <i class="fa-solid ${seasonIcon}"></i> ${p.season}
+                            </span>
+                        </div>
+                        <div class="var__old">${formatMoney(oldPrice)}</div>
+                        <div class="var__price var__price--now">${formatMoney(total)}</div>
                         <div class="var__offer">🔥 Oferta limitada</div>
-                        <div class="var__dep">50% seña: <strong>$${deposit.toLocaleString('es-AR')}</strong></div>
-                        ${btnHtml}
+                        <div class="var__dep">50% seña: <strong>${formatMoney(deposit)}</strong></div>
+                        ${isOutOfStock ?
+                            `<button disabled style="background:var(--surface);color:var(--muted);padding:12px;border-radius:4px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:not-allowed;border:1px solid var(--line);margin-top:12px">
+                                <i class="fa-solid fa-ban" style="margin-right:4px;"></i> Sin Stock
+                            </button>` :
+                            `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})">
+                                <i class="fa-brands fa-whatsapp"></i> RESERVAR
+                            </button>`
+                        }
                     </div>
                 </article>
             `;
         }
 
+        function renderFilters() {
+            const container = document.getElementById('filter-bar');
+            container.innerHTML = filterNames.map(f => {
+                const isActive = f === currentFilter;
+                return `<button onclick="setFilter('${f}')" class="filter-btn${isActive ? ' active' : ''}">${f}</button>`;
+            }).join('');
+        }
+
+        function setFilter(f) {
+            currentFilter = f;
+            renderFilters();
+            renderCatalog();
+        }
+
+        function renderCatalog() {
+            const featuredGrid = document.getElementById('featured-grid');
+            const catalogGrid = document.getElementById('catalog-grid');
+
+            const featured = products.filter(p => p.featured && p.inStock).slice(0, 10);
+            featuredGrid.innerHTML = featured.map(createCardHtml).join('');
+
+            let filtered = products.filter(p => !p.featured);
+            if (currentFilter !== "Todas") {
+                filtered = products.filter(p => p.category === currentFilter);
+            }
+
+            if (filtered.length === 0) {
+                catalogGrid.innerHTML = `<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)">No se encontraron productos en esta categoría.</div>`;
+            } else {
+                catalogGrid.innerHTML = filtered.map(createCardHtml).join('');
+            }
+        }
+
+        function initApp() {
+            const saved = localStorage.getItem('mistycalould_db');
+            if (saved) {
+                try {
+                    products = JSON.parse(saved);
+                } catch(e) {
+                    products = [...defaultData];
+                }
+            } else {
+                products = [...defaultData];
+            }
+            renderFilters();
+            renderCatalog();
+        }
+
+        function toggleAdmin() {
+            const modal = document.getElementById('admin-modal');
+            const isHidden = !modal.classList.contains('is-open');
+            modal.classList.toggle('is-open', isHidden);
+            if (isHidden) renderAdminTable();
+        }
+
+        function saveAdmin() {
+            localStorage.setItem('mistycalould_db', JSON.stringify(products));
+            renderCatalog();
+            const msg = document.getElementById('admin-msg');
+            msg.textContent = "¡Cambios guardados correctamente!";
+            msg.style.display = 'block';
+            setTimeout(() => msg.style.display = 'none', 2000);
+        }
+
+        function renderAdminTable() {
+            const tbody = document.getElementById('admin-table-body');
+            tbody.innerHTML = products.map((p, i) => `
+                <tr style="border-bottom:1px solid var(--line)">
+                    <td style="padding:8px"><input type="text" value="${p.name}" onchange="updateRow(${i}, 'name', this.value)" style="width:100%;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:5px;border-radius:4px;font-size:11px"></td>
+                    <td style="padding:8px;width:90px"><input type="number" value="${p.basePrice}" onchange="updateRow(${i}, 'basePrice', parseInt(this.value))" style="width:100%;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:5px;border-radius:4px;font-size:11px"></td>
+                    <td style="padding:8px;width:100px"><input type="text" value="${p.category}" onchange="updateRow(${i}, 'category', this.value)" style="width:100%;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:5px;border-radius:4px;font-size:11px"></td>
+                    <td style="padding:8px;width:90px">
+                        <select onchange="updateRow(${i}, 'gender', this.value)" style="width:100%;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:5px;border-radius:4px;font-size:11px">
+                            <option value="Hombre" ${p.gender==='Hombre'?'selected':''}>Hombre</option>
+                            <option value="Mujer" ${p.gender==='Mujer'?'selected':''}>Mujer</option>
+                            <option value="Unisex" ${p.gender==='Unisex'?'selected':''}>Unisex</option>
+                        </select>
+                    </td>
+                    <td style="padding:8px;width:100px"><input type="text" value="${p.season}" onchange="updateRow(${i}, 'season', this.value)" style="width:100%;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:5px;border-radius:4px;font-size:11px"></td>
+                    <td style="padding:8px;width:70px;text-align:center">
+                        <select onchange="updateRow(${i}, 'inStock', this.value === '1')" style="width:100%;background:var(--surface);border:1px solid var(--line);color:${p.inStock ? 'var(--ok)' : '#EF4444'};padding:5px;border-radius:4px;font-size:11px">
+                            <option value="1" ${p.inStock?'selected':''}>Sí</option>
+                            <option value="0" ${!p.inStock?'selected':''}>No</option>
+                        </select>
+                    </td>
+                    <td style="padding:8px;text-align:center;width:50px"><input type="checkbox" ${p.featured ? 'checked' : ''} onchange="updateRow(${i}, 'featured', this.checked)" style="accent-color:var(--gold);width:14px;height:14px;cursor:pointer"></td>
+                    <td style="padding:8px;text-align:center;width:40px"><button onclick="delRow(${i})" style="background:none;border:none;color:#EF4444;cursor:pointer"><i class="fa-solid fa-trash-can"></i></button></td>
+                </tr>
+            `).join('');
+        }
+
+        function updateRow(index, field, value) {
+            products[index][field] = value;
+            saveAdmin();
+        }
+
+        function delRow(index) {
+            if(confirm("¿Seguro que deseas eliminar este perfume?")) {
+                products.splice(index, 1);
+                saveAdmin();
+                renderAdminTable();
+            }
+        }
+
+        function addProduct() {
+            const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
+            products.unshift({
+                id: newId,
+                name: "Nuevo Perfume",
+                basePrice: 20000,
+                category: "Otros",
+                gender: "Unisex",
+                season: "Todo el año",
+                featured: false,
+                inStock: true,
+                image: fallbackImage,
+                notas: "Notas por definir"
+            });
+            saveAdmin();
+            renderAdminTable();
+        }
+
+        function resetData() {
+            if(confirm("¿Restaurar todo a los valores originales?")) {
+                products = [...defaultData];
+                saveAdmin();
+                renderAdminTable();
+            }
+        }
+
+        // ===== MODO EDICIÓN =====
+        let isEditing = false;
+
+        // Textos editables: se les asigna una clave estable (data-field) por bloque
+        const EDIT_SELECTOR = 'h1,h2,h3,h4,p,li,.eyebrow,blockquote';
+        function getEditableEls() {
+            const out = [];
+            document.querySelectorAll('[data-bloque]').forEach(sec => {
+                const bloque = sec.getAttribute('data-bloque');
+                let i = 0;
+                sec.querySelectorAll(EDIT_SELECTOR).forEach(el => {
+                    // no tocar productos (se generan solos), modales, ni elementos que contienen otros textos
+                    if (el.closest('#featured-grid, #catalog-grid, #filter-bar, .reserve-modal, .admin-modal')) return;
+                    if (el.querySelector(EDIT_SELECTOR)) return;
+                    el.setAttribute('data-field', bloque + '-' + (i++));
+                    out.push(el);
+                });
+            });
+            return out;
+        }
+
+        function toggleEditMode() {
+            isEditing = !isEditing;
+            document.body.classList.toggle('editing', isEditing);
+            getEditableEls().forEach(el => {
+                if (isEditing) el.setAttribute('contenteditable', 'true');
+                else el.removeAttribute('contenteditable');
+            });
+            const btn = document.getElementById('edit-toggle');
+            btn.classList.toggle('active', isEditing);
+            btn.innerHTML = isEditing ? '<i class="fa-solid fa-check"></i> Listo' : '<i class="fa-solid fa-pen"></i> Editar';
+        }
+
+        // En modo edición, los links no deben navegar al tocar un texto
+        document.addEventListener('click', function(e) {
+            if (isEditing && e.target.closest('[contenteditable]') && e.target.closest('a')) e.preventDefault();
+        }, true);
+
+        function saveAllChanges() {
+            const editables = document.querySelectorAll('[contenteditable][data-field]');
+            const saved = localStorage.getItem('mistycalould_texts') || '{}';
+            let texts = {};
+            try { texts = JSON.parse(saved); } catch(e) { texts = {}; }
+            editables.forEach(el => {
+                const field = el.getAttribute('data-field');
+                texts[field] = el.innerHTML;
+            });
+            localStorage.setItem('mistycalould_texts', JSON.stringify(texts));
+            alert('¡Cambios guardados!');
+        }
+
+        function exportHTML() {
+            // Guardar cambios actuales primero
+            saveAllChanges();
+
+            // Obtener el HTML completo del documento
+            const clone = document.documentElement.cloneNode(true);
+            clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+            clone.querySelector('body').classList.remove('editing');
+            const htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
+
+            // Crear blob y descargar
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mistycal-ould-editado.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            alert('¡Archivo HTML descargado! Subilo a GitHub para actualizar tu página.');
+        }
+
+        function loadSavedTexts() {
+            getEditableEls();
+            const saved = localStorage.getItem('mistycalould_texts');
+            if (!saved) return;
+            let texts = {};
+            try { texts = JSON.parse(saved); } catch(e) { return; }
+            Object.keys(texts).forEach(field => {
+                const el = document.querySelector(`[data-field="${field}"]`);
+                if (el) el.innerHTML = texts[field];
+            });
+        }
+
+        // Buybar
+        (function(){
+            var b = document.getElementById('buybar');
+            if(!b) return;
+            function f(){ b.classList.toggle('is-on', window.scrollY > 1.2 * window.innerHeight); }
+            window.addEventListener('scroll', f, {passive:true});
+            f();
+        })();
+
+        loadSavedTexts();
+        initApp();
+
+        // ===== CARRUSEL =====
+        let currentSlide = 0;
+        const totalSlides = 10;
+        let carouselInterval;
+
+        function initCarousel() {
+            const track = document.querySelector('.carousel__track');
+            const dotsContainer = document.getElementById('carousel-dots');
+            if (!track || !dotsContainer) return;
+
+            // Crear dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'carousel__dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            }
+
+            // Auto-play
+            startCarousel();
+        }
+
+        function goToSlide(index) {
+            const track = document.querySelector('.carousel__track');
+            if (!track) return;
+            currentSlide = index;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Actualizar dots
+            const dots = document.querySelectorAll('.carousel__dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function carouselNext() {
+            goToSlide(currentSlide + 1);
+            resetCarousel();
+        }
+
+        function carouselPrev() {
+            goToSlide(currentSlide - 1);
+            resetCarousel();
+        }
+
+        function startCarousel() {
+            carouselInterval = setInterval(() => {
+                goToSlide(currentSlide + 1);
+            }, 4000);
+        }
+
+        function resetCarousel() {
+            clearInterval(carouselInterval);
+            startCarousel();
+        }
+
+        initCarousel();
+
+        // ===== FILTROS CARRUSEL =====
+        function scrollFilters(direction) {
+            const filterBar = document.getElementById('filter-bar');
+            if (!filterBar) return;
+            const scrollAmount = 200;
+            filterBar.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+        // ===== MODAL DE RESERVA =====
+        const RESERVE_ALIAS = "MISTYCAL.OULD";   // <-- alias para recibir la seña
+        const WA_NUMBER = "543515210477";
+        let reserveCurrent = null;
+
+        function esc(t) {
+            return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        function setReserveTitle(t) {
+            document.getElementById('reserve-title').textContent = t;
+        }
+
+        function openReserveModal(productId) {
+            const p = products.find(x => x.id === productId);
+            if (!p) return;
+            const { total, deposit } = getPrices(p.basePrice);
+            reserveCurrent = { name: p.name, total, deposit, saldo: total - deposit };
+
+            setReserveTitle('RESERVAR TU PERFUME');
+            document.getElementById('reserve-content').innerHTML = `
+                <div class="reserve-product">
+                    <h4>${esc(p.name)}</h4>
+                    <div class="reserve-price"><span>Precio total:</span><strong>${formatMoney(total)}</strong></div>
+                    <div class="reserve-price reserve-price--dep"><span>Seña 50%:</span><strong>${formatMoney(deposit)}</strong></div>
+                    <div class="reserve-price"><span>Saldo contra entrega:</span><strong>${formatMoney(total - deposit)}</strong></div>
+                </div>
+                <ul class="reserve-notes">
+                    <li><i class="fa-solid fa-lock"></i><span>Tu perfume queda reservado al confirmar la transferencia.</span></li>
+                    <li><i class="fa-solid fa-clock"></i><span>Tenés 15 minutos para realizar la transferencia.</span></li>
+                    <li><i class="fa-brands fa-whatsapp"></i><span>Una vez realizada, enviá el comprobante por WhatsApp.</span></li>
+                </ul>
+                <form class="reserve-form" onsubmit="confirmReserve(event)">
+                    <div><label for="rf-nombre">Nombre</label><input id="rf-nombre" type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre"></div>
+                    <div><label for="rf-wsp">WhatsApp</label><input id="rf-wsp" type="tel" name="whatsapp" required inputmode="tel" autocomplete="tel" placeholder="Ej: 351 123 4567"></div>
+                    <div><label for="rf-dir">Dirección</label><input id="rf-dir" type="text" name="direccion" required autocomplete="street-address" placeholder="Calle y número"></div>
+                    <div><label for="rf-barrio">Barrio</label><input id="rf-barrio" type="text" name="barrio" required placeholder="Tu barrio"></div>
+                    <button type="submit" class="reserve-confirm">Confirmar reserva</button>
+                </form>
+            `;
+            document.getElementById('reserve-box').scrollTop = 0;
+            document.getElementById('reserve-modal').classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeReserveModal() {
+            document.getElementById('reserve-modal').classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        function confirmReserve(event) {
+            event.preventDefault();
+            if (!reserveCurrent) return;
+            const f = new FormData(event.target);
+            const r = reserveCurrent;
+            const msg = `¡Hola! Te envío el comprobante de la seña para reservar:\n\n` +
+                `*${r.name}*\n` +
+                `- Precio total: ${formatMoney(r.total)}\n` +
+                `- Seña 50% (transferida): ${formatMoney(r.deposit)}\n` +
+                `- Saldo contra entrega: ${formatMoney(r.saldo)}\n\n` +
+                `*Mis datos*\n` +
+                `Nombre: ${f.get('nombre')}\n` +
+                `WhatsApp: ${f.get('whatsapp')}\n` +
+                `Dirección: ${f.get('direccion')}\n` +
+                `Barrio: ${f.get('barrio')}\n\n` +
+                `(Adjunto el comprobante de la transferencia)`;
+            const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+            setReserveTitle('CASI LISTO');
+            document.getElementById('reserve-content').innerHTML = `
+                <div class="reserve-success">
+                    <div class="icon">✓</div>
+                    <h4>Reservá ${esc(r.name)}</h4>
+                    <p>Tu perfume queda reservado al confirmar la transferencia. Tenés 15 minutos para realizarla.</p>
+                    <div class="reserve-alias">
+                        <p style="margin:0">Transferí <strong>${formatMoney(r.deposit)}</strong> al alias:</p>
+                        <div class="alias" id="reserve-alias-text">${esc(RESERVE_ALIAS)}</div>
+                        <button type="button" class="reserve-copy" onclick="copyAlias(this)">Copiar alias</button>
+                    </div>
+                    <p>Una vez realizada la transferencia:</p>
+                    <a href="${waLink}" target="_blank" rel="noopener" class="reserve-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar comprobante por WhatsApp
+                    </a>
+                    <p style="margin:.9rem 0 0;font-size:12px">Saldo contra entrega: ${formatMoney(r.saldo)}</p>
+                </div>
+            `;
+            document.getElementById('reserve-box').scrollTop = 0;
+        }
+
+        function copyAlias(btn) {
+            const done = () => { btn.textContent = '¡Copiado!'; setTimeout(() => btn.textContent = 'Copiar alias', 1800); };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(RESERVE_ALIAS).then(done).catch(done);
+            } else {
+                const t = document.createElement('textarea');
+                t.value = RESERVE_ALIAS; document.body.appendChild(t); t.select();
+                try { document.execCommand('copy'); } catch (e) {}
+                document.body.removeChild(t); done();
+            }
+        }
+
+        // Cerrar modal: clic afuera o tecla Escape
+        document.addEventListener('click', function(e) {
+            if (e.target === document.getElementById('reserve-modal')) closeReserveModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeReserveModal();
+        });
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const b=document.getElementById('edit-toggle');
+            if(b){ b.addEventListener('click', function(e){ e.preventDefault(); try{ toggleEditMode(); }catch(err){} }); }
+        });
+
+        // LOGICA DE REEMPLAZO - Si titular esta en NO muestra suplente
         const SISTEMA_3 = [
             { titular: 'Yara Candy G5', supl1: 'Odyssey Candee G5', supl2: 'Odyssey Pink Pop G5' },
             { titular: '9 AM Pour Femme G5', supl1: '9PM Elixir G5', supl2: '9PM Black G5' },
@@ -7518,32 +7934,36 @@
             if(s1 && s1.inStock) return {prod:s1, esReemplazo:true, orig:cfg.titular};
             let s2=buscarProd(cfg.supl2);
             if(s2 && s2.inStock) return {prod:s2, esReemplazo:true, orig:cfg.titular};
-            // si ninguno tiene stock, devuelve titular para que se vea SIN STOCK (no vacío)
-            return {prod:t||s1||s2, esReemplazo:false, sinStockTotal:true};
+            return {prod:t||s1||s2, esReemplazo:false};
         }
         function renderBannerMadre(){
             const grid=document.getElementById('madre-grid');
-            if(!grid || !window.products || !window.createCardHtml) return;
-            // REEMPLAZO AUTOMÁTICO: si titular está sin stock, muestra suplente con stock
+            if(!grid || !window.products || !window.createCardHtml){
+                console.log('renderBannerMadre waiting', !!window.products, !!window.createCardHtml);
+                return;
+            }
+            // Solo reemplaza si algun titular esta sin stock, si no deja los 3 estaticos que ya se ven
+            let necesitaReemplazo = false;
+            SISTEMA_3.forEach(cfg=>{
+                let t=buscarProd(cfg.titular);
+                if(t && !t.inStock) necesitaReemplazo=true;
+            });
+            if(!necesitaReemplazo){
+                console.log('Todos con stock, dejo estaticos visibles');
+                return;
+            }
+            console.log('Hay sin stock, reemplazo banner');
             let out='';
             SISTEMA_3.forEach(cfg=>{
                 const r=elegirConStock(cfg);
                 const p=r.prod;
                 if(!p) return;
                 let cuadro = createCardHtml(p);
-                let badge = r.esReemplazo ? `<div style="position:absolute;top:10px;left:10px;z-index:16;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;box-shadow:0 2px 8px rgba(0,0,0,.15)">REEMPLAZO • ${cfg.titular} sin stock</div>` : '';
-                // si es reemplazo, quitamos badge SIN STOCK y ponemos reemplazo
-                if(r.esReemplazo){
-                    cuadro = cuadro.replace('SIN STOCK</div>','').replace('background:#8b1a1a','background:#D4AF37;color:#000').replace('SIN STOCK</button>','RESERVAR</button>').replace('fa-ban','fa-whatsapp').replace('disabled','onclick="openReserveModal('+p.id+')"').replace('#E9E9E6','#111').replace('#9A9A96','#fff');
-                    // reconstruir bien con reemplazo
-                    cuadro = createCardHtml(p);
-                    badge = `<div style="position:absolute;top:10px;left:10px;z-index:16;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;">REEMPLAZO CON STOCK</div>`;
-                }
+                let badge = r.esReemplazo ? `<div style="position:absolute;top:10px;left:10px;z-index:15;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;">REEMPLAZO CON STOCK</div>` : '';
                 out += `<div style="position:relative;">${badge}${cuadro}</div>`;
             });
             if(out) grid.innerHTML=out;
         }
-
         // Intentos
         setTimeout(renderBannerMadre, 800);
         setTimeout(renderBannerMadre, 2000);
