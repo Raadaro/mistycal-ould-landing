@@ -120,6 +120,10 @@
         .var__grid{display:grid;gap:20px}
         .var__card{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);transition:all 0.3s ease}
         .var__card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 10px 25px -5px rgba(122,31,61,0.15)}
+        .var__card.out-of-stock{opacity:0.38!important;filter:grayscale(100%);pointer-events:none!important;position:relative}
+        .var__card.out-of-stock:hover{transform:none!important;box-shadow:none!important;border-color:var(--line)!important}
+        .var__card.out-of-stock .var__img img{filter:grayscale(100%)}
+
         .var__img{position:relative}
         .var__img .ph{aspect-ratio:1/1;border-radius:0;border:0;border-bottom:1.5px dashed color-mix(in srgb,var(--ink) 30%,transparent)}
         .var__badge{position:absolute;top:12px;left:12px;background:var(--ink);color:var(--paper);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px}
@@ -321,59 +325,7 @@
     </section>
 
     <!-- Hero -->
-    <section class="hero" data-bloque="hero">
-        <div class="wrap hero__grid">
-            <div>
-                <div class="hero__media">
-                    <div class="carousel" id="hero-carousel">
-                        <div class="carousel__track" id="carousel-track" style="transform: translateX(-400%);">
-                <div class="carousel__slide">
-                    <img src="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/I98iA1IbOvqNBJnhC4K5F.png" alt="ASAD ZANZÍBAR G5" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                    <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface);font-family:var(--font-display);font-size:24px;font-weight:600;">ASAD ZANZÍBAR G5</div>
-                </div>
-            
-                <div class="carousel__slide">
-                    <img src="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/89Td4x7VkaRkW4ifZgL4z.png" alt="9AM DIVE G5" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                    <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface);font-family:var(--font-display);font-size:24px;font-weight:600;">9AM DIVE G5</div>
-                </div>
-            
-                <div class="carousel__slide">
-                    <img src="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/yMEWn9PB6NNxU8zT13nld.png" alt="9PM REBEL G5" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                    <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface);font-family:var(--font-display);font-size:24px;font-weight:600;">9PM REBEL G5</div>
-                </div>
-            </div>
-                        <button class="carousel__btn carousel__btn--prev" onclick="carouselPrev()">❮</button>
-                        <button class="carousel__btn carousel__btn--next" onclick="carouselNext()">❯</button>
-                        <div class="carousel__dots" id="carousel-dots"><button class="carousel__dot" onclick="goToSlide(0)"></button><button class="carousel__dot" onclick="goToSlide(1)"></button><button class="carousel__dot" onclick="goToSlide(2)"></button></div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="eyebrow" data-field="hero-0">EAU DE PARFUM · COLECCION OUD MODERNA · CORDOBA</p>
-                <h1 data-field="hero-1">La esencia de oriente, en una fragancia</h1>
-                <p style="margin-top:18px;color:var(--muted)" data-field="hero-2">Selección exclusiva de fragancias. Descubre nuestra colección G5 con los más altos estándares de calidad.</p>
-                <ul class="checks">
-                    <li data-field="hero-3"><svg class="ic"><use href="#i-check"></use></svg><span>Fragancias de marcas exclusivas</span></li>
-                    <li data-field="hero-4"><svg class="ic"><use href="#i-check"></use></svg><span>Modalidad: 50% seña + 50% contra entrega</span></li>
-                    <li data-field="hero-5"><svg class="ic"><use href="#i-check"></use></svg><span>Envío gratis en Córdoba Capital</span></li>
-                </ul>
-                <div class="hero__price">
-                    <span class="hero__now">Desde $44.900</span>
-                    <span class="chip">G5 Quality</span>
-                </div>
-                <p class="hero__sub" data-field="hero-6">El envío llega entre las 24hs y 48hs.</p>
-                <div class="hero__cta">
-                    <a class="btn" href="#catalogo">Ver Catálogo</a>
-                    <a class="btn btn--ghost" href="#destacados">Destacados</a>
-                </div>
-                <p class="hero__risk" data-field="hero-7">Reserva con seña del 50%. Abona el saldo contra entrega.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Confianza -->
-    
-    <!-- ALTERNATIVAS PARA MAMA - CON FALLBACK AUTOMATICO -->
+        <!-- ALTERNATIVAS PARA MAMA - CON FALLBACK AUTOMATICO -->
     <section id="alternativas-madre" style="padding:56px 0;background:#FBFBF9;border-top:1px solid #E9E9E6;border-bottom:1px solid #E9E9E6;">
         <div class="wrap">
             <div style="text-align:center;max-width:640px;margin:0 auto 36px;">
@@ -494,6 +446,59 @@
     <style>
         @media(min-width:750px){ .destacados-grid{grid-template-columns:repeat(3,1fr)!important;} }
     </style>
+
+<section class="hero" data-bloque="hero">
+        <div class="wrap hero__grid">
+            <div>
+                <div class="hero__media">
+                    <div class="carousel" id="hero-carousel">
+                        <div class="carousel__track" id="carousel-track" style="transform: translateX(-400%);">
+                <div class="carousel__slide">
+                    <img src="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/I98iA1IbOvqNBJnhC4K5F.png" alt="ASAD ZANZÍBAR G5" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface);font-family:var(--font-display);font-size:24px;font-weight:600;">ASAD ZANZÍBAR G5</div>
+                </div>
+            
+                <div class="carousel__slide">
+                    <img src="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/89Td4x7VkaRkW4ifZgL4z.png" alt="9AM DIVE G5" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface);font-family:var(--font-display);font-size:24px;font-weight:600;">9AM DIVE G5</div>
+                </div>
+            
+                <div class="carousel__slide">
+                    <img src="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/yMEWn9PB6NNxU8zT13nld.png" alt="9PM REBEL G5" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface);font-family:var(--font-display);font-size:24px;font-weight:600;">9PM REBEL G5</div>
+                </div>
+            </div>
+                        <button class="carousel__btn carousel__btn--prev" onclick="carouselPrev()">❮</button>
+                        <button class="carousel__btn carousel__btn--next" onclick="carouselNext()">❯</button>
+                        <div class="carousel__dots" id="carousel-dots"><button class="carousel__dot" onclick="goToSlide(0)"></button><button class="carousel__dot" onclick="goToSlide(1)"></button><button class="carousel__dot" onclick="goToSlide(2)"></button></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="eyebrow" data-field="hero-0">EAU DE PARFUM · COLECCION OUD MODERNA · CORDOBA</p>
+                <h1 data-field="hero-1">La esencia de oriente, en una fragancia</h1>
+                <p style="margin-top:18px;color:var(--muted)" data-field="hero-2">Selección exclusiva de fragancias. Descubre nuestra colección G5 con los más altos estándares de calidad.</p>
+                <ul class="checks">
+                    <li data-field="hero-3"><svg class="ic"><use href="#i-check"></use></svg><span>Fragancias de marcas exclusivas</span></li>
+                    <li data-field="hero-4"><svg class="ic"><use href="#i-check"></use></svg><span>Modalidad: 50% seña + 50% contra entrega</span></li>
+                    <li data-field="hero-5"><svg class="ic"><use href="#i-check"></use></svg><span>Envío gratis en Córdoba Capital</span></li>
+                </ul>
+                <div class="hero__price">
+                    <span class="hero__now">Desde $44.900</span>
+                    <span class="chip">G5 Quality</span>
+                </div>
+                <p class="hero__sub" data-field="hero-6">El envío llega entre las 24hs y 48hs.</p>
+                <div class="hero__cta">
+                    <a class="btn" href="#catalogo">Ver Catálogo</a>
+                    <a class="btn btn--ghost" href="#destacados">Destacados</a>
+                </div>
+                <p class="hero__risk" data-field="hero-7">Reserva con seña del 50%. Abona el saldo contra entrega.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confianza -->
+    
 
     <section class="conf" data-bloque="confianza">
         <div class="wrap conf__grid">
@@ -8305,13 +8310,16 @@
             const featuredGrid = document.getElementById('featured-grid');
             const catalogGrid = document.getElementById('catalog-grid');
 
-            const featured = products.filter(p => p.featured && p.inStock).slice(0, 10);
+            // FIX: no ocultar sin stock, solo sombrear
+            const featured = products.filter(p => p.featured).slice(0, 10);
             featuredGrid.innerHTML = featured.map(createCardHtml).join('');
 
             let filtered = products.filter(p => !p.featured);
             if (currentFilter !== "Todas") {
                 filtered = products.filter(p => p.category === currentFilter);
             }
+            filtered.sort((a,b)=> (b.inStock===true) - (a.inStock===true));
+
 
             if (filtered.length === 0) {
                 catalogGrid.innerHTML = `<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)">No se encontraron productos en esta categoría.</div>`;
