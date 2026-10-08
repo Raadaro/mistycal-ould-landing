@@ -7495,8 +7495,8 @@
                         <div class="var__offer">🔥 Oferta limitada</div>
                         <div class="var__dep">50% seña: <strong>${formatMoney(deposit)}</strong></div>
                         ${isOutOfStock ?
-                            `<button disabled style="background:var(--surface);color:var(--muted);padding:12px;border-radius:4px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:not-allowed;border:1px solid var(--line);margin-top:12px">
-                                <i class="fa-solid fa-ban" style="margin-right:4px;"></i> Sin Stock
+                            `<button disabled type="button" style="background:#0a0a0a;color:#fff;padding:12px;border-radius:4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;cursor:not-allowed;border:1px solid #0a0a0a;margin-top:12px;opacity:0.9;width:100%;display:flex;align-items:center;justify-content:center;gap:6px">
+                                <i class="fa-brands fa-whatsapp"></i> SIN STOCK
                             </button>` :
                             `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})">
                                 <i class="fa-brands fa-whatsapp"></i> RESERVAR
@@ -8013,7 +8013,7 @@ fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
         if(btn){
           btn.textContent='SIN STOCK';
           btn.disabled=true;
-          btn.style.background='#555';
+          btn.style.background='#0a0a0a'; btn.style.color='#fff'; btn.style.border='1px solid #0a0a0a';
         }
       }
     }
