@@ -1,584 +1,328 @@
 {
-  "actualizado": "2026-10-08T01:19:24.443733",
+  "actualizado": "2026-10-08T01:55:30.848Z",
   "total": 64,
   "con_stock": 20,
   "sin_stock": 44,
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
-      "categoria": "YARA",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 44899,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "YARA CANDY G5",
-      "categoria": "YARA",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 44899,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "YARA TOUS G5",
-      "categoria": "YARA",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 44899,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "YARA ELIXIR G5",
-      "categoria": "YARA",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 44899,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "YARA MOI G5",
-      "categoria": "YARA",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 44899,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ASAD BOURBON G5",
-      "categoria": "ASAD",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 61999,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ASAD G5",
-      "categoria": "ASAD",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 61999,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ASAD ELIXIR",
-      "categoria": "ASAD",
-      "costo": 18000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 61999,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
-      "nombre": "ASAD ZANZÍBAR G5",
-      "categoria": "ASAD",
-      "costo": 18000,
+      "nombre": "ASAD ZANZ?BAR G5",
       "stock": false,
-      "stock_text": "NO",
-      "precio": 61999,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "9AM DIVE G5",
-      "categoria": "9PM",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "9PM REBEL G5",
-      "categoria": "9PM",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "9PM NIGHT OUT G5",
-      "categoria": "9PM",
-      "costo": 35000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 72360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "9PM ELIXIR G5",
-      "categoria": "9PM",
-      "costo": 30000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 72360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "9PM BLACK G5",
-      "categoria": "9PM",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "9 AM POUR FEMME G5",
-      "categoria": "9PM",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
-      "nombre": "ODYSSEY MANDARÍN SKY G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
+      "nombre": "ODYSSEY MANDAR?N SKY G5",
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
-      "nombre": "MANDARÍN SKY VINTAGE G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
+      "nombre": "MANDAR?N SKY VINTAGE G5",
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY BLACK FOREST G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "OSYSSEY TYRANT G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY MARSHMALLOW G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY AQUA G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY BAHAMAS G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY EAU DE MONTAGNE G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "MEGA G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ARTISTO G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY LICHI LUSH G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY GO MANGO G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY REVOLUTION G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "LIMONI G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "HOMME WHITE G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY PINK POP G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY DUBAI CHOCOLATE",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "ODYSSEY CANDEE G5",
-      "categoria": "ODYSSEY",
-      "costo": 25000,
       "stock": true,
-      "stock_text": "SI",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME ARMAF - Revisar en Pedix",
-      "categoria": "ARMAF",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME AL HARAMAIN - Revisar en Pedix",
-      "categoria": "AL HARAMAIN",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME CLUB DE NUIT - Revisar en Pedix",
-      "categoria": "CLUB DE NUIT",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME HAWAS - Revisar en Pedix",
-      "categoria": "HAWAS",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME BHARARA - Revisar en Pedix",
-      "categoria": "BHARARA",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME VULCAN - Revisar en Pedix",
-      "categoria": "VULCAN",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME ORIENTICA - Revisar en Pedix",
-      "categoria": "ORIENTICA",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME LATTAFA - Revisar en Pedix",
-      "categoria": "LATTAFA",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME SUPREMACY - Revisar en Pedix",
-      "categoria": "SUPREMACY",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME BADEE AL OUD - Revisar en Pedix",
-      "categoria": "BADEE AL OUD",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME KHAMRAH - Revisar en Pedix",
-      "categoria": "KHAMRAH",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME FURSAN - Revisar en Pedix",
-      "categoria": "FURSAN",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME FRENCH AVENUE - Revisar en Pedix",
-      "categoria": "FRENCH AVENUE",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME AROMATIX - Revisar en Pedix",
-      "categoria": "AROMATIX",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME XERJOFF - Revisar en Pedix",
-      "categoria": "XERJOFF",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME ECLAIRE - Revisar en Pedix",
-      "categoria": "ECLAIRE",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME RAYHAAN - Revisar en Pedix",
-      "categoria": "RAYHAAN",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME AHMED - Revisar en Pedix",
-      "categoria": "AHMED",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME FAKHAR - Revisar en Pedix",
-      "categoria": "FAKHAR",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME AMEERAT - Revisar en Pedix",
-      "categoria": "AMEERAT",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME PARIS CORNER - Revisar en Pedix",
-      "categoria": "PARIS CORNER",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME SABRINA CARPENTER - Revisar en Pedix",
-      "categoria": "SABRINA CARPENTER",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME JPG - Revisar en Pedix",
-      "categoria": "JPG",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME GIVE ME GOURMAND - Revisar en Pedix",
-      "categoria": "GIVE ME GOURMAND",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME MUSAMAM - Revisar en Pedix",
-      "categoria": "MUSAMAM",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME KAYALI - Revisar en Pedix",
-      "categoria": "KAYALI",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME JO MILANO - Revisar en Pedix",
-      "categoria": "JO MILANO",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME SPECTRE - Revisar en Pedix",
-      "categoria": "SPECTRE",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME MAISON ASRAR - Revisar en Pedix",
-      "categoria": "MAISON ASRAR",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME KHSAFA - Revisar en Pedix",
-      "categoria": "KHSAFA",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     },
     {
       "nombre": "PERFUME Otros - Revisar en Pedix",
-      "categoria": "Otros",
-      "costo": 25000,
       "stock": false,
-      "stock_text": "NO",
-      "precio": 62360,
-      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+      "reemplazo": ""
     }
   ]
 }
