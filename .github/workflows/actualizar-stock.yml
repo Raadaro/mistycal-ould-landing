@@ -1,1 +1,37 @@
 
+name: Actualizar stock - CORREGIDO
+
+on:
+  schedule:
+    # 11:00 UTC = 8:00 AM Argentina
+    - cron: '0 11 * * *'
+  workflow_dispatch:  # Permite ejecutarlo manual desde Actions
+
+jobs:
+  update-stock:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install requests
+      
+      - name: Update stock.json desde Google Sheets
+        env:
+          SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
+        run: python scripts/update_stock.py
+      
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "Mistycal Bot"
+          git config user.email "bot@mistycal.com"
+          git add stock.json
+          git diff --staged --quiet || git commit -m "stock actualizado $(date -u)"
+          git push
