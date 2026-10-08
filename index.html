@@ -7733,7 +7733,54 @@
             f();
         })();
 
-        loadSavedTexts();
+        
+        // ===== CARGA DE STOCK.JSON DESDE TU EXCEL =====
+        // Tu Excel debe generar stock.json en la raiz del repo con formato: {"perfumes":[{"nombre":"Yara Candy G5","stock":true/false}]}
+        async function cargarStockJson(){
+            try{
+                const resp = await fetch('./stock.json?v='+Date.now(), {cache:'no-store'});
+                if(!resp.ok) throw new Error('no stock.json');
+                const data = await resp.json();
+                const lista = data.perfumes || data || [];
+                const mapa = {};
+                lista.forEach(p=>{
+                    const nombre = (p.nombre || p.name || '').toLowerCase().trim();
+                    const stockVal = p.stock;
+                    // stock puede ser true/false, 1/0, "SI"/"NO", "Si hoy"/"NO"
+                    let tieneStock = true;
+                    if(stockVal===false || stockVal===0 || stockVal==='0') tieneStock=false;
+                    else if(typeof stockVal==='string'){
+                        const s=stockVal.toLowerCase();
+                        if(s.includes('no') || s==='0' || s==='false') tieneStock=false;
+                        else tieneStock=true;
+                    }
+                    mapa[nombre]=tieneStock;
+                    mapa[nombre.toLowerCase()]=tieneStock;
+                });
+                let cambio=false;
+                products.forEach(prod=>{
+                    const key=prod.name.toLowerCase().trim();
+                    if(key in mapa){
+                        if(prod.inStock!==mapa[key]) cambio=true;
+                        prod.inStock=mapa[key];
+                    }
+                });
+                if(cambio){
+                    console.log('Stock actualizado desde stock.json', mapa);
+                    renderCatalog();
+                } else {
+                    console.log('Stock.json leido, sin cambios o ya aplicado');
+                }
+            }catch(e){
+                console.log('No se pudo leer stock.json, usando stock interno', e);
+            }
+        }
+        // Cargar stock.json al iniciar y cada 30 segundos por si actualizas Excel
+        setTimeout(cargarStockJson, 800);
+        setTimeout(cargarStockJson, 2500);
+        setInterval(cargarStockJson, 30000);
+
+loadSavedTexts();
         initApp();
 
         // ===== CARRUSEL =====
@@ -7988,100 +8035,7 @@
             <div class="reserve-body" id="reserve-content"></div>
         </div>
     </div>
-    <script>
-fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
-.then(r=>r.json()).then(data=>{
-  const mapa={};
-  data.perfumes.forEach(p=>{ mapa[p.nombre.toLowerCase().trim()] = p.stock; });
-  <script>
-fetch('./stock.json?v='+Date.now(),{cache:'no-store'})
-.then(r=>r.json()).then(data=>{
-  const mapa={};
-  (data.perfumes||[]).forEach(p=>{
-    mapa[p.nombre.toLowerCase().trim()] = p.stock;
-    mapa[p.nombre.toLowerCase()] = p.stock;
-  });
-  // Busca por el título del perfume en la página
-  document.querySelectorAll('h3').forEach(h=>{
-    const key = h.textContent.toLowerCase().trim();
-    if(mapa[key]===false || mapa[key]===0 || mapa[key]==='0'){
-      const card = h.closest('div');
-      if(card){
-        card.style.opacity='0.5';
-        card.style.filter='grayscale(0.8)';
-        const btn = card.querySelector('button');
-        if(btn){
-          btn.textContent='SIN STOCK';
-          btn.disabled=true;
-          btn.style.background='#0a0a0a'; btn.style.color='#fff'; btn.style.border='1px solid #0a0a0a';
-        }
-      }
-    }
-  });
-});
-
-        document.addEventListener('DOMContentLoaded', function(){
-            const b=document.getElementById('edit-toggle');
-            if(b){ b.addEventListener('click', function(e){ e.preventDefault(); try{ toggleEditMode(); }catch(err){} }); }
-        });
-
-        // LOGICA DE REEMPLAZO - Si titular esta en NO muestra suplente
-        const SISTEMA_3 = [
-            { titular: 'Yara Candy G5', supl1: 'Odyssey Candee G5', supl2: 'Odyssey Pink Pop G5' },
-            { titular: '9 AM Pour Femme G5', supl1: '9PM Elixir G5', supl2: '9PM Black G5' },
-            { titular: 'Limoni G5', supl1: 'Odyssey Bahamas G5', supl2: '9AM Dive G5' }
-        ];
-        function buscarProd(nombre){
-            const n=nombre.toLowerCase().trim();
-            return products.find(p=>p.name.toLowerCase()===n) || products.find(p=>p.name.toLowerCase().includes(n)) || products.find(p=>n.includes(p.name.toLowerCase()));
-        }
-        function elegirConStock(cfg){
-            let t=buscarProd(cfg.titular);
-            if(t && t.inStock) return {prod:t, esReemplazo:false};
-            let s1=buscarProd(cfg.supl1);
-            if(s1 && s1.inStock) return {prod:s1, esReemplazo:true, orig:cfg.titular};
-            let s2=buscarProd(cfg.supl2);
-            if(s2 && s2.inStock) return {prod:s2, esReemplazo:true, orig:cfg.titular};
-            return {prod:t||s1||s2, esReemplazo:false};
-        }
-        function renderBannerMadre(){
-            const grid=document.getElementById('madre-grid');
-            if(!grid || !window.products || !window.createCardHtml){
-                console.log('renderBannerMadre waiting', !!window.products, !!window.createCardHtml);
-                return;
-            }
-            // Solo reemplaza si algun titular esta sin stock, si no deja los 3 estaticos que ya se ven
-            let necesitaReemplazo = false;
-            SISTEMA_3.forEach(cfg=>{
-                let t=buscarProd(cfg.titular);
-                if(t && !t.inStock) necesitaReemplazo=true;
-            });
-            if(!necesitaReemplazo){
-                console.log('Todos con stock, dejo estaticos visibles');
-                return;
-            }
-            console.log('Hay sin stock, reemplazo banner');
-            let out='';
-            SISTEMA_3.forEach(cfg=>{
-                const r=elegirConStock(cfg);
-                const p=r.prod;
-                if(!p) return;
-                let cuadro = createCardHtml(p);
-                let badge = r.esReemplazo ? `<div style="position:absolute;top:10px;left:10px;z-index:15;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;">REEMPLAZO CON STOCK</div>` : '';
-                out += `<div style="position:relative;">${badge}${cuadro}</div>`;
-            });
-            if(out) grid.innerHTML=out;
-        }
-        // Intentos
-        setTimeout(renderBannerMadre, 800);
-        setTimeout(renderBannerMadre, 2000);
-        setTimeout(renderBannerMadre, 4000);
-        const _origRender = window.renderCatalog;
-        if(_origRender){
-            window.renderCatalog=function(){ _origRender(); setTimeout(renderBannerMadre, 100); };
-        }
-
-</script>
+    
 <script src="./volaron.js?v=1">
         document.addEventListener('DOMContentLoaded', function(){
             const b=document.getElementById('edit-toggle');
