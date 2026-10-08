@@ -1,1088 +1,908 @@
 {
+  "actualizado": "2026-10-08T12:05:33.192262",
+  "total": 100,
+  "con_stock": 20,
+  "sin_stock": 80,
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
-      "stock": false
-    },
-    {
-      "nombre": "YARA CANDY G5",
-      "stock": false
-    },
-    {
-      "nombre": "YARA TOUS G5",
-      "stock": true
-    },
-    {
-      "nombre": "YARA ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "YARA MOI G5",
-      "stock": true
-    },
-    {
-      "nombre": "ASAD BOURBON G5",
-      "stock": true
-    },
-    {
-      "nombre": "ASAD G5",
-      "stock": true
-    },
-    {
-      "nombre": "ASAD ELIXIR",
-      "stock": true
-    },
-    {
-      "nombre": "ASAD ZANZÍBAR G5",
-      "stock": true
-    },
-    {
-      "nombre": "9AM DIVE G5",
-      "stock": true
-    },
-    {
-      "nombre": "9PM REBEL G5",
-      "stock": true
-    },
-    {
-      "nombre": "9PM NIGHT OUT G5",
-      "stock": true
-    },
-    {
-      "nombre": "9PM ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "9PM BLACK G5",
-      "stock": true
-    },
-    {
-      "nombre": "9 AM POUR FEMME G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY MANDARÍN SKY G5",
-      "stock": true
-    },
-    {
-      "nombre": "MANDARÍN SKY VINTAGE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY BLACK FOREST G5",
-      "stock": true
-    },
-    {
-      "nombre": "OSYSSEY TYRANT G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY MARSHMALLOW G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY AQUA G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY BAHAMAS G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY EAU DE MONTAGNE G5",
-      "stock": true
-    },
-    {
-      "nombre": "MEGA G5",
-      "stock": true
-    },
-    {
-      "nombre": "ARTISTO G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY PINK POP G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY LICHI LUSH G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY GO MANGO G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY DUBAI CHOCOLATE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY CANDEE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY REVOLUTION G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY MANDARIN SKY ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY AOUD G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY TOFFEE COFFEE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ODYSSEY WILD ONE G5",
-      "stock": true
-    },
-    {
-      "nombre": "LIMONI G5",
-      "stock": true
-    },
-    {
-      "nombre": "HOMME WHITE G5",
-      "stock": true
-    },
-    {
-      "nombre": "SPECTRA RAINBOW G5",
-      "stock": true
-    },
-    {
-      "nombre": "SPECTRA BLU G5",
-      "stock": true
-    },
-    {
-      "nombre": "INFINITY GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "INFINITY SILVER G5",
-      "stock": true
-    },
-    {
-      "nombre": "ISLAND BREEZE G5",
-      "stock": true
-    },
-    {
-      "nombre": "DELICACY KUNAFA CHOCOLATE G5",
-      "stock": true
-    },
-    {
-      "nombre": "DELICACY RED VELVET G5",
-      "stock": true
-    },
-    {
-      "nombre": "ÉTER ARABIAN SKY G5",
-      "stock": true
-    },
-    {
-      "nombre": "BEACH PARTY G5",
-      "stock": true
-    },
-    {
-      "nombre": "YUM YUM G5",
-      "stock": true
-    },
-    {
-      "nombre": "BON BON G5",
-      "stock": true
-    },
-    {
-      "nombre": "ISLAND BLISS G5",
-      "stock": true
-    },
-    {
-      "nombre": "SHK SAOUD ALKAABI G5",
-      "stock": true
-    },
-    {
-      "nombre": "DELICACY COTTON CANDY G5",
-      "stock": true
-    },
-    {
-      "nombre": "SPACE AGE G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN AQUA DUBAI G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN GOLD EDITION G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN BLEU EDITION G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN PRIVATE EDITION G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN DUBAI NIGHT 60ml G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN GOLD 100ML G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN WHITE G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN ULTRA VIOLET G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN RUBY G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN GOLD 120ml G5 (dorado y negro)",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN CARBON G5",
-      "stock": true
-    },
-    {
-      "nombre": "BON CHERIE ROJO G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN INTENSE MAN G5",
-      "stock": true
-    },
-    {
-      "nombre": "CLUB DE NUIT BLING G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN MILESTONE G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN SILLAGE G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN URBAN MAN G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN URBAN MAN ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN MALEKA G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN ICONIC G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN UNTOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN IMPERIALE G5",
-      "stock": true
-    },
-    {
-      "nombre": "LIONHEART G5",
-      "stock": true
-    },
-    {
-      "nombre": "CDN WOMAN G5",
-      "stock": true
-    },
-    {
-      "nombre": "CLUB DE NUIT OUD G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS FIRE G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS FOR HIM",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS KOBRA G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS LONDON G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS VIPER G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS MALIBÚ G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS VERDE G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS DIVA G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS THUNDER G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS LAVA GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS BLACK G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS ICE G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS ATLANTIS G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS ECLAT G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS TROPICAL G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAWAS PINK G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA ROSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA SCARLET G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA QUEEN G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA KING SOLEIL G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA KING G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA BLEU G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA CHOCOLATE G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA KING GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "BHARARA NICHE FEMME G5",
-      "stock": true
-    },
-    {
-      "nombre": "VULCAN FEU G5",
-      "stock": true
-    },
-    {
-      "nombre": "VULVAN SABLE G5",
-      "stock": true
-    },
-    {
-      "nombre": "VULCAN BAIE G5",
-      "stock": true
-    },
-    {
-      "nombre": "VULCAN BLACK G5",
-      "stock": true
-    },
-    {
-      "nombre": "ORIENTICA ROYAL AMBER G5",
-      "stock": true
-    },
-    {
-      "nombre": "ORIENTICA AMBER ROUGE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ORIENTICA OUD SAFFRON G5",
-      "stock": true
-    },
-    {
-      "nombre": "ORIENTICA ROYAL BLEU G5",
-      "stock": true
-    },
-    {
-      "nombre": "ORIENTICA NARDO OUD G5",
-      "stock": true
-    },
-    {
-      "nombre": "ORIENTICA VELVET GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "ATHEERI G5",
-      "stock": true
-    },
-    {
-      "nombre": "ANGHAM G5",
-      "stock": true
-    },
-    {
-      "nombre": "HER CONFESSION G5",
-      "stock": true
-    },
-    {
-      "nombre": "TERIAQ INTENSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "TERIAQ G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAYAAM G5",
-      "stock": true
-    },
-    {
-      "nombre": "SECOND SONG G5",
-      "stock": true
-    },
-    {
-      "nombre": "VINTAGE RADIO G5",
-      "stock": true
-    },
-    {
-      "nombre": "DALAL G5",
-      "stock": true
-    },
-    {
-      "nombre": "THE KINGDOM FEM G5",
-      "stock": true
-    },
-    {
-      "nombre": "THE KINGDOM G5",
-      "stock": true
-    },
-    {
-      "nombre": "ART OF UNIVERSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ART OF ARABIA I G5",
-      "stock": true
-    },
-    {
-      "nombre": "AFEEF G5",
-      "stock": true
-    },
-    {
-      "nombre": "NOW WOMEN G5",
-      "stock": true
-    },
-    {
-      "nombre": "VICTORIA G5",
-      "stock": true
-    },
-    {
-      "nombre": "HIS CONFESSION G5",
-      "stock": true
-    },
-    {
-      "nombre": "SAKEENA G5",
-      "stock": true
-    },
-    {
-      "nombre": "QAAED AL SHABAAB G5",
-      "stock": true
-    },
-    {
-      "nombre": "QAAED G5",
-      "stock": true
-    },
-    {
-      "nombre": "NOW INTENSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "NOW ROUGE G5",
-      "stock": true
-    },
-    {
-      "nombre": "NOW WHITE G5",
-      "stock": true
-    },
-    {
-      "nombre": "NOW NEGRO G5",
-      "stock": true
-    },
-    {
-      "nombre": "HAYA G5",
-      "stock": true
-    },
-    {
-      "nombre": "MAYAR ROSA G5",
-      "stock": true
-    },
-    {
-      "nombre": "CONFIDENTIAL GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "RAMZ GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "SUPREMACY IN OUD G5",
-      "stock": true
-    },
-    {
-      "nombre": "SUPREMACY NOT ONLY INTENSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "SUPREMACY COLLECTOR'S G5",
-      "stock": true
-    },
-    {
-      "nombre": "SUPREMACY NOIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "OUD FOR GLORY G5",
-      "stock": true
-    },
-    {
-      "nombre": "NOBLE BLUSH G5",
-      "stock": true
-    },
-    {
-      "nombre": "SUBLIME G5",
-      "stock": true
-    },
-    {
-      "nombre": "HONOR AND GLORY G5",
-      "stock": true
-    },
-    {
-      "nombre": "AMETHYST G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHAMRAH G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHAMRAH QAHWA G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHAMRAH KARAZ G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHARMRAH DUKHAN G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHAMRAH ZANQAM G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHARMRAH WAHA G5",
-      "stock": true
-    },
-    {
-      "nombre": "QAED AL FURSAN BLANCO G5",
-      "stock": true
-    },
-    {
-      "nombre": "FURSAN MARRÓN G5",
-      "stock": true
-    },
-    {
-      "nombre": "QAED AL FURSAN NEGRO G5",
-      "stock": true
-    },
-    {
-      "nombre": "IRIDA EXTRAIT G5",
-      "stock": true
-    },
-    {
-      "nombre": "VENENO SCARLET G5",
-      "stock": true
-    },
-    {
-      "nombre": "VENENO NEGRO G5",
-      "stock": true
-    },
-    {
-      "nombre": "JADE GIALLO G5",
-      "stock": true
-    },
-    {
-      "nombre": "LIQUID BRUN G5",
-      "stock": true
-    },
-    {
-      "nombre": "AZZURE AOUD G5",
-      "stock": true
-    },
-    {
-      "nombre": "CHAOS EXTRAIT G5",
-      "stock": true
-    },
-    {
-      "nombre": "LUSCIOUS G5",
-      "stock": true
-    },
-    {
-      "nombre": "VENENO BIANCO G5",
-      "stock": true
-    },
-    {
-      "nombre": "JADE VERDE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ROYAL BLEND BOURBON G5",
-      "stock": true
-    },
-    {
-      "nombre": "ROYAL BLEND SEQUOIA G5",
-      "stock": true
-    },
-    {
-      "nombre": "ROYAL BLEND NERO G5",
-      "stock": true
-    },
-    {
-      "nombre": "LIQUID BRUN LIMITED EDITION 150ML G5",
-      "stock": true
-    },
-    {
-      "nombre": "AROMATIX ROYAL TABOO G5",
-      "stock": true
-    },
-    {
-      "nombre": "AROMATIX CARNAL DESIRE G5",
-      "stock": true
-    },
-    {
-      "nombre": "AROMATIX FORBIDDEN FRUIT G5",
-      "stock": true
-    },
-    {
-      "nombre": "AROMATIX SUN KISSED G5",
-      "stock": true
-    },
-    {
-      "nombre": "AROMATIX TEAS ME G5",
-      "stock": true
-    },
-    {
-      "nombre": "ERBA PURA CON PAÑUELO G5",
-      "stock": true
-    },
-    {
-      "nombre": "HOMME ANIVERSARY G5",
-      "stock": true
-    },
-    {
-      "nombre": "NAXOS XERJOFF G5",
-      "stock": true
-    },
-    {
-      "nombre": "CORO CON PAÑUELO G5",
-      "stock": true
-    },
-    {
-      "nombre": "ACCENTO CON PAÑUELO G5",
-      "stock": true
-    },
-    {
-      "nombre": "ERBA GOLD CON PAÑUELO G5",
-      "stock": true
-    },
-    {
-      "nombre": "ECLAIRE PISTACHO G5",
-      "stock": true
-    },
-    {
-      "nombre": "ECLAIRE G5",
-      "stock": true
-    },
-    {
-      "nombre": "ECLAIRE BANOFFI G5",
-      "stock": true
-    },
-    {
-      "nombre": "TROPICAL VIBE G5",
-      "stock": true
-    },
-    {
-      "nombre": "TERRA RAYHAAN G5",
-      "stock": true
-    },
-    {
-      "nombre": "AQUATICA RAYHAAN G5",
-      "stock": true
-    },
-    {
-      "nombre": "RAYHAAN ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "PACIFIC AURA G5",
-      "stock": true
-    },
-    {
-      "nombre": "AHMED MARJ G5",
-      "stock": true
-    },
-    {
-      "nombre": "AHMED AHL G5",
-      "stock": true
-    },
-    {
-      "nombre": "ROSE NOIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "FAKHAR ROSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "FAKHAR SILVER G5",
-      "stock": true
-    },
-    {
-      "nombre": "FAKHAR GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "AMEERAT AL ARAB G5",
-      "stock": true
-    },
-    {
-      "nombre": "AMEERAT PRIVE ROSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "AMEERAT AL ARAB BLACK G5",
-      "stock": true
-    },
-    {
-      "nombre": "ESHAL G5",
-      "stock": true
-    },
-    {
-      "nombre": "MARSHMALLOW BLUSH G5",
-      "stock": true
-    },
-    {
-      "nombre": "TASKEEN CARAMEL G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHAIR CONFECTION G5",
-      "stock": true
-    },
-    {
-      "nombre": "SABRINA CARPENTER CARAMEL G5",
-      "stock": true
-    },
-    {
-      "nombre": "SABRINA CARPENTER ESPRESSO G5",
-      "stock": true
-    },
-    {
-      "nombre": "SABRINA CARPENTER ROSA G5",
-      "stock": true
-    },
-    {
-      "nombre": "JPG LE MALE ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "JPG LE MALE G5",
-      "stock": true
-    },
-    {
-      "nombre": "JPG LE BEAU G5",
-      "stock": true
-    },
-    {
-      "nombre": "JPG GARDEN G5",
-      "stock": true
-    },
-    {
-      "nombre": "JPG ULTRA ELIXIR G5",
-      "stock": true
-    },
-    {
-      "nombre": "GIVE ME GOURMAND CHOCO OVERDOSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "COOKIE GRAVE G5",
-      "stock": true
-    },
-    {
-      "nombre": "VAINILLA FREAK G5",
-      "stock": true
-    },
-    {
-      "nombre": "GIVE ME GOURMAND MALLOW MADNESS G5",
-      "stock": true
-    },
-    {
-      "nombre": "GIVE ME GOURMAND BERRY ON TOP G5",
-      "stock": true
-    },
-    {
-      "nombre": "MUSAMAM BLACK G5",
-      "stock": true
-    },
-    {
-      "nombre": "MUSAMAM WHITE G5",
-      "stock": true
-    },
-    {
-      "nombre": "MUSAMAM INTENSE G5",
-      "stock": true
-    },
-    {
-      "nombre": "KAYALI BURNING CHERRY G5",
-      "stock": true
-    },
-    {
-      "nombre": "KAYALI JUICY APPLE G5",
-      "stock": true
-    },
-    {
-      "nombre": "KAYALI VAINILLA G5",
-      "stock": true
-    },
-    {
-      "nombre": "KAYALI WHITE FLOWERS G5",
-      "stock": true
-    },
-    {
-      "nombre": "KAYALI SPARKLING LYCHEE G5",
-      "stock": true
-    },
-    {
-      "nombre": "GAME OF SPADES BONUS",
-      "stock": true
-    },
-    {
-      "nombre": "GAME OF SPADES BOSTON G5",
-      "stock": true
-    },
-    {
-      "nombre": "GAME OF SPADES MOON G5",
-      "stock": true
-    },
-    {
-      "nombre": "SPRECTRE G5",
-      "stock": true
-    },
-    {
-      "nombre": "SPECTRE WRAITH G5",
-      "stock": true
-    },
-    {
-      "nombre": "SPECTRE GHOST G5",
-      "stock": true
-    },
-    {
-      "nombre": "VANILLA VOYAGE G5",
-      "stock": true
-    },
-    {
-      "nombre": "OH HONEY G5",
-      "stock": true
-    },
-    {
-      "nombre": "DIGNITY G5",
-      "stock": true
-    },
-    {
-      "nombre": "FAITH G5",
-      "stock": true
-    },
-    {
-      "nombre": "NEW WOMEN RAVE G5",
-      "stock": true
-    },
-    {
-      "nombre": "EXCLUSIVE PRÍVATE GOLD G5",
-      "stock": true
-    },
-    {
-      "nombre": "LAYLA ECLUSIF G5",
-      "stock": true
-    },
-    {
-      "nombre": "AURELIA G5",
-      "stock": true
-    },
-    {
-      "nombre": "KHAIR FUSIÓN G5",
-      "stock": true
-    },
-    {
-      "nombre": "SUPREMACY POUR FEMME G5",
-      "stock": true
-    },
-    {
-      "nombre": "MILKY WAY G5",
-      "stock": true
-    },
-    {
-      "nombre": "AL HARAMAIN FUTURE DUBAI 100ml  G5",
-      "stock": true
-    },
-    {
-      "nombre": "WHIPPED PLEASURE G5",
-      "stock": true
-    },
-    {
-      "nombre": "HISTORIC DORIA G5",
-      "stock": true
-    },
-    {
-      "nombre": "TURATHI ELÉCTRICA G5",
-      "stock": true
-    },
-    {
-      "nombre": "NATURAL SPRAY (MUSAMAM WHITE)",
-      "stock": true
-    },
-    {
-      "nombre": "ELYSIAN FIELDS (FAKHAR SILVER)",
-      "stock": true
-    },
-    {
-      "nombre": "SCOOP HAUNT (YUM YUM)",
-      "stock": true
-    },
-    {
-      "nombre": "DUSK EMBRACE (ASAD BOURBON)",
-      "stock": true
-    },
-    {
-      "nombre": "LOVELY DREAM (ARIANA)",
-      "stock": true
-    },
-    {
-      "nombre": "KISASS (ECLAIRE)",
-      "stock": true
-    },
-    {
-      "nombre": "VELVET EMBRACE (ERBA PURA)",
-      "stock": true
-    },
-    {
-      "nombre": "MOONLIT CITADEL (HAWAS ICE)",
-      "stock": true
-    },
-    {
-      "nombre": "MARSHMA (MARSHMALLOW BLUSH)",
-      "stock": true
-    },
-    {
-      "nombre": "REFRESHING SWEET (SABRINA CARPENTER)",
-      "stock": true
-    },
-    {
-      "nombre": "ISLAND CREAM (ISLAND BLISS)",
-      "stock": true
-    },
-    {
-      "nombre": "AHLAM (KAHIR CONFESSION)",
-      "stock": true
-    },
-    {
-      "nombre": "PROMO 10 MINIATURAS",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI ODYSSEY MANDARIN",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI YARA ASAD 30ML",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI 9PM",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI ODYSSEY CANDEE",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI ECLAIRE",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI JPG",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI HAWAS MASCULINO",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI MARSHMALLOW",
-      "stock": true
-    },
-    {
-      "nombre": "KIT MINI VULCAN",
-      "stock": true
-    },
-    {
-      "nombre": "KIT ECLAIRE",
-      "stock": true
-    },
-    {
-      "nombre": "KIT CLUB DE NUIT",
-      "stock": true
+      "categoria": "YARA",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 44899,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G6",
+      "categoria": "YARA",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 44899,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G7",
+      "categoria": "YARA",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 44899,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G8",
+      "categoria": "YARA",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 44899,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G9",
+      "categoria": "YARA",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 44899,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G10",
+      "categoria": "ASAD",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 61999,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G11",
+      "categoria": "ASAD",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 61999,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G12",
+      "categoria": "ASAD",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 61999,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G13",
+      "categoria": "ASAD",
+      "costo": 18000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 61999,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G14",
+      "categoria": "9PM",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G15",
+      "categoria": "9PM",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G16",
+      "categoria": "9PM",
+      "costo": 35000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 72360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G17",
+      "categoria": "9PM",
+      "costo": 30000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 72360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G18",
+      "categoria": "9PM",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G19",
+      "categoria": "9PM",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G20",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G21",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G22",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G23",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G24",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G25",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G26",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G27",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G28",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G29",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G30",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G31",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G32",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G33",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G34",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G35",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G36",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G37",
+      "categoria": "ODYSSEY",
+      "costo": 25000,
+      "stock": true,
+      "stock_text": "SI",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G38",
+      "categoria": "ARMAF",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G39",
+      "categoria": "AL HARAMAIN",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G40",
+      "categoria": "CLUB DE NUIT",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G41",
+      "categoria": "HAWAS",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G42",
+      "categoria": "BHARARA",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G43",
+      "categoria": "VULCAN",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G44",
+      "categoria": "ORIENTICA",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G45",
+      "categoria": "LATTAFA",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G46",
+      "categoria": "SUPREMACY",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G47",
+      "categoria": "BADEE AL OUD",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G48",
+      "categoria": "KHAMRAH",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G49",
+      "categoria": "FURSAN",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G50",
+      "categoria": "FRENCH AVENUE",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G51",
+      "categoria": "AROMATIX",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G52",
+      "categoria": "XERJOFF",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G53",
+      "categoria": "ECLAIRE",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G54",
+      "categoria": "RAYHAAN",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G55",
+      "categoria": "AHMED",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G56",
+      "categoria": "FAKHAR",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G57",
+      "categoria": "AMEERAT",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G58",
+      "categoria": "PARIS CORNER",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G59",
+      "categoria": "SABRINA CARPENTER",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G60",
+      "categoria": "JPG",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G61",
+      "categoria": "GIVE ME GOURMAND",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G62",
+      "categoria": "MUSAMAM",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G63",
+      "categoria": "KAYALI",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G64",
+      "categoria": "JO MILANO",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G65",
+      "categoria": "SPECTRE",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G66",
+      "categoria": "MAISON ASRAR",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G67",
+      "categoria": "KHSAFA",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G68",
+      "categoria": "Otros",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": "https://pedix.app/labusca/categoria/dGlBqD50PcsXAXVpgE3k"
+    },
+    {
+      "nombre": "YARA FEM G69",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G70",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G71",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G72",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G73",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G74",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G75",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G76",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G77",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G78",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G79",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G80",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G81",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G82",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G83",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G84",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G85",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "Y",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G87",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G88",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G89",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G90",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G91",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G92",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G93",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G94",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G95",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G96",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G97",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G98",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G99",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G100",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G101",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G102",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G103",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
+    },
+    {
+      "nombre": "YARA FEM G104",
+      "categoria": "",
+      "costo": 25000,
+      "stock": false,
+      "stock_text": "NO",
+      "precio": 62360,
+      "link_pedix": ""
     }
   ]
 }
