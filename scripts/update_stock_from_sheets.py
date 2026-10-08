@@ -1,4 +1,3 @@
-
 """
 Script CORREGIDO FINAL - respeta gid y lee Stock correctamente
 """
