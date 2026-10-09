@@ -278,6 +278,33 @@
         <style>
   .sin-stock { opacity: 0.4; filter: grayscale(100%); pointer-events: none; position: relative; }
   .sin-stock::after { content: "SIN STOCK"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: black; color: white; padding: 5px 12px; font-size: 12px; font-weight: bold; border-radius: 20px; z-index: 2; }
+</style><style>
+/* BANNER FINAL LIMPIO - SOLO BOTON CATALOGO */
+.buybar{display:flex;align-items:center;justify-content:center;padding:14px 16px;background:#111;color:#fff;position:fixed;bottom:0;left:0;right:0;z-index:99;box-shadow:0 -2px 12px rgba(0,0,0,.15);}
+.buybar .btn{width:100%;max-width:320px;height:48px;font-size:15px;letter-spacing:.06em;background:#fff;color:#111;border:none;}
+.buybar .btn:hover{background:#F6F2EE;}
+@media(min-width:750px){
+  .buybar{padding:16px;}
+  .buybar .btn{max-width:360px;}
+}
+#buybar-final{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:48px 24px;background:#141414;color:#fff;text-align:center;}
+#buybar-final h3{font-family:var(--font-display);font-size:28px;color:#fff;}
+#buybar-final .btn--light{width:100%;max-width:340px;}
+</style><style>
+/* FIX MISTYCAL FINAL - precio unificado y responsive sin romper orden */
+.buybar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#111;color:#fff;position:fixed;bottom:0;left:0;right:0;z-index:99;}
+.buybar__p{display:flex;flex-direction:column;line-height:1.1;}
+.buybar__p span{font-family:var(--font-display);font-size:20px;font-weight:600;}
+.buybar__p small{font-size:11px;opacity:.8;letter-spacing:.08em;text-transform:uppercase;}
+@media(min-width:750px){
+  .buybar{justify-content:center;gap:24px;}
+  .buybar__p{flex-direction:row;align-items:baseline;gap:8px;}
+}
+.hero__price .hero__now{font-size:32px;}
+@media(max-width:749px){
+  .hero__price .hero__now{font-size:28px;}
+  .buybar__p span{font-size:18px;}
+}
 </style>
 <style></style><style></style></head>
 <body class="">
@@ -435,7 +462,7 @@
                     <li data-field="hero-5"><svg class="ic"><use href="#i-check"></use></svg><span>Envío gratis en Córdoba Capital</span></li>
                 </ul>
                 <div class="hero__price">
-                    <span class="hero__now">Desde $44.900</span>
+                    
                     <span class="chip">G5 Quality</span>
                 </div>
                 <p class="hero__sub" data-field="hero-6">El envío llega entre las 24hs y 48hs.</p>
@@ -5739,7 +5766,7 @@
             <h2 data-field="cta-final-1">Descubrí tu próximo perfume favorito.</h2>
             <p data-field="cta-final-2">Fragancias Calidad G5 · Envío gratis en Córdoba</p>
             <div class="hero__price">
-                <span class="hero__now">Desde $44.900</span>
+                
             </div>
             <a class="btn btn--light" href="#catalogo">Ver Catálogo</a>
         </div>
@@ -5757,10 +5784,7 @@
     </section>
 
     <!-- Buybar -->
-    <div class="buybar" id="buybar" data-bloque="buybar">
-        <div class="buybar__p"><span>Desde $18.000</span><small>Calidad G5</small></div>
-        <a class="btn" href="#catalogo">Ver Catálogo</a>
-    </div>
+    <div class="buybar" id="buybar"><a class="btn" href="#catalogo">Ver Catálogo</a></div>
 
     <!-- Admin Modal -->
     <div id="admin-modal" class="admin-modal">
