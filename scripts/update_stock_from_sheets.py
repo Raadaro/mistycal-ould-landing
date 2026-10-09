@@ -158,4 +158,13 @@ def main():
 
     # Seguridad: si algo salio mal y viene casi vacio, NO pisar el stock.json bueno
     if len(perfumes) < 50:
-        raise ValueError(f"Solo se leyeron {len(perfumes)} perfumes; se cancela para no romper
+        raise ValueError(f"Solo se leyeron {len(perfumes)} perfumes; se cancela para no romper stock.json")
+
+    ahora = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M")
+    output = {"actualizado": ahora, "perfumes": perfumes}
+    Path("stock.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("stock.json generado OK")
+
+
+if __name__ == "__main__":
+    main()
