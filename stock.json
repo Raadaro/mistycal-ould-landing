@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-09 22:21",
+  "actualizado": "2026-10-09 22:33",
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
@@ -1203,7 +1203,7 @@
     },
     {
       "nombre": "MILKY WAY G5",
-      "stock": true,
+      "stock": false,
       "precio": 30000
     },
     {
