@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-09 21:17",
+  "actualizado": "2026-10-09 21:40",
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
@@ -87,7 +87,7 @@
       "precio": 25000
     },
     {
-      "nombre": "Odyssey Tyrant G5",
+      "nombre": "ODYSSEY TYRANT G5",
       "stock": true,
       "precio": 25000
     },
@@ -522,7 +522,7 @@
       "precio": 35000
     },
     {
-      "nombre": "Vulcan Sable G5",
+      "nombre": "VULCAN SABLE G5",
       "stock": true,
       "precio": 30000
     },
@@ -767,12 +767,12 @@
       "precio": 30000
     },
     {
-      "nombre": "Khamrah Dukhan G5",
+      "nombre": "KHAMRAH DUKHAN G5",
       "stock": false,
       "precio": 30000
     },
     {
-      "nombre": "Khamrah Waha G5",
+      "nombre": "KHAMRAH WAHA G5",
       "stock": true,
       "precio": 35000
     },
@@ -907,7 +907,7 @@
       "precio": 35000
     },
     {
-      "nombre": "Homme Anniversary G5",
+      "nombre": "HOMME ANNIVERSARY G5",
       "stock": true,
       "precio": 30000
     },
@@ -1172,6 +1172,11 @@
       "precio": 35000
     },
     {
+      "nombre": "GAME OF SPADES WILDCARD G5",
+      "stock": false,
+      "precio": 35000
+    },
+    {
       "nombre": "SPRECTRE G5",
       "stock": true,
       "precio": 35000
@@ -1262,7 +1267,7 @@
       "precio": 30000
     },
     {
-      "nombre": "Sabah Al Ward G5",
+      "nombre": "SABAH AL WARD G5",
       "stock": false,
       "precio": 25000
     },
@@ -1270,11 +1275,6 @@
       "nombre": "SABAH AL WARD SUGAR G5",
       "stock": false,
       "precio": 26000
-    },
-    {
-      "nombre": "GAME OF SPADES WILDCARD G5",
-      "stock": false,
-      "precio": 35000
     },
     {
       "nombre": "BONITA FEMME MARRON G5",
