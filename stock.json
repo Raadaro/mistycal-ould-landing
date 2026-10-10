@@ -1,1104 +1,1425 @@
 {
+  "actualizado": "2026-10-09 21:05",
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "YARA CANDY G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "YARA TOUS G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "YARA ELIXIR G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "YARA MOI G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "ASAD BOURBON G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "ASAD G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "ASAD ELIXIR",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "ASAD ZANZÍBAR G5",
-      "stock": false
+      "stock": false,
+      "precio": 18000
     },
     {
       "nombre": "9AM DIVE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "9PM REBEL G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "9PM NIGHT OUT G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "9PM ELIXIR G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "9PM BLACK G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "9 AM POUR FEMME G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY MANDARÍN SKY G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "MANDARÍN SKY VINTAGE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
-      "nombre": "OSYSSEY TYRANT G5",
-      "stock": true
+      "nombre": "Odyssey Tyrant G5",
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY MARSHMALLOW G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY BAHAMAS G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY EAU DE MONTAGNE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ARTISTO G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY PINK POP G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY GO MANGO G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY REVOLUTION G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY MANDARIN SKY ELIXIR G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "LIMONI G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "HOMME WHITE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY BLACK FOREST G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY AQUA G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "MEGA G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY LICHI LUSH G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY DUBAI CHOCOLATE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY CANDEE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY AOUD G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY TOFFEE COFFEE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ODYSSEY WILD ONE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "SPECTRA RAINBOW G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "SPECTRA BLU G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "INFINITY GOLD G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "INFINITY SILVER G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "DELICACY KUNAFA CHOCOLATE G5",
-      "stock": true
+      "stock": true,
+      "precio": 28000
     },
     {
       "nombre": "DELICACY RED VELVET G5",
-      "stock": true
+      "stock": true,
+      "precio": 28000
     },
     {
       "nombre": "ÉTER ARABIAN SKY G5",
-      "stock": true
+      "stock": true,
+      "precio": 40000
     },
     {
       "nombre": "BEACH PARTY G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "SPACE AGE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ISLAND BREEZE G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "YUM YUM G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BON BON G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ISLAND BLISS G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "SHK SAOUD ALKAABI G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "DELICACY COTTON CANDY G5",
-      "stock": false
+      "stock": false,
+      "precio": 28000
     },
     {
       "nombre": "AL HARAMAIN PRIVATE EDITION G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "AL HARAMAIN DUBAI NIGHT 60ml G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "AL HARAMAIN FUTURE DUBAI 100ml  G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "AL HARAMAIN AQUA DUBAI G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AL HARAMAIN GOLD EDITION G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AL HARAMAIN BLEU EDITION G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AL HARAMAIN GOLD 100ML G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "AL HARAMAIN WHITE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AL HARAMAIN ULTRA VIOLET G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AL HARAMAIN RUBY G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
-      "nombre": "AL HARAMAIN GOLD 120ml G5 (dorado y negro)",
-      "stock": false
+      "nombre": "Al Haramain Gold 120ml G5",
+      "stock": false,
+      "precio": 37000
     },
     {
       "nombre": "AL HARAMAIN CARBON G5",
-      "stock": false
+      "stock": false,
+      "precio": 40000
     },
     {
       "nombre": "BON CHERIE ROJO G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "CDN INTENSE MAN G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CLUB DE NUIT BLING G5",
-      "stock": true
+      "stock": true,
+      "precio": 45000
     },
     {
       "nombre": "CDN MILESTONE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CDN SILLAGE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CDN URBAN MAN G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CDN URBAN MAN ELIXIR G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CDN MALEKA G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CDN IMPERIALE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "CLUB DE NUIT OUD G5",
-      "stock": true
+      "stock": true,
+      "precio": 47000
     },
     {
       "nombre": "CDN ICONIC G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "CDN UNTOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "LIONHEART G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "CDN WOMAN G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS KOBRA G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS THUNDER G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS ICE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS FIRE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS FOR HIM",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS LONDON G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS VIPER G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS MALIBÚ G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS VERDE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS DIVA G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS LAVA GOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS BLACK G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS ELIXIR G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS ATLANTIS G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS ECLAT G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS TROPICAL G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HAWAS PINK G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "BHARARA ROSE G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA KING SOLEIL G5",
-      "stock": true
+      "stock": true,
+      "precio": 40000
     },
     {
       "nombre": "BHARARA SCARLET G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA QUEEN G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA KING G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA BLEU G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA CHOCOLATE G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA KING GOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "BHARARA NICHE FEMME G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
-      "nombre": "VULVAN SABLE G5",
-      "stock": true
+      "nombre": "Vulcan Sable G5",
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "VULCAN FEU G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "VULCAN BAIE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "VULCAN BLACK G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "ORIENTICA ROYAL AMBER G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "ORIENTICA AMBER ROUGE G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "ORIENTICA OUD SAFFRON G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "ORIENTICA ROYAL BLEU G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "ORIENTICA NARDO OUD G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "ORIENTICA VELVET GOLD G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "ATHEERI G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "SECOND SONG G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "VINTAGE RADIO G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "DALAL G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "THE KINGDOM G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "AFEEF G5",
-      "stock": true
+      "stock": true,
+      "precio": 40000
     },
     {
       "nombre": "VICTORIA G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "HIS CONFESSION G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "ANGHAM G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "HER CONFESSION G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "TERIAQ INTENSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "TERIAQ G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "HAYAAM G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "THE KINGDOM FEM G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ART OF UNIVERSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ART OF ARABIA I G5",
-      "stock": false
+      "stock": false,
+      "precio": 40000
     },
     {
       "nombre": "NOW WOMEN G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "SAKEENA G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "QAAED AL SHABAAB G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "QAAED G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "NOW INTENSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "NOW ROUGE G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "NOW WHITE G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "NOW NEGRO G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "HAYA G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "MAYAR ROSA G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "CONFIDENTIAL GOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "RAMZ GOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "SUPREMACY COLLECTOR'S G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "SUPREMACY POUR FEMME G5",
-      "stock": true
+      "stock": true,
+      "precio": 20000
     },
     {
       "nombre": "SUPREMACY IN OUD G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "SUPREMACY NOT ONLY INTENSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "SUPREMACY NOIR G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "NOBLE BLUSH G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "OUD FOR GLORY G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "SUBLIME G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "HONOR AND GLORY G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "AMETHYST G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "KHAMRAH G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
-      "nombre": "KHARMRAH DUKHAN G5",
-      "stock": false
+      "nombre": "Khamrah Dukhan G5",
+      "stock": false,
+      "precio": 30000
     },
     {
-      "nombre": "KHARMRAH WAHA G5",
-      "stock": true
+      "nombre": "Khamrah Waha G5",
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "KHAMRAH QAHWA G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "KHAMRAH KARAZ G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "KHAMRAH ZANQAM G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "QAED AL FURSAN BLANCO G5",
-      "stock": true
+      "stock": true,
+      "precio": 20000
     },
     {
       "nombre": "FURSAN MARRÓN G5",
-      "stock": true
+      "stock": true,
+      "precio": 20000
     },
     {
       "nombre": "QAED AL FURSAN NEGRO G5",
-      "stock": true
+      "stock": true,
+      "precio": 20000
     },
     {
       "nombre": "VENENO SCARLET G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "VENENO NEGRO G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "LIQUID BRUN LIMITED EDITION 150ML G5",
-      "stock": true
+      "stock": true,
+      "precio": 40000
     },
     {
       "nombre": "IRIDA EXTRAIT G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "LIQUID BRUN G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "AZZURE AOUD G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "CHAOS EXTRAIT G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "LUSCIOUS G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "VENENO BIANCO G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "JADE VERDE G5",
-      "stock": false
+      "stock": false,
+      "precio": 37000
     },
     {
       "nombre": "ROYAL BLEND BOURBON G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ROYAL BLEND SEQUOIA G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ROYAL BLEND NERO G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "JADE GIALLO G5",
-      "stock": false
+      "stock": false,
+      "precio": 37000
     },
     {
       "nombre": "AROMATIX ROYAL TABOO G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AROMATIX CARNAL DESIRE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AROMATIX FORBIDDEN FRUIT G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "AROMATIX SUN KISSED G5",
-      "stock": false
+      "stock": false,
+      "precio": 26000
     },
     {
       "nombre": "AROMATIX TEAS ME G5",
-      "stock": false
+      "stock": false,
+      "precio": 26000
     },
     {
       "nombre": "ERBA PURA CON PAÑUELO G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
-      "nombre": "HOMME ANIVERSARY G5",
-      "stock": true
+      "nombre": "Homme Anniversary G5",
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "NAXOS XERJOFF G5",
-      "stock": true
+      "stock": true,
+      "precio": 45000
     },
     {
       "nombre": "CORO CON PAÑUELO G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ACCENTO CON PAÑUELO G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ERBA GOLD CON PAÑUELO G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "ECLAIRE PISTACHO G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "ECLAIRE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "ECLAIRE BANOFFI G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "TROPICAL VIBE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "TERRA RAYHAAN G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "AQUATICA RAYHAAN G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "RAYHAAN ELIXIR G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "PACIFIC AURA G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "AHMED MARJ G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "AHMED AHL G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "ROSE NOIR G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "FAKHAR ROSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "FAKHAR SILVER G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "FAKHAR GOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "AMEERAT AL ARAB G5",
-      "stock": true
+      "stock": true,
+      "precio": 20000
     },
     {
       "nombre": "AMEERAT PRIVE ROSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "AMEERAT AL ARAB BLACK G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "MARSHMALLOW BLUSH G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "ESHAL G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "TASKEEN CARAMEL G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "KHAIR CONFECTION G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "KHAIR FUSIÓN G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "SABRINA CARPENTER CARAMEL G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "SABRINA CARPENTER ESPRESSO G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "SABRINA CARPENTER ROSA G5",
-      "stock": false
+      "stock": false,
+      "precio": 20000
     },
     {
       "nombre": "JPG LE MALE ELIXIR G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "JPG LE MALE L PARFUM G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "JPG LE BEAU G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "JPG GARDEN G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "JPG LE MALE G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
       "nombre": "JPG ULTRA ELIXIR G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "GIVE ME GOURMAND CHOCO OVERDOSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "COOKIE GRAVE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "VAINILLA FREAK G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "GIVE ME GOURMAND MALLOW MADNESS G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "GIVE ME GOURMAND BERRY ON TOP G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "WHIPPED PLEASURE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "MUSAMAM BLACK G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "MUSAMAM WHITE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "MUSAMAM INTENSE G5",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "KAYALI BURNING CHERRY G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "KAYALI JUICY APPLE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "KAYALI VAINILLA G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "KAYALI WHITE FLOWERS G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "KAYALI SPARKLING LYCHEE G5",
-      "stock": false
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "GAME OF SPADES BONUS",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "GAME OF SPADES BOSTON G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "GAME OF SPADES MOON G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "SPRECTRE G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "SPECTRE WRAITH G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "SPECTRE GHOST G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "VANILLA VOYAGE G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "OH HONEY G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "MILKY WAY G5",
-      "stock": true
+      "stock": true,
+      "precio": 30000
     },
     {
       "nombre": "LAYLA ECLUSIF G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "AURELIA G5",
-      "stock": true
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "DIGNITY G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "FAITH G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "NEW WOMEN RAVE G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "EXCLUSIVE PRÍVATE GOLD G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "HISTORIC DORIA G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "TURATHI ELÉCTRICA G5",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "LA BOMBA CH G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
     },
     {
-      "nombre": "LATEEN ROJO",
-      "stock": true
+      "nombre": "Lateen Rojo G5",
+      "stock": true,
+      "precio": 35000
     },
     {
       "nombre": "BILLIE EILISH G5",
-      "stock": true
+      "stock": true,
+      "precio": 25000
+    },
+    {
+      "nombre": "KIAANA ANGEL G5",
+      "stock": false,
+      "precio": 30000
+    },
+    {
+      "nombre": "Sabah Al Ward G5",
+      "stock": false,
+      "precio": 25000
+    },
+    {
+      "nombre": "SABAH AL WARD SUGAR G5",
+      "stock": false,
+      "precio": 26000
+    },
+    {
+      "nombre": "GAME OF SPADES WILDCARD G5",
+      "stock": false,
+      "precio": 35000
+    },
+    {
+      "nombre": "BONITA FEMME MARRON G5",
+      "stock": false,
+      "precio": 25000
+    },
+    {
+      "nombre": "KIAANA CRUSH G5",
+      "stock": false,
+      "precio": 30000
+    },
+    {
+      "nombre": "BONITA FEMME ROJO G5",
+      "stock": false,
+      "precio": 25000
+    },
+    {
+      "nombre": "BONITA LA ROSE G5",
+      "stock": false,
+      "precio": 25000
+    },
+    {
+      "nombre": "BONITA HOT PINK G5",
+      "stock": false,
+      "precio": 25000
     },
     {
       "nombre": "NATURAL SPRAY (MUSAMAM WHITE)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "ELYSIAN FIELDS (FAKHAR SILVER)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "SCOOP HAUNT (YUM YUM)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "DUSK EMBRACE (ASAD BOURBON)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "LOVELY DREAM (ARIANA)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "KISASS (ECLAIRE)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "VELVET EMBRACE (ERBA PURA)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "MOONLIT CITADEL (HAWAS ICE)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "MARSHMA (MARSHMALLOW BLUSH)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "REFRESHING SWEET (SABRINA CARPENTER)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "ISLAND CREAM (ISLAND BLISS)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "AHLAM (KAHIR CONFESSION)",
-      "stock": false
+      "stock": false,
+      "precio": 6000
     },
     {
       "nombre": "PROMO 10 MINIATURAS",
-      "stock": false
+      "stock": false,
+      "precio": 45000
     },
     {
       "nombre": "KIT MINI ODYSSEY MANDARIN",
-      "stock": false
+      "stock": false,
+      "precio": 27000
     },
     {
       "nombre": "KIT MINI YARA ASAD 30ML",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "KIT MINI 9PM",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     },
     {
       "nombre": "KIT MINI ODYSSEY CANDEE",
-      "stock": false
+      "stock": false,
+      "precio": 27000
     },
     {
       "nombre": "KIT MINI ECLAIRE",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "KIT MINI JPG",
-      "stock": false
+      "stock": false,
+      "precio": 27000
     },
     {
       "nombre": "KIT MINI HAWAS MASCULINO",
-      "stock": false
+      "stock": false,
+      "precio": 30000
     },
     {
       "nombre": "KIT MINI MARSHMALLOW",
-      "stock": false
+      "stock": false,
+      "precio": 27000
     },
     {
       "nombre": "KIT MINI VULCAN",
-      "stock": false
+      "stock": false,
+      "precio": 27000
     },
     {
       "nombre": "KIT ECLAIRE",
-      "stock": false
+      "stock": false,
+      "precio": 27000
     },
     {
       "nombre": "KIT CLUB DE NUIT",
-      "stock": false
+      "stock": false,
+      "precio": 35000
     }
   ]
 }
