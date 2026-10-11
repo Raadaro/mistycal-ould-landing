@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-11 04:21",
+  "actualizado": "2026-10-11 04:41",
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
@@ -1893,7 +1893,7 @@
     },
     {
       "nombre": "TROPICAL VIBE G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "RAYHAAN",
       "genero": "Unisex",
