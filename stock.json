@@ -1,9 +1,9 @@
 {
-  "actualizado": "2026-10-11 08:03",
+  "actualizado": "2026-10-11 17:55",
   "perfumes": [
     {
       "nombre": "YARA FEM G5",
-      "stock": false,
+      "stock": true,
       "precio": 18000,
       "categoria": "YARA",
       "genero": "Mujer",
@@ -13,7 +13,7 @@
     },
     {
       "nombre": "YARA CANDY G5",
-      "stock": false,
+      "stock": true,
       "precio": 18000,
       "categoria": "YARA",
       "genero": "Mujer",
@@ -23,7 +23,7 @@
     },
     {
       "nombre": "YARA TOUS G5",
-      "stock": false,
+      "stock": true,
       "precio": 18000,
       "categoria": "YARA",
       "genero": "Mujer",
@@ -53,7 +53,7 @@
     },
     {
       "nombre": "ASAD BOURBON G5",
-      "stock": false,
+      "stock": true,
       "precio": 18000,
       "categoria": "ASAD",
       "genero": "Hombre",
@@ -63,7 +63,7 @@
     },
     {
       "nombre": "ASAD G5",
-      "stock": false,
+      "stock": true,
       "precio": 18000,
       "categoria": "ASAD",
       "genero": "Hombre",
@@ -143,7 +143,7 @@
     },
     {
       "nombre": "9 AM POUR FEMME G5",
-      "stock": true,
+      "stock": false,
       "precio": 25000,
       "categoria": "9PM",
       "genero": "Mujer",
@@ -412,6 +412,16 @@
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/hIzWOeuQaGVWc1hO7u3LP.png"
     },
     {
+      "nombre": "ISLAND BREEZE G5",
+      "stock": false,
+      "precio": 35000,
+      "categoria": "ARMAF",
+      "genero": "Unisex",
+      "temporada": "Verano",
+      "notas": "Cítricos, Flor tropical, Almizcle, Madera",
+      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/-FT0QwL3f66mtl4abjcLc.png"
+    },
+    {
       "nombre": "DELICACY KUNAFA CHOCOLATE G5",
       "stock": true,
       "precio": 28000,
@@ -452,24 +462,38 @@
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/AtmJNLumKNZqbij2bbNIe.png"
     },
     {
-      "nombre": "SPACE AGE G5",
+      "nombre": "BON BON G5",
       "stock": true,
-      "precio": 25000,
+      "precio": 35000,
       "categoria": "ARMAF",
       "genero": "Unisex",
       "temporada": "Otoño/Invierno",
-      "notas": "Especias, Oud, Ámbar, Cuero",
-      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/Q5-cvM8ZCqlF3YbOoPwyj.png"
+      "notas": "Caramelo, Vainilla, Sándalo, Ámbar",
+      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/qCy0CIH1z22cpQGReJI2J.png"
     },
     {
-      "nombre": "ISLAND BREEZE G5",
-      "stock": false,
+      "nombre": "ISLAND BLISS G5",
+      "stock": true,
       "precio": 35000,
       "categoria": "ARMAF",
       "genero": "Unisex",
       "temporada": "Verano",
       "notas": "Cítricos, Flor tropical, Almizcle, Madera",
-      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/-FT0QwL3f66mtl4abjcLc.png"
+      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/vmOB2NmedtUDxaQxg3Jpa.png"
+    },
+    {
+      "nombre": "SALSA G5",
+      "stock": true,
+      "precio": 37000,
+      "categoria": "ARMAF",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/m0vYbki6xKU0lZjjOf5Rb.png?size=250x250"
+    },
+    {
+      "nombre": "TANGO G5",
+      "stock": true,
+      "precio": 37000,
+      "categoria": "ARMAF",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/AzsoSdywkDZ05sJjnz5I3.png?size=250x250"
     },
     {
       "nombre": "YUM YUM G5",
@@ -480,26 +504,6 @@
       "temporada": "Otoño/Invierno",
       "notas": "Caramelo, Vainilla, Sándalo, Ámbar",
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/45gMjFySxkdR_aFhh_nJd.png"
-    },
-    {
-      "nombre": "BON BON G5",
-      "stock": false,
-      "precio": 35000,
-      "categoria": "ARMAF",
-      "genero": "Unisex",
-      "temporada": "Otoño/Invierno",
-      "notas": "Caramelo, Vainilla, Sándalo, Ámbar",
-      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/qCy0CIH1z22cpQGReJI2J.png"
-    },
-    {
-      "nombre": "ISLAND BLISS G5",
-      "stock": false,
-      "precio": 35000,
-      "categoria": "ARMAF",
-      "genero": "Unisex",
-      "temporada": "Verano",
-      "notas": "Cítricos, Flor tropical, Almizcle, Madera",
-      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/vmOB2NmedtUDxaQxg3Jpa.png"
     },
     {
       "nombre": "SHK SAOUD ALKAABI G5",
@@ -520,6 +524,16 @@
       "temporada": "Otoño/Invierno",
       "notas": "Algodón de azúcar, Vainilla, Sándalo, Ámbar",
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/7CEEDXkm9RbCfhG6vo2io.png"
+    },
+    {
+      "nombre": "SPACE AGE G5",
+      "stock": false,
+      "precio": 25000,
+      "categoria": "ARMAF",
+      "genero": "Unisex",
+      "temporada": "Otoño/Invierno",
+      "notas": "Especias, Oud, Ámbar, Cuero",
+      "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/Q5-cvM8ZCqlF3YbOoPwyj.png"
     },
     {
       "nombre": "AL HARAMAIN PRIVATE EDITION G5",
@@ -713,7 +727,7 @@
     },
     {
       "nombre": "CDN MALEKA G5",
-      "stock": true,
+      "stock": false,
       "precio": 25000,
       "categoria": "CLUB DE NUIT",
       "genero": "Mujer",
@@ -763,7 +777,7 @@
     },
     {
       "nombre": "LIONHEART G5",
-      "stock": false,
+      "stock": true,
       "precio": 35000,
       "categoria": "CLUB DE NUIT",
       "genero": "Hombre",
@@ -813,7 +827,7 @@
     },
     {
       "nombre": "HAWAS FIRE G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -833,7 +847,7 @@
     },
     {
       "nombre": "HAWAS LONDON G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -843,7 +857,7 @@
     },
     {
       "nombre": "HAWAS VIPER G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -853,7 +867,7 @@
     },
     {
       "nombre": "HAWAS MALIBÚ G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -863,7 +877,7 @@
     },
     {
       "nombre": "HAWAS VERDE G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -913,7 +927,7 @@
     },
     {
       "nombre": "HAWAS ATLANTIS G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -923,7 +937,7 @@
     },
     {
       "nombre": "HAWAS ECLAT G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -933,7 +947,7 @@
     },
     {
       "nombre": "HAWAS TROPICAL G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Hombre",
@@ -943,7 +957,7 @@
     },
     {
       "nombre": "HAWAS PINK G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "HAWAS",
       "genero": "Mujer",
@@ -993,7 +1007,7 @@
     },
     {
       "nombre": "BHARARA KING G5",
-      "stock": false,
+      "stock": true,
       "precio": 35000,
       "categoria": "BHARARA",
       "genero": "Hombre",
@@ -1152,6 +1166,13 @@
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/3R5jl6qI1-goNa3ZFANM6.png"
     },
     {
+      "nombre": "HER CONFESSION G5",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "LATTAFA",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/mDy9iNALJakDyj4t_Z-IO.png?size=250x250"
+    },
+    {
       "nombre": "SECOND SONG G5",
       "stock": true,
       "precio": 30000,
@@ -1212,7 +1233,7 @@
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/hA90ZPkwRwvIG9z0GsGcd.png"
     },
     {
-      "nombre": "HIS CONFESSION G5",
+      "nombre": "HIS  CONFESSION G5",
       "stock": true,
       "precio": 35000,
       "categoria": "LATTAFA",
@@ -1233,7 +1254,7 @@
     },
     {
       "nombre": "HER CONFESSION G5",
-      "stock": false,
+      "stock": true,
       "precio": 35000,
       "categoria": "LATTAFA",
       "genero": "Mujer",
@@ -1283,7 +1304,7 @@
     },
     {
       "nombre": "ART OF UNIVERSE G5",
-      "stock": false,
+      "stock": true,
       "precio": 35000,
       "categoria": "LATTAFA",
       "genero": "Unisex",
@@ -1383,7 +1404,7 @@
     },
     {
       "nombre": "HAYA G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "LATTAFA",
       "genero": "Unisex",
@@ -1443,7 +1464,7 @@
     },
     {
       "nombre": "SUPREMACY IN OUD G5",
-      "stock": false,
+      "stock": true,
       "precio": 35000,
       "categoria": "SUPREMACY",
       "genero": "Hombre",
@@ -1473,7 +1494,7 @@
     },
     {
       "nombre": "NOBLE BLUSH G5",
-      "stock": true,
+      "stock": false,
       "precio": 25000,
       "categoria": "BADEE AL OUD",
       "genero": "Mujer",
@@ -1533,7 +1554,7 @@
     },
     {
       "nombre": "KHAMRAH DUKHAN G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "KHAMRAH",
       "genero": "Unisex",
@@ -1593,7 +1614,7 @@
     },
     {
       "nombre": "FURSAN MARRÓN G5",
-      "stock": true,
+      "stock": false,
       "precio": 20000,
       "categoria": "FURSAN",
       "genero": "Unisex",
@@ -1603,7 +1624,7 @@
     },
     {
       "nombre": "QAED AL FURSAN NEGRO G5",
-      "stock": true,
+      "stock": false,
       "precio": 20000,
       "categoria": "FURSAN",
       "genero": "Unisex",
@@ -1632,6 +1653,13 @@
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/KD-K3etJ45hxZ5GC4Ndhc.png"
     },
     {
+      "nombre": "VENENO BIANCO G5",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "FRENCH AVENUE",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/9idYVEvWkiXylOsCTCE6W.png?size=250x250"
+    },
+    {
       "nombre": "LIQUID BRUN LIMITED EDITION 150ML G5",
       "stock": true,
       "precio": 40000,
@@ -1642,14 +1670,49 @@
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/ZZ5p02-089i-7VL2jqcOw.png"
     },
     {
+      "nombre": "ELYSIAN MARRON G5",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "FRENCH AVENUE",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/R1XgVJTLpTG7Qzg3W_Q8p.png?size=250x250"
+    },
+    {
+      "nombre": "ELYSIAN NEGRO G5",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "FRENCH AVENUE",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/dam-uTRhFBtIEOEXS2JsB.png?size=250x250"
+    },
+    {
+      "nombre": "DIWANI RABAT G5",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "FRENCH AVENUE",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/1qvd-1LtZDJ0JOAG8bg5G.png?size=250x250"
+    },
+    {
+      "nombre": "SOLITAIRE",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "FRENCH AVENUE",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/24yQvk6IORtCvnwQcvv6P.png?size=250x250"
+    },
+    {
       "nombre": "IRIDA EXTRAIT G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "FRENCH AVENUE",
       "genero": "Unisex",
       "temporada": "Otoño/Invierno",
       "notas": "Especias, Oud, Ámbar, Cuero",
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/pbXxmJDcmSNeXnTyjV2tC.png"
+    },
+    {
+      "nombre": "LUMIERE ELLE G5",
+      "stock": true,
+      "precio": 35000,
+      "categoria": "FRENCH AVENUE",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/X7bh_bmtPQ6kNouqo62g8.png?size=250x250"
     },
     {
       "nombre": "LIQUID BRUN G5",
@@ -1773,7 +1836,7 @@
     },
     {
       "nombre": "AROMATIX FORBIDDEN FRUIT G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "AROMATIX",
       "genero": "Unisex",
@@ -1793,7 +1856,7 @@
     },
     {
       "nombre": "AROMATIX TEAS ME G5",
-      "stock": false,
+      "stock": true,
       "precio": 26000,
       "categoria": "AROMATIX",
       "genero": "Unisex",
@@ -1823,7 +1886,7 @@
     },
     {
       "nombre": "NAXOS XERJOFF G5",
-      "stock": true,
+      "stock": false,
       "precio": 45000,
       "categoria": "XERJOFF",
       "genero": "Unisex",
@@ -1933,7 +1996,7 @@
     },
     {
       "nombre": "PACIFIC AURA G5",
-      "stock": false,
+      "stock": true,
       "precio": 20000,
       "categoria": "RAYHAAN",
       "genero": "Unisex",
@@ -1993,7 +2056,7 @@
     },
     {
       "nombre": "FAKHAR GOLD G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "FAKHAR",
       "genero": "Unisex",
@@ -2033,7 +2096,7 @@
     },
     {
       "nombre": "MARSHMALLOW BLUSH G5",
-      "stock": true,
+      "stock": false,
       "precio": 30000,
       "categoria": "PARIS CORNER",
       "genero": "Mujer",
@@ -2043,7 +2106,7 @@
     },
     {
       "nombre": "ESHAL G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "PARIS CORNER",
       "genero": "Mujer",
@@ -2063,7 +2126,7 @@
     },
     {
       "nombre": "KHAIR CONFECTION G5",
-      "stock": false,
+      "stock": true,
       "precio": 20000,
       "categoria": "PARIS CORNER",
       "genero": "Unisex",
@@ -2073,7 +2136,7 @@
     },
     {
       "nombre": "KHAIR FUSIÓN G5",
-      "stock": false,
+      "stock": true,
       "precio": 20000,
       "categoria": "PARIS CORNER",
       "genero": "Unisex",
@@ -2123,7 +2186,7 @@
     },
     {
       "nombre": "JPG LE MALE L PARFUM G5",
-      "stock": true,
+      "stock": false,
       "precio": 25000,
       "categoria": "JPG",
       "genero": "Hombre",
@@ -2133,7 +2196,7 @@
     },
     {
       "nombre": "JPG LE BEAU G5",
-      "stock": true,
+      "stock": false,
       "precio": 25000,
       "categoria": "JPG",
       "genero": "Hombre",
@@ -2143,7 +2206,7 @@
     },
     {
       "nombre": "JPG GARDEN G5",
-      "stock": true,
+      "stock": false,
       "precio": 25000,
       "categoria": "JPG",
       "genero": "Unisex",
@@ -2171,7 +2234,7 @@
     },
     {
       "nombre": "GIVE ME GOURMAND CHOCO OVERDOSE G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "GIVE ME GOURMAND",
       "genero": "Unisex",
@@ -2181,7 +2244,7 @@
     },
     {
       "nombre": "COOKIE GRAVE G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "GIVE ME GOURMAND",
       "genero": "Unisex",
@@ -2191,7 +2254,7 @@
     },
     {
       "nombre": "VAINILLA FREAK G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "GIVE ME GOURMAND",
       "genero": "Unisex",
@@ -2201,7 +2264,7 @@
     },
     {
       "nombre": "GIVE ME GOURMAND MALLOW MADNESS G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "GIVE ME GOURMAND",
       "genero": "Unisex",
@@ -2221,7 +2284,7 @@
     },
     {
       "nombre": "WHIPPED PLEASURE G5",
-      "stock": false,
+      "stock": true,
       "precio": 30000,
       "categoria": "GIVE ME GOURMAND",
       "genero": "Unisex",
@@ -2358,7 +2421,7 @@
     },
     {
       "nombre": "SPECTRE WRAITH G5",
-      "stock": true,
+      "stock": false,
       "precio": 35000,
       "categoria": "SPECTRE",
       "genero": "Unisex",
@@ -2398,7 +2461,7 @@
     },
     {
       "nombre": "MILKY WAY G5",
-      "stock": true,
+      "stock": false,
       "precio": 30000,
       "categoria": "MAISON ASRAR",
       "genero": "Unisex",
@@ -2478,7 +2541,7 @@
     },
     {
       "nombre": "TURATHI ELÉCTRICA G5",
-      "stock": false,
+      "stock": true,
       "precio": 35000,
       "categoria": "AFNAN",
       "genero": "Unisex",
@@ -2516,17 +2579,31 @@
     },
     {
       "nombre": "SABAH AL WARD G5",
-      "stock": false,
+      "stock": true,
       "precio": 25000,
       "categoria": "OTROS",
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/kAk7yu776rO3QEc-BxZFC.png"
     },
     {
       "nombre": "SABAH AL WARD SUGAR G5",
-      "stock": false,
+      "stock": true,
       "precio": 26000,
       "categoria": "OTROS",
       "imagen": "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/WEna38vJiy92p0_bC9_di.png"
+    },
+    {
+      "nombre": "LA CHARMANTE VERDE G5",
+      "stock": true,
+      "precio": 25000,
+      "categoria": "OTROS",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/huML8kAabBwga81h8TQc1.png?size=250x250"
+    },
+    {
+      "nombre": "LA CHARMANTE ECLATANT ROSA G5",
+      "stock": true,
+      "precio": 25000,
+      "categoria": "OTROS",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/_xbOR_5vGJdEze-5njpRM.png?size=250x250"
     },
     {
       "nombre": "BONITA FEMME MARRON G5",
