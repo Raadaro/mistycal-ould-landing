@@ -6021,7 +6021,7 @@
             { id: 256, name: "Sabah Al Ward G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "kAk7yu776rO3QEc-BxZFC.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
             { id: 257, name: "Sabah Al Ward Sugar G5", basePrice: 26000, category: "Otros", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "WEna38vJiy92p0_bC9_di.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
             { id: 258, name: "Game of Spades Wildcard G5", basePrice: 35000, category: "Jo Milano", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "08OcJ1-oj0MjCSTt4dsY_.png", notas: "Especias, Oud, Ámbar, Cuero" },
-            { id: 259, name: "Milky Way G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "1j5GUl7gCBrh307aD3rEj.png", notas: "Leche, Vainilla, Sándalo, Ámbar" },
+            { id: 259, name: "Milky Way G5", basePrice: 30000, category: "Maison Asrar", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "1j5GUl7gCBrh307aD3rEj.png", notas: "Leche, Vainilla, Sándalo, Ámbar" },
             { id: 260, name: "Bonita Femme Marrón G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "6P4_Be3AcyXgQP2RZAoVH.png", notas: "Chocolate, Vainilla, Sándalo, Ámbar" },
             { id: 261, name: "Kiaana Crush G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "lZ_C0l7RG4nNfCWtpcQ9A.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 262, name: "Bonita Femme Rojo G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "4Ib_jJgRA3QHUyhzOQeQQ.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
@@ -6218,6 +6218,8 @@
                         const it = enlace.get(p);
                         p._o = it ? it._i : 100000 + idx;
                         if(it){
+                            const marcaHoja = filterNames.find(f => f !== 'Todas' && normName(f) === normName(it.categoria || ''));
+                            if(marcaHoja) p.category = marcaHoja;   // la marca la define la hoja
                             p.inStock = stockDe(it);
                             if(!p.inStock) sinStockCount++;
                             const pv = Number(it.precio);
