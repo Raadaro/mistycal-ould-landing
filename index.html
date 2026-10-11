@@ -6020,7 +6020,7 @@
             { id: 255, name: "Kiaana Ángel G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dMiNGdend6OIUmBOy10HZ.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 256, name: "Sabah Al Ward G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "kAk7yu776rO3QEc-BxZFC.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
             { id: 257, name: "Sabah Al Ward Sugar G5", basePrice: 26000, category: "Otros", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "WEna38vJiy92p0_bC9_di.png", notas: "Caramelo, Vainilla, Sándalo, Ámbar" },
-            { id: 258, name: "Game of Spades Wildcar G5", basePrice: 35000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "08OcJ1-oj0MjCSTt4dsY_.png", notas: "Especias, Oud, Ámbar, Cuero" },
+            { id: 258, name: "Game of Spades Wildcard G5", basePrice: 35000, category: "Jo Milano", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "08OcJ1-oj0MjCSTt4dsY_.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 259, name: "Milky Way G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "1j5GUl7gCBrh307aD3rEj.png", notas: "Leche, Vainilla, Sándalo, Ámbar" },
             { id: 260, name: "Bonita Femme Marrón G5", basePrice: 25000, category: "Otros", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "6P4_Be3AcyXgQP2RZAoVH.png", notas: "Chocolate, Vainilla, Sándalo, Ámbar" },
             { id: 261, name: "Kiaana Crush G5", basePrice: 30000, category: "Otros", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "lZ_C0l7RG4nNfCWtpcQ9A.png", notas: "Especias, Oud, Ámbar, Cuero" },
@@ -6106,13 +6106,17 @@
             const featuredGrid = document.getElementById('featured-grid');
             const catalogGrid = document.getElementById('catalog-grid');
 
-            const featured = products.filter(p => p.featured).slice(0, 10); // mostrar incluso sin stock
+            const featured = products.filter(p => p.featured).sort((a, b) => (a._idx0 ?? 1e9) - (b._idx0 ?? 1e9)).slice(0, 10); // mostrar incluso sin stock
             featuredGrid.innerHTML = featured.map(createCardHtml).join('');
 
             let filtered = products;
             if (currentFilter !== "Todas") {
                 filtered = products.filter(p => p.category === currentFilter);
             }
+
+            // El catalogo no repite un perfume (los "destacados" estan cargados dos veces en la lista interna)
+            const vistos = new Set();
+            filtered = filtered.filter(p => { const k = String(p.name).toLowerCase().trim(); if (vistos.has(k)) return false; vistos.add(k); return true; });
 
             if (filtered.length === 0) {
                 catalogGrid.innerHTML = `<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)">No se encontraron productos en esta categoría.</div>`;
@@ -6121,8 +6125,35 @@
             }
         }
 
+        // ---- Sincronizacion con la hoja (stock.json) ----
+        // Marcas de la hoja que NO se agregan solas a la landing (kits, miniaturas, promos)
+        const EXCLUIR_MARCAS = ['kit miniaturas', 'femenino', 'masculino', 'unisex', 'promo'];
+        function tituloCase(s){
+            return String(s || '').replace(/\s+/g, ' ').trim().split(' ')
+                .map(w => /\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+        }
+        function notasLimpias(it){
+            const n = (it.notas || '').trim(), c = (it.categoria || '').trim().toLowerCase();
+            if(!n || (c && n.toLowerCase().startsWith(c + ','))) return '';   // "MARCA, NOMBRE" = relleno de la hoja
+            return n;
+        }
+        function lev(a, b){
+            if(a === b) return 0;
+            if(Math.abs(a.length - b.length) > 4) return 99;
+            let prev = Array.from({length: b.length + 1}, (_, i) => i);
+            for(let i = 1; i <= a.length; i++){
+                const cur = [i];
+                for(let j = 1; j <= b.length; j++){
+                    cur[j] = Math.min(prev[j] + 1, cur[j-1] + 1, prev[j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+                }
+                prev = cur;
+            }
+            return prev[b.length];
+        }
+
                 function initApp() {
             products = [...defaultData];
+            products.forEach((p, i) => { p._idx0 = i; });
             renderBannerMadre();
             localStorage.removeItem('mistycalould_db');
             console.log('MISTYCAL: Iniciando, products base =', products.length);
@@ -6135,21 +6166,67 @@
                 .then(data => {
                     console.log('MISTYCAL: stock.json cargado OK', (data.perfumes||[]).length, 'items');
                     // Compara nombres sin importar mayusculas, tildes ni espacios dobles
-                    const normName = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').toLowerCase().trim();
-                    const map = {}, precios = {};
-                    (data.perfumes || []).forEach(pr => {
-                        const k = normName(pr.nombre);
-                        const st = (typeof pr.stock === 'string') ? ['si','sí','true','1'].includes(pr.stock.toLowerCase().trim()) : !!pr.stock;
-                        map[k] = st;
-                        const pv = Number(pr.precio);
-                        if(pv > 0) precios[k] = pv;   // precio del proveedor (BasePrice) desde el Excel
+                    const normName = s => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').toLowerCase().trim();
+                    const stockDe = pr => (typeof pr.stock === 'string') ? ['si','sí','true','1'].includes(pr.stock.toLowerCase().trim()) : !!pr.stock;
+                    const hoja = (data.perfumes || []).filter(pr => pr && pr.nombre);
+                    hoja.forEach((pr, i) => { pr._i = i; });
+                    const porNombre = {};
+                    hoja.forEach(pr => { const k = normName(pr.nombre); if(!(k in porNombre)) porNombre[k] = pr; });
+
+                    // 1) cada perfume de la landing busca su fila en la hoja (mismo nombre)
+                    const enlace = new Map();
+                    products.forEach(p => { const it = porNombre[normName(p.name)]; if(it) enlace.set(p, it); });
+                    const usadas = new Set(enlace.values());
+
+                    // 2) filas de la hoja sin pareja: si el nombre es casi igual (error de tipeo) se enlazan
+                    hoja.filter(it => !usadas.has(it)).forEach(it => {
+                        const k = normName(it.nombre), c = normName(it.categoria || '');
+                        let mejor = null, dist = 99;
+                        products.forEach(p => {
+                            if(enlace.has(p)) return;
+                            const d = lev(normName(p.name), k);
+                            const mismaMarca = c && normName(p.category) === c;
+                            if(((mismaMarca && d <= 3) || d <= 1) && d < dist){ dist = d; mejor = p; }
+                        });
+                        if(mejor){ enlace.set(mejor, it); usadas.add(it); }
                     });
+
+                    // 3) filas de la hoja que la landing no tiene: se agregan (salvo kits/miniaturas/promos)
+                    let maxId = Math.max(0, ...products.map(p => p.id));
+                    const agregados = [];
+                    hoja.filter(it => !usadas.has(it)).forEach(it => {
+                        const marcaKey = normName(it.categoria || '');
+                        if(!marcaKey || !it.imagen || EXCLUIR_MARCAS.includes(marcaKey)) return;
+                        let marca = filterNames.find(f => f !== 'Todas' && normName(f) === marcaKey);
+                        if(!marca){
+                            marca = tituloCase(it.categoria);
+                            const iOtros = filterNames.indexOf('Otros');
+                            filterNames.splice(iOtros >= 0 ? iOtros : filterNames.length, 0, marca);
+                        }
+                        const g = normName(it.genero || '');
+                        const nuevo = { id: ++maxId, name: tituloCase(it.nombre), basePrice: Number(it.precio) || 0, category: marca,
+                            gender: g === 'mujer' ? 'Mujer' : g === 'hombre' ? 'Hombre' : 'Unisex',
+                            season: it.temporada || 'Todo el año', featured: false, inStock: true,
+                            image: it.imagen, notas: notasLimpias(it) };
+                        products.push(nuevo); enlace.set(nuevo, it); agregados.push(nuevo.name);
+                    });
+                    if(agregados.length) console.log('MISTYCAL: perfumes agregados desde la hoja:', agregados);
+
+                    // 4) stock, precio y ORDEN segun la hoja (los que no estan en la hoja quedan al final)
                     let sinStockCount = 0;
-                    products.forEach(p => {
-                        const key = normName(p.name);
-                        if(key in map){ p.inStock = map[key]; if(!map[key]) sinStockCount++; }
-                        if(key in precios){ p.basePrice = precios[key]; }
+                    products.forEach((p, idx) => {
+                        const it = enlace.get(p);
+                        p._o = it ? it._i : 100000 + idx;
+                        if(it){
+                            p.inStock = stockDe(it);
+                            if(!p.inStock) sinStockCount++;
+                            const pv = Number(it.precio);
+                            if(pv > 0) p.basePrice = pv;   // precio del proveedor (BasePrice)
+                        }
                     });
+                    products.sort((a, b) => a._o - b._o);
+                    const fueraDeHoja = products.filter(p => !enlace.has(p)).map(p => p.name);
+                    if(fueraDeHoja.length) console.log('MISTYCAL: perfumes de la landing que no estan en la hoja:', fueraDeHoja);
                     console.log('MISTYCAL: Productos sin stock según Excel:', sinStockCount);
                     renderFilters();
                     renderCatalog();
