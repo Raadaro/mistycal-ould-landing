@@ -214,6 +214,10 @@
             .cab-nav a[href="#hero"]{display:none}
             .hero__grid > *{min-width:0}
         }
+        /* Titulo de cada cuadro del banner (Mamá dulce / intensa / fresca) */
+        .madre-tit{font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.2;text-align:center;color:var(--ink);margin:0 0 16px}
+        .madre-tit::after{content:"";display:block;width:38px;height:2px;background:#D4AF37;margin:9px auto 0}
+        @media (max-width:749px){ .madre-tit{font-size:22px} }
         /* Banner Día de la Madre: carrusel deslizable en móvil (las 3 tarjetas accesibles) */
         @media (max-width:749px){
             #madre-grid{display:grid !important;grid-template-columns:none !important;grid-auto-flow:column;grid-auto-columns:78%;gap:14px !important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0 0 12px;scrollbar-width:none;overscroll-behavior-x:contain}
@@ -5882,13 +5886,13 @@
             { id: 116, name: "Vulcan Baie G5", basePrice: 30000, category: "Vulcan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "mZcDFuSzcV_AT7a024kxj.png", notas: "Cítricos, Especias, Madera, Almizcle" },
             { id: 117, name: "Vulcan Black G5", basePrice: 30000, category: "Vulcan", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "d1Wt3W8rkd2yP9wdyeVO-.png", notas: "Cuero, Especias, Oud, Ámbar" },
             { id: 118, name: "Orientica Royal Amber G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "K-BaQtmd86MsPKkD8qb11.png", notas: "Ámbar, Vainilla, Sándalo, Madera" },
-            { id: 119, name: "Orientica Amber Rouge G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dcS_9tZee9eBr6XbKJHKh.png", notas: "Ámbar, Especias, Oud, Cuero" },
+            { id: 119, name: "Orientica Amber Rouge G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dcS_9tZee9eBr6XbKJHKh.png", notas: "Azafrán, Jazmín, Ámbar, Ámbar gris, Cedro, Resina de abeto" },
             { id: 120, name: "Orientica Oud Saffron G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "FwQaKlgW1c_XJx5kUgJIn.png", notas: "Azafrán, Oud, Especias, Ámbar" },
             { id: 121, name: "Orientica Royal Bleu G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "KaFExRZtn_7LZX7yS2-tw.png", notas: "Acuático, Cítricos, Sal marina, Madera" },
             { id: 122, name: "Orientica Nardo Oud G5", basePrice: 35000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Xc2tcBPapOa7F0j1kvjgg.png", notas: "Oud, Especias, Ámbar, Cuero" },
             { id: 123, name: "Orientica Velvet Gold G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "pZ5naf9RKxHfNXzxwcd65.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 124, name: "Atheeri G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "3R5jl6qI1-goNa3ZFANM6.png", notas: "Especias, Oud, Ámbar, Cuero" },
-            { id: 125, name: "Angham G5", basePrice: 30000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "WxfwCLEPjnic5lAlmIbLI.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
+            { id: 125, name: "Angham G5", basePrice: 30000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "WxfwCLEPjnic5lAlmIbLI.png", notas: "Mandarina, Jengibre, Pimienta rosa, Lavanda, Praliné, Cacao, Jazmín, Vainilla, Ámbar, Almizcle" },
             { id: 126, name: "Her Confession G5", basePrice: 35000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "mDy9iNALJakDyj4t_Z-IO.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
             { id: 127, name: "Teriaq Intense G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "p9hq8iCFNWBaXbwXPdcXn.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 128, name: "Teriaq G5", basePrice: 35000, category: "Lattafa", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "Kls6Y3naDV5PYdQPtgtaO.png", notas: "Especias, Oud, Ámbar, Cuero" },
@@ -5924,7 +5928,7 @@
             { id: 158, name: "Sublime G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "DWEgf8zT_y6OEArCD6AUV.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 159, name: "Honor and Glory G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "K1gAm1xIH00EBVa47cm9a.png", notas: "Oud, Especias, Ámbar, Cuero" },
             { id: 160, name: "Amethyst G5", basePrice: 25000, category: "Badee Al Oud", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "P-HVdLMDDl-MECHVo8Fov.png", notas: "Especias, Oud, Ámbar, Cuero" },
-            { id: 161, name: "Khamrah G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "h-_jooj3dMsZz8oDV-aSx.png", notas: "Canela, Nuez moscada, Vainilla, Ámbar" },
+            { id: 161, name: "Khamrah G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "h-_jooj3dMsZz8oDV-aSx.png", notas: "Canela, Nuez moscada, Bergamota, Dátiles, Praliné, Tuberosa, Vainilla, Haba tonka, Ámbar, Mirra" },
             { id: 162, name: "Khamrah Qahwa G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "RRBUmRV3Zld00Rf_bulxu.png", notas: "Café, Canela, Cardamomo, Vainilla" },
             { id: 163, name: "Khamrah Karaz G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "fs2BIrj0p2j3z6RfaQWNT.png", notas: "Cereza, Canela, Vainilla, Ámbar" },
             { id: 164, name: "Khamrah Dukhan G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "F8KCoakEsrdkhPYoMqa-q.png", notas: "Especias, Oud, Ámbar, Cuero" },
@@ -6248,9 +6252,12 @@
         // Para cambiar un perfume, edita SOLO estos nombres (iguales al catalogo).
         // ============================================================
         const SISTEMA_3 = [
-            { titular: 'Tropical Vibe G5',   supl1: 'Odyssey Go Mango G5', supl2: 'Beach Party G5' },
-            { titular: '9 AM Pour Femme G5', supl1: 'Odyssey Pink Pop G5', supl2: 'CDN Maleka G5' },
-            { titular: 'Limoni G5',          supl1: 'Odyssey Bahamas G5', supl2: '9AM Dive G5' }
+            // 1) Dulce y femenina
+            { titulo: 'Mamá dulce y femenina',  titular: 'Odyssey Candee G5', supl1: 'Odyssey Pink Pop G5', supl2: 'Noble Blush G5' },
+            // 2) Intensa y sensual
+            { titulo: 'Mamá intensa y sensual',  titular: 'Angham G5',         supl1: 'Khamrah G5',          supl2: 'Orientica Amber Rouge G5' },
+            // 3) Fresca y deportiva
+            { titulo: 'Mamá fresca y deportiva', titular: 'Limoni G5',         supl1: 'Tropical Vibe G5',    supl2: '9AM Dive G5' }
         ];
         function buscarProd(nombre){
             const n=nombre.toLowerCase().trim();
@@ -6275,7 +6282,7 @@
                 if(!p) return;
                 let cuadro = createCardHtml(p);
                 let badge = r.esReemplazo ? `<div style="position:absolute;top:10px;left:10px;z-index:16;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;">REEMPLAZO CON STOCK</div>` : '';
-                out += `<div style="position:relative;">${badge}${cuadro}</div>`;
+                out += `<div><div class="madre-tit">${cfg.titulo || ''}</div><div style="position:relative;">${badge}${cuadro}</div></div>`;
             });
             if(out) grid.innerHTML=out;
         }
