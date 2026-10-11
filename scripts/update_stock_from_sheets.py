@@ -1,9 +1,11 @@
 """
 Actualiza stock.json desde Google Sheets (CSV).
 Lee por TITULO de columna (fila 1):  Nombre | BasePrice | Stock
-Genera: {"actualizado": "...", "perfumes": [{"nombre", "stock", "precio"}, ...]}
+Genera: {"actualizado": "...", "perfumes": [{"nombre", "stock", "precio", ...}, ...]}
   - stock : True/False segun la columna Stock (SI/NO)
   - precio: precio del proveedor (BasePrice). La pagina le aplica el multiplicador.
+  - categoria, genero, temporada, notas, imagen: se copian si existen (la pagina los usa
+    para agregar sola los perfumes nuevos). El ORDEN de la lista es el orden de la hoja.
 """
 import csv
 import io
@@ -101,26 +103,34 @@ def parse_stock(text):
     if not reader.fieldnames:
         raise ValueError("No se detectaron columnas en el CSV")
 
-    fieldnames_lower = {k.lower().strip(): k for k in reader.fieldnames}
+    fieldnames_lower = {norm(k): k for k in reader.fieldnames if k}
     print(f"Columnas detectadas: {reader.fieldnames}")
 
-    nombre_key = fieldnames_lower.get("nombre") or list(reader.fieldnames)[0]
+    def find_key(options):
+        for possible in options:
+            if possible in fieldnames_lower:
+                return fieldnames_lower[possible]
+        return None
 
-    stock_key = None
-    for possible in ["stock", "disponible", "estado", "h"]:
-        if possible in fieldnames_lower:
-            stock_key = fieldnames_lower[possible]
-            break
+    nombre_key = find_key(["nombre"]) or list(reader.fieldnames)[0]
+
+    stock_key = find_key(["stock", "disponible", "estado", "h"])
     if not stock_key:
         stock_key = reader.fieldnames[7] if len(reader.fieldnames) > 7 else reader.fieldnames[-1]
 
-    precio_key = None
-    for possible in ["baseprice", "base price", "precio proveedor", "precio base", "precio"]:
-        if possible in fieldnames_lower:
-            precio_key = fieldnames_lower[possible]
-            break
+    precio_key = find_key(["baseprice", "base price", "precio proveedor", "precio base", "precio"])
+
+    # Columnas opcionales: se copian tal cual al stock.json
+    extras = {
+        "categoria": find_key(["categoria", "marca"]),
+        "genero": find_key(["genero"]),
+        "temporada": find_key(["temporada"]),
+        "notas": find_key(["notas"]),
+        "imagen": find_key(["imagen", "foto"]),
+    }
 
     print(f"Usando Nombre={nombre_key}, Stock={stock_key}, Precio={precio_key}")
+    print(f"Columnas extra: {extras}")
     if not precio_key:
         print("AVISO: no encontre la columna de precio (BasePrice); stock.json saldra sin precios")
 
@@ -138,6 +148,10 @@ def parse_stock(text):
         precio = parse_price(row.get(precio_key)) if precio_key else None
         if precio:
             item["precio"] = precio
+        for campo, key in extras.items():
+            valor = (row.get(key) or "").strip() if key else ""
+            if valor:
+                item[campo] = valor
         perfumes.append(item)
 
     return perfumes
