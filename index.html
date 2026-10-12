@@ -5947,7 +5947,7 @@
             { id: 177, name: "Luscious G5", basePrice: 30000, category: "French Avenue", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "fTVxxyHBWlK7EpG0ix0_F.png", notas: "Flor de azahar, Jazmín, Almizcle, Vainilla" },
             { id: 178, name: "Veneno Bianco G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "9idYVEvWkiXylOsCTCE6W.png", notas: "Cítricos, Flor blanca, Almizcle, Madera" },
             { id: 179, name: "Jade Verde G5", basePrice: 37000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "78d_GLtM2qhr_8Q7CWI-p.png", notas: "Especias, Oud, Ámbar, Cuero" },
-            { id: 180, name: "Royal Blend Bourbon G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "LkMpr6I4zzQJzFmaKWrz.png", notas: "Bourbon, Canela, Cardamomo, Vainilla, Madera" },
+            { id: 180, name: "Royal Blend Bourbon G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "LkMpr6I4zzQJsyFmaKWrz.png", notas: "Bourbon, Canela, Cardamomo, Vainilla, Madera" },
             { id: 181, name: "Royal Blend Sequoia G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "SwYu8Gro48TosvmyzIXsl.png", notas: "Pino, Cedro, Musgo, Cuero" },
             { id: 182, name: "Royal Blend Nero G5", basePrice: 35000, category: "French Avenue", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "9VCxmQntcno41RPEkOpHd.png", notas: "Cuero, Especias, Oud, Ámbar" },
             { id: 183, name: "Liquid Brun Limited Edition 150ml G5", basePrice: 40000, category: "French Avenue", gender: "Hombre", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ZZ5p02-089i-7VL2jqcOw.png", notas: "Cuero, Especias, Oud, Ámbar" },
@@ -6001,7 +6001,7 @@
             { id: 231, name: "Musamam White G5", basePrice: 30000, category: "Musamam", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "Zq6k-FQtoh_rPNLRRDQ41.png", notas: "Cítricos, Flor tropical, Almizcle, Madera" },
             { id: 232, name: "Musamam Intense G5", basePrice: 30000, category: "Musamam", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "UJLLxTetUVYB3vA4O5XbN.png", notas: "Especias, Oud, Ámbar, Cuero" },
             { id: 233, name: "Kayali Burning Cherry G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "UnS4Q2qcDXTfF11wecGcX.png", notas: "Cereza, Vainilla, Sándalo, Ámbar" },
-            { id: 234, name: "Kayali Juicy Apple G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "XmyqMaS9NcvhxmPF2kFi.png", notas: "Manzana, Cítricos, Flor blanca, Vainilla" },
+            { id: 234, name: "Kayali Juicy Apple G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "XmyqMaS9iNcvhxmPF2kFi.png", notas: "Manzana, Cítricos, Flor blanca, Vainilla" },
             { id: 235, name: "Kayali Vainilla G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "esQOUN-n7_klac2d5HWjO.png", notas: "Vainilla, Caramelo, Sándalo, Ámbar" },
             { id: 236, name: "Kayali White Flowers G5", basePrice: 25000, category: "Kayali", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "NK4R1MqYAmSmTIL355NIc.png", notas: "Flor blanca, Jazmín, Almizcle, Vainilla" },
             { id: 237, name: "Kayali Sparkling Lychee G5", basePrice: 25000, category: "Kayali", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "p4HzPbIqXunmuyxchrqkq.png", notas: "Lichi, Cítricos, Flor blanca, Vainilla" },
@@ -6129,6 +6129,16 @@
             }
         }
 
+        // ---- Foto de respaldo ----
+        // Si una foto de la landing no carga, se prueba la direccion que figura en la hoja (una sola vez)
+        window.__IMG_ALT = {};
+        document.addEventListener('error', function(e){
+            const t = e.target;
+            if(!t || t.tagName !== 'IMG' || t.dataset.altProbado) return;
+            const alt = window.__IMG_ALT[t.src];
+            if(alt){ t.dataset.altProbado = '1'; t.src = alt; }
+        }, true);
+
         // ---- Sincronizacion con la hoja (stock.json) ----
         // Marcas de la hoja que NO se agregan solas a la landing (kits, miniaturas, promos)
         const EXCLUIR_MARCAS = ['kit miniaturas', 'femenino', 'masculino', 'unisex', 'promo'];
@@ -6222,6 +6232,7 @@
                         const it = enlace.get(p);
                         p._o = it ? it._i : 100000 + idx;
                         if(it){
+                            if(it.imagen && it.imagen !== p.image){ p.imageAlt = it.imagen; window.__IMG_ALT[p.image] = it.imagen; }   // foto de respaldo (la de la hoja)
                             const marcaHoja = filterNames.find(f => f !== 'Todas' && normName(f) === normName(it.categoria || ''));
                             if(marcaHoja) p.category = marcaHoja;   // la marca la define la hoja
                             p.inStock = stockDe(it);
