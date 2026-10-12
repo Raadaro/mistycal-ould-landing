@@ -1,6 +1,114 @@
 {
-  "actualizado": "2026-10-12 08:07",
+  "actualizado": "2026-10-12 16:40",
   "perfumes": [
+    {
+      "nombre": "BODY SPLASH YUM YUM 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/KWDk1cszXzNhBBgRVb6L9.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH 9PM VIOLETA 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/oErAsUU_M6ODgWXUWFQeH.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH ANGHAM 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/z4n7HpPcx8K1CEapv-9IF.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH 9PM NEGRO 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/x6EZylqAJE_74F2DzPnsh.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH BHARARA KING 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/5iAp5SPoDclsaoHNjUG-B.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH YARA CANDY 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/dlaop9djOEj_jCAfjoNpP.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH AL HARAMAIN BLEU 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/JMYBdKWddw-p7dDynrMSC.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH ERBA PURA 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/P1VnillMZw3_05DkhpcPW.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH LE MALE ELIXIR 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/hP7dSaeyRMkQNrt-ZK7Ep.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH VULCAN FEU 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/DFY_P7YjdGYfARj98tvdZ.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH AL HARAMAIN AQUA DUBAI 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/YzUJFp014VF76xU0LcBSW.png?size=2000x2000"
+    },
+    {
+      "nombre": "BODY SPLASH 9PM NIGHT OUT 250ML",
+      "stock": true,
+      "precio": 8000,
+      "categoria": "BODY SPLASH",
+      "genero": "MUJER",
+      "notas": ".",
+      "imagen": "https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/eKN2UfNf_r34ZecMHRYqk.png?size=2000x2000"
+    },
     {
       "nombre": "YARA FEM G5",
       "stock": true,
