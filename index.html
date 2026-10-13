@@ -6144,11 +6144,17 @@
         const EXCLUIR_MARCAS = ['kit miniaturas', 'femenino', 'masculino', 'unisex', 'promo'];
         function tituloCase(s){
             return String(s || '').replace(/\s+/g, ' ').trim().split(' ')
-                .map(w => /\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+                .map(w => /^\d+ml$/i.test(w) ? w.toLowerCase() : /\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+        }
+        function imgOptimizada(url){
+            const m = /cdn\.pedix\.app\/[^?]*\?(?:.*&)?size=(\d+)x\d+/.exec(url || '');
+            if(m && Number(m[1]) > 900) return { src: url.replace(/size=\d+x\d+/, 'size=800x800'), alt: url };
+            return { src: url, alt: null };
         }
         function notasLimpias(it){
             const n = (it.notas || '').trim(), c = (it.categoria || '').trim().toLowerCase();
-            if(!n || (c && n.toLowerCase().startsWith(c + ','))) return '';   // "MARCA, NOMBRE" = relleno de la hoja
+            if(!n || !/[A-Za-zÁÉÍÓÚáéíóúÑñ]/.test(n)) return '';                 // "." u otro relleno sin letras
+            if(c && n.toLowerCase().startsWith(c + ',')) return '';             // "MARCA, NOMBRE" = relleno de la hoja
             return n;
         }
         function lev(a, b){
@@ -6218,10 +6224,12 @@
                             filterNames.splice(iOtros >= 0 ? iOtros : filterNames.length, 0, marca);
                         }
                         const g = normName(it.genero || '');
+                        const im = imgOptimizada(it.imagen);
+                        if(im.alt) window.__IMG_ALT[im.src] = im.alt;
                         const nuevo = { id: ++maxId, name: tituloCase(it.nombre), basePrice: Number(it.precio) || 0, category: marca,
                             gender: g === 'mujer' ? 'Mujer' : g === 'hombre' ? 'Hombre' : 'Unisex',
                             season: it.temporada || 'Todo el año', featured: false, inStock: true,
-                            image: it.imagen, notas: notasLimpias(it) };
+                            image: im.src, notas: notasLimpias(it) };
                         products.push(nuevo); enlace.set(nuevo, it); agregados.push(nuevo.name);
                     });
                     if(agregados.length) console.log('MISTYCAL: perfumes agregados desde la hoja:', agregados);
