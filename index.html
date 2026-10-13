@@ -6199,7 +6199,8 @@
                     const usadas = new Set(enlace.values());
 
                     // 2) filas de la hoja sin pareja: si el nombre es casi igual (error de tipeo) se enlazan
-                    hoja.filter(it => !usadas.has(it)).forEach(it => {
+                    const unica = it => porNombre[normName(it.nombre)] === it;   // si un nombre esta repetido en la hoja, cuenta la primera fila
+                    hoja.filter(it => !usadas.has(it) && unica(it)).forEach(it => {
                         const k = normName(it.nombre), c = normName(it.categoria || '');
                         let mejor = null, dist = 99;
                         products.forEach(p => {
@@ -6214,7 +6215,7 @@
                     // 3) filas de la hoja que la landing no tiene: se agregan (salvo kits/miniaturas/promos)
                     let maxId = Math.max(0, ...products.map(p => p.id));
                     const agregados = [];
-                    hoja.filter(it => !usadas.has(it)).forEach(it => {
+                    hoja.filter(it => !usadas.has(it) && unica(it)).forEach(it => {
                         const marcaKey = normName(it.categoria || '');
                         if(!marcaKey || !it.imagen || EXCLUIR_MARCAS.includes(marcaKey)) return;
                         let marca = filterNames.find(f => f !== 'Todas' && normName(f) === marcaKey);
