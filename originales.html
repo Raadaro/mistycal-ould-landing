@@ -305,7 +305,24 @@
   .sin-stock { opacity: 0.4; filter: grayscale(100%); pointer-events: none; position: relative; }
   .sin-stock::after { content: "SIN STOCK"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: black; color: white; padding: 5px 12px; font-size: 12px; font-weight: bold; border-radius: 20px; z-index: 2; }
 </style>
-<style></style><style></style></head>
+<style></style><style></style>    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1438105681629107');
+    fbq('track', 'PageView');
+    // Envia un evento al pixel sin romper la pagina si el pixel esta bloqueado
+    function trackPixel(ev, data){ try{ if(window.fbq) fbq('track', ev, data); }catch(e){} }
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1438105681629107&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+</head>
 <body class="">
 <section class="topbar" data-bloque="topbar">
         <span><i class="fa-solid fa-circle-exclamation" style="margin-right:6px;color:var(--gold-light)"></i>Reserva con el 50% y abona el saldo contra entrega</span>
@@ -425,7 +442,7 @@
                 btn = `<button type="button" class="var__cta" onclick="openReserveModal(${p.id})"><i class="fa-brands fa-whatsapp"></i> RESERVAR</button>`;
             } else {
                 const msg = encodeURIComponent('¡Hola! Quiero consultar el precio de ' + p.name);
-                btn = `<a class="var__cta" style="text-decoration:none;text-align:center" href="https://wa.me/543515210477?text=${msg}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> CONSULTAR</a>`;
+                btn = `<a class="var__cta" style="text-decoration:none;text-align:center" href="https://wa.me/543515210477?text=${msg}" target="_blank" rel="noopener" data-n="${esc(p.name)}" onclick="trackPixel('Contact',{content_name:this.dataset.n})"><i class="fa-brands fa-whatsapp"></i> CONSULTAR</a>`;
             }
             return `
                 <article class="var__card" data-perfume="${esc(p.name)}" style="opacity:1;filter:none">
@@ -463,11 +480,12 @@
         function cargar(data){
             const stockDe = pr => (typeof pr.stock === 'string') ? ['si','sí','true','1'].includes(pr.stock.toLowerCase().trim()) : !!pr.stock;
             const vistos = new Set();
+            const g5 = new Set((data.perfumes || []).map(x => normName(x.nombre)));   // los G5 no van en esta pagina
             let id = 0;
             (data.originales || []).forEach(it => {
                 const name = ml(it.nombre);
                 const k = normName(name);
-                if(!name || vistos.has(k) || !it.imagen) return;      // hace falta nombre y foto; sin repetidos
+                if(!name || vistos.has(k) || !it.imagen || g5.has(k)) return;      // hace falta nombre y foto; sin repetidos ni G5
                 vistos.add(k);
                 const im = imgOptimizada(it.imagen);
                 if(im.alt) window.__IMG_ALT[im.src] = im.alt;
@@ -504,6 +522,7 @@
             if (!p) return;
             const { total, deposit } = getPrices(p);
             reserveCurrent = { name: p.name, total, deposit, saldo: total - deposit };
+            trackPixel('InitiateCheckout', { content_name: p.name, content_ids: [p.name], content_type: 'product', value: deposit, currency: 'ARS' });
 
             setReserveTitle('RESERVAR TU PERFUME');
             document.getElementById('reserve-content').innerHTML = `
@@ -541,6 +560,7 @@
             if (!reserveCurrent) return;
             const f = new FormData(event.target);
             const r = reserveCurrent;
+            trackPixel('Purchase', { content_name: r.name, content_ids: [r.name], content_type: 'product', value: r.deposit, currency: 'ARS' });
             const msg = `¡Hola! Te envío el comprobante de la seña para reservar:\n\n` +
                 `*${r.name}*\n` +
                 `- Precio total: ${formatMoney(r.total)}\n` +
