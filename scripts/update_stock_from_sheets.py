@@ -20,6 +20,7 @@ from urllib.parse import urlparse, parse_qs
 import requests
 
 SHEET_CSV_URL = os.getenv("SHEET_CSV_URL", "")
+ORIGINALES_GID = os.getenv("ORIGINALES_GID", "1700000001")   # numero (gid) de la pestana Originales
 
 # Nombres de la planilla que difieren del nombre que usa la pagina (errores de tipeo).
 # Formato:  "NOMBRE EN LA PLANILLA": "Nombre en la pagina"
@@ -43,7 +44,7 @@ def norm(s):
 ALIAS_N = {norm(k): v for k, v in ALIAS.items()}
 
 
-def fetch_csv(url):
+def fetch_csv(url, gid=None):
     print(f"URL original: {url}")
     # Si ya es export?format=csv la dejamos tal cual
     if "export?format=csv" in url:
@@ -68,6 +69,12 @@ def fetch_csv(url):
             final_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
     else:
         final_url = url
+
+    if gid:   # otra pestana de la misma hoja
+        if "gid=" in final_url:
+            final_url = re.sub(r"gid=\d+", f"gid={gid}", final_url)
+        else:
+            final_url += ("&" if "?" in final_url else "?") + f"gid={gid}"
 
     print(f"Descargando CSV de: {final_url}")
     r = requests.get(final_url, timeout=30)
@@ -96,7 +103,7 @@ def parse_price(raw):
     return int(round(v)) if v > 0 else None
 
 
-def parse_stock(text):
+def parse_stock(text, con_venta=False):
     perfumes = []
     reader = csv.DictReader(io.StringIO(text))
 
@@ -119,6 +126,7 @@ def parse_stock(text):
         stock_key = reader.fieldnames[7] if len(reader.fieldnames) > 7 else reader.fieldnames[-1]
 
     precio_key = find_key(["baseprice", "base price", "precio proveedor", "precio base", "precio"])
+    venta_key = find_key(["precio venta", "precio de venta"]) if con_venta else None
 
     # Columnas opcionales: se copian tal cual al stock.json
     extras = {
@@ -148,6 +156,10 @@ def parse_stock(text):
         precio = parse_price(row.get(precio_key)) if precio_key else None
         if precio:
             item["precio"] = precio
+        if venta_key:
+            venta = parse_price(row.get(venta_key))
+            if venta:
+                item["venta"] = venta
         for campo, key in extras.items():
             valor = (row.get(key) or "").strip() if key else ""
             if valor:
@@ -176,6 +188,22 @@ def main():
 
     ahora = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M")
     output = {"actualizado": ahora, "perfumes": perfumes}
+
+    # Pestana "Originales" (misma hoja, otra pestana). Si falla, se conserva lo anterior y NO se toca lo de los G5.
+    try:
+        csv_o = fetch_csv(SHEET_CSV_URL, gid=ORIGINALES_GID)
+        orig = parse_stock(csv_o, con_venta=True)
+        orig = [o for o in orig if o.get("precio")]        # hace falta nombre y precio
+        print(f"Originales leidos: {len(orig)}")
+        output["originales"] = orig
+    except Exception as e:
+        print(f"AVISO: no pude leer la pestana Originales ({e}); se conserva lo anterior")
+        try:
+            previo = json.loads(Path("stock.json").read_text(encoding="utf-8")).get("originales")
+            if previo is not None:
+                output["originales"] = previo
+        except Exception:
+            pass
     Path("stock.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print("stock.json generado OK")
 
