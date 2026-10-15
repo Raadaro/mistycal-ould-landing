@@ -44,7 +44,7 @@ def norm(s):
 ALIAS_N = {norm(k): v for k, v in ALIAS.items()}
 
 
-def fetch_csv(url, gid=None):
+def fetch_csv(url, gid_forzado=None):
     print(f"URL original: {url}")
     # Si ya es export?format=csv la dejamos tal cual
     if "export?format=csv" in url:
@@ -70,11 +70,11 @@ def fetch_csv(url, gid=None):
     else:
         final_url = url
 
-    if gid:   # otra pestana de la misma hoja
+    if gid_forzado:   # otra pestana de la misma hoja (ej: Originales)
         if "gid=" in final_url:
-            final_url = re.sub(r"gid=\d+", f"gid={gid}", final_url)
+            final_url = re.sub(r"gid=\d+", f"gid={gid_forzado}", final_url)
         else:
-            final_url += ("&" if "?" in final_url else "?") + f"gid={gid}"
+            final_url += ("&" if "?" in final_url else "?") + f"gid={gid_forzado}"
 
     print(f"Descargando CSV de: {final_url}")
     r = requests.get(final_url, timeout=30)
@@ -191,10 +191,17 @@ def main():
 
     # Pestana "Originales" (misma hoja, otra pestana). Si falla, se conserva lo anterior y NO se toca lo de los G5.
     try:
-        csv_o = fetch_csv(SHEET_CSV_URL, gid=ORIGINALES_GID)
+        csv_o = fetch_csv(SHEET_CSV_URL, gid_forzado=ORIGINALES_GID)
         orig = parse_stock(csv_o, con_venta=True)
         orig = [o for o in orig if o.get("precio")]        # hace falta nombre y precio
         print(f"Originales leidos: {len(orig)}")
+        # Defensa: si trajo los mismos perfumes que la pestana de los G5, el enlace no distingue pestanas
+        nombres_g5 = {norm(x["nombre"]) for x in perfumes}
+        repetidos = [x for x in orig if norm(x["nombre"]) in nombres_g5]
+        if orig and len(repetidos) >= max(3, len(orig) // 2):
+            print("AVISO: la pestana Originales trajo los mismos perfumes que la de los G5 "
+                  "(el enlace de la hoja no esta distinguiendo pestanas). Se ignora y no se guardan originales.")
+            orig = []
         output["originales"] = orig
     except Exception as e:
         print(f"AVISO: no pude leer la pestana Originales ({e}); se conserva lo anterior")
