@@ -8,15 +8,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        .elegir-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto}
-        .elegir-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:28px 26px;text-decoration:none;color:var(--ink);transition:box-shadow .2s,transform .2s,border-color .2s}
-        .elegir-card:hover{box-shadow:0 10px 28px rgba(0,0,0,.08);transform:translateY(-2px);border-color:var(--gold)}
-        .elegir-tag{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#D4AF37;font-weight:700}
-        .elegir-card h3{font-family:var(--font-display);font-size:28px;line-height:1.15;margin:0;font-weight:600}
-        .elegir-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
-        .elegir-precio{font-family:var(--font-display);font-size:24px;font-weight:600}
-        .elegir-card .btn{margin-top:6px}
-        @media (max-width:749px){ .elegir-grid{grid-template-columns:1fr} .elegir-card h3{font-size:26px} }
+        .elegir2{padding:56px 0 72px;background:var(--surface)}
+        .elegir2__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:1000px;margin:0 auto;align-items:start}
+        .eleg-card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:#fff;border-radius:6px;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .25s}
+        .eleg-card--g5{background:var(--ink)}
+        .eleg-card--orig{background:var(--accent);margin-top:44px}
+        .eleg-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+        .eleg-media{position:relative;aspect-ratio:5/4;overflow:hidden;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.14),rgba(255,255,255,.03))}
+        .eleg-card--g5 .eleg-media{clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}
+        .eleg-card--orig .eleg-media{clip-path:polygon(0 0,100% 0,100% 100%,0 86%)}
+        .eleg-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease}
+        .eleg-media img.is-on{opacity:1}
+        .eleg-body{display:flex;flex-direction:column;gap:12px;padding:6px 26px 28px;flex:1}
+        .eleg-tag{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light);font-weight:700}
+        .eleg-card h3{font-family:var(--font-display);font-size:36px;line-height:1.05;margin:0;color:#fff}
+        .eleg-card p{margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.8)}
+        .eleg-cta{margin-top:10px;display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:13px 22px;border:1.5px solid var(--gold);border-radius:999px;color:var(--gold-light);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
+        .eleg-card:hover .eleg-cta{background:var(--gold);color:var(--ink)}
+        .eleg-cta i{font-style:normal;transition:transform .2s}
+        .eleg-card:hover .eleg-cta i{transform:translateX(4px)}
+        @media (max-width:749px){
+            .elegir2{padding:40px 0 56px}
+            .elegir2__grid{grid-template-columns:1fr;gap:22px}
+            .eleg-card--orig{margin-top:0}
+            .eleg-card h3{font-size:34px}
+            .eleg-media{aspect-ratio:4/3}
+            .eleg-body{padding:4px 22px 26px}
+        }
+        @media (prefers-reduced-motion:reduce){ .eleg-media img{transition:none} .eleg-card{transition:none} }
 /* PARCHE MISTYCAL - Ocultar botones Editar/Exportar - NO TOCA BANNER */
 .edit-toggle, .edit-hint, .save-bar, .export-btn, #edit-toggle, button.edit-toggle, button.export-btn, button.save-bar {
     display: none !important;
@@ -223,6 +242,19 @@
             .cab-nav a[href="#hero"]{display:none}
             .hero__grid > *{min-width:0}
         }
+        /* Menu superior: botones en pildora */
+        .cab .cab-nav{gap:8px;letter-spacing:.08em}
+        .cab .cab-nav a{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;padding:10px 18px;border:1.5px solid var(--ink);border-radius:999px;color:var(--ink);font-size:11.5px;font-weight:700;line-height:1;transition:background .2s,color .2s,border-color .2s}
+        .cab .cab-nav a:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+        .cab .cab-nav a.is-cta{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+        .cab .cab-nav a.is-cta:hover{background:var(--ink);border-color:var(--ink);color:var(--gold-light)}
+        @media (max-width:640px){
+            .cab .cab__in{height:60px;gap:8px}
+            .cab .logo{font-size:21px;letter-spacing:.14em}
+            .cab .cab-nav{gap:6px}
+            .cab .cab-nav a{padding:9px 13px;font-size:10.5px;letter-spacing:.05em}
+            .cab .cab-nav a.solo-pc, .cab .cab-nav .solo-pc{display:none}
+        }
         /* Titulo de cada cuadro del banner (Mamá dulce / intensa / fresca) */
         .madre-tit{font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.2;text-align:center;color:var(--ink);margin:0 0 16px}
         .madre-tit::after{content:"";display:block;width:38px;height:2px;background:#D4AF37;margin:9px auto 0}
@@ -348,8 +380,8 @@
                 </div>
             </div>
             <nav class="cab-nav">
-                <a href="g5.html">G5</a>
-                <a href="originales.html">Originales</a>
+                <a href="g5.html" class="is-cta"><span class="solo-pc">Perfumes&nbsp;</span>G5</a>
+                <a href="originales.html" class="is-cta">Originales</a>
             </nav>
         </div>
     </section>
@@ -367,25 +399,30 @@
         
     </section>
 
-    <section id="elegir" style="padding:56px 0;background:var(--paper);">
+    <section id="elegir" class="elegir2">
         <div class="wrap">
             <div style="text-align:center;max-width:720px;margin:0 auto 32px;">
                 <p style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:#D4AF37;font-weight:700;">ELEGÍ TU CATÁLOGO</p>
-                <h2 style="font-family:var(--font-display);font-size:32px;margin:12px 0 8px;">¿Qué perfumes estás buscando?</h2>
+                <h2 style="font-family:var(--font-display);font-size:34px;margin:12px 0 8px;">¿Qué perfumes estás buscando?</h2>
             </div>
-            <div class="elegir-grid">
-                <a class="elegir-card" href="g5.html">
-                    <span class="elegir-tag">Calidad G5</span>
-                    <h3>Perfumes calidad G5</h3>
-                    <p>Las fragancias más pedidas. Reservá con el 50% y abonás el saldo contra entrega. Envío gratis en Córdoba Capital.</p>
-                    <div class="elegir-precio">Desde $44.900</div>
-                    <span class="btn">Ver perfumes G5</span>
+            <div class="elegir2__grid">
+                <a class="eleg-card eleg-card--g5" href="g5.html" aria-label="Ver perfumes calidad G5">
+                    <div class="eleg-media" id="slides-g5"></div>
+                    <div class="eleg-body">
+                        <span class="eleg-tag">Calidad G5</span>
+                        <h3>Perfumes G5</h3>
+                        <p>Las fragancias más pedidas. Reservá con el 50% y abonás el saldo contra entrega. Envío gratis en Córdoba Capital.</p>
+                        <span class="eleg-cta">Ver desde $44.900 <i>&rarr;</i></span>
+                    </div>
                 </a>
-                <a class="elegir-card" href="originales.html">
-                    <span class="elegir-tag">Originales</span>
-                    <h3>Perfumes originales</h3>
-                    <p>Nuestra selección de perfumes originales. Reservá con el 50% y abonás el saldo contra entrega.</p>
-                    <span class="btn" style="margin-top:auto">Ver perfumes originales</span>
+                <a class="eleg-card eleg-card--orig" href="originales.html" aria-label="Ver perfumes originales">
+                    <div class="eleg-media" id="slides-orig"></div>
+                    <div class="eleg-body">
+                        <span class="eleg-tag">Originales</span>
+                        <h3>Perfumes originales</h3>
+                        <p>Nuestra selección de perfumes originales. Reservá con el 50% y abonás el saldo contra entrega.</p>
+                        <span class="eleg-cta">Ver originales <i>&rarr;</i></span>
+                    </div>
                 </a>
             </div>
         </div>
@@ -513,6 +550,40 @@
             if(b) location.href = 'g5.html?reservar=' + encodeURIComponent(b.getAttribute('data-reservar'));
         });
 
+        // ---- Carrusel automatico de fotos en las dos tarjetas ----
+        const reducirMov = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function mezclar(a){ a = a.slice(); for(let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+        function imgChica(url){
+            const m = /cdn\.pedix\.app\/[^?]*\?(?:.*&)?size=(\d+)x\d+/.exec(url || '');
+            if(m && Number(m[1]) > 900){ const src = url.replace(/size=\d+x\d+/, 'size=800x800'); window.__IMG_ALT[src] = url; return src; }
+            return url;
+        }
+        function montarSlides(id, urls, demora){
+            const box = document.getElementById(id);
+            if(!box || !urls.length) return;
+            box.innerHTML = urls.map((u, i) => '<img src="' + u + '" alt="" ' + (i ? 'loading="lazy" ' : '') + 'class="' + (i === 0 ? 'is-on' : '') + '">').join('');
+            box.querySelectorAll('img').forEach(im => im.addEventListener('error', () => { if(im.dataset.altProbado) im.remove(); }));
+            if(reducirMov) return;
+            let i = 0;
+            setTimeout(function(){
+                setInterval(function(){
+                    const imgs = box.querySelectorAll('img');
+                    if(imgs.length < 2) return;
+                    imgs[i % imgs.length].classList.remove('is-on');
+                    i = (i + 1) % imgs.length;
+                    imgs[i].classList.add('is-on');
+                }, 3400);
+            }, demora || 0);
+        }
+        const NO_G5 = /body splash|kit|promo|miniatura/i;
+        function fotosDesdeStock(data){
+            const g5 = (data.perfumes || []).filter(p => p && p.stock && p.imagen && !NO_G5.test((p.categoria || '') + ' ' + p.nombre)).map(p => imgChica(p.imagen));
+            const g5nombres = new Set((data.perfumes || []).map(p => String(p.nombre).toLowerCase()));
+            const orig = (data.originales || []).filter(p => p && p.imagen && !g5nombres.has(String(p.nombre).toLowerCase())).map(p => imgChica(p.imagen));
+            montarSlides('slides-g5', mezclar(g5).slice(0, 6), 0);
+            montarSlides('slides-orig', mezclar(orig).slice(0, 6), 1700);
+        }
+
         // Stock y precios desde la hoja (stock.json lo arma el bot)
         const norm = s => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').toLowerCase().trim();
         const stockDe = pr => (typeof pr.stock === 'string') ? ['si','sí','true','1'].includes(pr.stock.toLowerCase().trim()) : !!pr.stock;
@@ -530,8 +601,9 @@
                     if(it.imagen && it.imagen !== p.image) window.__IMG_ALT[p.image] = it.imagen;
                 });
                 renderBannerMadre();
+                fotosDesdeStock(data);
             })
-            .catch(err => console.error('MISTYCAL: no se pudo cargar stock.json', err));
+            .catch(err => { console.error('MISTYCAL: no se pudo cargar stock.json', err); montarSlides('slides-g5', mezclar(products.map(p => p.image)).slice(0, 6), 0); });
     })();
     </script>
 
