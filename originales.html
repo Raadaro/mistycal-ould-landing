@@ -335,6 +335,72 @@
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1438105681629107&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel -->
+    <meta name="description" content="Selección de perfumes originales. Reservá con el 50% de seña y pagá el saldo al recibir. Entregas los viernes en Córdoba.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Perfumes originales · MISTYCAL OULD">
+    <meta property="og:description" content="Selección de perfumes originales. Reservá con el 50% de seña y pagá el saldo al recibir. Entregas los viernes en Córdoba.">
+    <meta property="og:image" content="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/c_k4C_JTwiCKzgBAIDpJ6.png">
+    <meta property="og:url" content="https://raadaro.github.io/mistycal-ould-landing/originales.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#141414">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='45' font-size='40' text-anchor='middle' fill='%23D4AF37' font-family='Georgia,serif' font-weight='700'%3EM%3C/text%3E%3C/svg%3E">
+    <style>
+        .reserve-mp{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:8px;background:#009EE3;color:#fff;font-weight:700;font-size:14px;text-decoration:none;margin-top:6px}
+        .reserve-mp:hover{background:#0087c4}
+        .reserve-mp-note{margin:.5rem 0 0;font-size:12px;color:var(--muted)}
+        .reserve-o{margin:1rem 0 .4rem;font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+        .foot__legal{margin-top:10px;font-size:12px;line-height:1.9}
+        .foot__legal a{color:var(--muted);text-decoration:underline;margin:0 6px}
+    </style>
+    <script>
+    // ---- Entrega por ciclos: pedidos hasta el miercoles 16 hs, entrega el viernes ----
+    const CIERRE_DIA = 3, CIERRE_HORA = 16, ENTREGA_DIA = 5;   // 0=domingo ... 3=miercoles ... 5=viernes
+    const DIAS_ES = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+    function proximaEntrega(){
+        const ahora = new Date(Date.now() - 3*3600*1000);              // hora de Argentina, leida con getUTC*
+        const dia = ahora.getUTCDay();
+        const minutos = ahora.getUTCHours()*60 + ahora.getUTCMinutes();
+        let d = (CIERRE_DIA - dia + 7) % 7;
+        if(d === 0 && minutos >= CIERRE_HORA*60) d = 7;
+        const cierre = new Date(Date.UTC(ahora.getUTCFullYear(), ahora.getUTCMonth(), ahora.getUTCDate() + d));
+        const entrega = new Date(cierre.getTime() + ((ENTREGA_DIA - CIERRE_DIA + 7) % 7) * 86400000);
+        return { cierre, entrega };
+    }
+    function fmtFecha(f){ return DIAS_ES[f.getUTCDay()] + ' ' + String(f.getUTCDate()).padStart(2,'0') + '/' + String(f.getUTCMonth()+1).padStart(2,'0'); }
+    function textoEntrega(){ const e = proximaEntrega(); return { entrega: fmtFecha(e.entrega), cierre: fmtFecha(e.cierre) }; }
+    document.addEventListener('DOMContentLoaded', function(){
+        const t = textoEntrega();
+        document.querySelectorAll('[data-entrega]').forEach(function(el){
+            const k = el.getAttribute('data-entrega');
+            el.textContent = (k === 'cierre') ? t.cierre : t.entrega;
+        });
+    });
+
+    // ---- Origen del cliente (anuncio de Meta): se recuerda 7 dias y se agrega al mensaje de WhatsApp ----
+    (function(){
+        try{
+            const q = new URLSearchParams(location.search);
+            const s = q.get('utm_source'), c = q.get('utm_campaign'), x = q.get('utm_content');
+            if(s || c || x || q.get('fbclid')){
+                const v = [s, c, x].filter(Boolean).join(' / ') || 'meta';
+                localStorage.setItem('mistycal_origen', JSON.stringify({ v: v, t: Date.now() }));
+            }
+        }catch(e){}
+    })();
+    function getOrigen(){
+        try{ const o = JSON.parse(localStorage.getItem('mistycal_origen') || 'null'); if(o && Date.now() - o.t < 7*86400000) return o.v; }catch(e){}
+        return '';
+    }
+
+    // ---- Pagos y pedidos ----
+    const MP_LINK = 'https://link.mercadopago.com.ar/robinoraul';
+    // Para recibir cada reserva automaticamente (n8n o Google Apps Script), pega aca la direccion del webhook:
+    const PEDIDOS_WEBHOOK_URL = '';
+    function enviarPedido(datos){
+        if(!PEDIDOS_WEBHOOK_URL) return;
+        try{ fetch(PEDIDOS_WEBHOOK_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(datos), keepalive:true }); }catch(e){}
+    }
+    </script>
 </head>
 <body class="">
 <section class="topbar" data-bloque="topbar">
@@ -364,7 +430,7 @@
             <div class="sec-head">
                 <p class="eyebrow">Selección de originales</p>
                 <h1 style="font-family:var(--font-display);font-size:38px;font-weight:600;line-height:1.15;margin:8px 0">Perfumes originales</h1>
-                <p style="color:var(--muted);font-size:15px;margin-top:8px">Reservá con el 50% y abonás el saldo contra entrega. Envío gratis en Córdoba Capital.</p>
+                <p style="color:var(--muted);font-size:15px;margin-top:8px">Reservá con el 50% y abonás el saldo contra entrega. Envío gratis en Córdoba Capital.</p><p style="color:var(--muted);font-size:13px;margin-top:6px">Pedidos hasta el <b data-entrega="cierre">miércoles</b> a las 16 hs · Entrega el <b data-entrega="entrega">viernes</b></p>
             </div>
             <div id="filter-wrap">
                 <div class="filter-nav">
@@ -386,6 +452,7 @@
     <section class="foot" data-bloque="footer">
         <div class="wrap">
             <small>© 2026 · Mistycal Ould · Perfumería de Autor · Córdoba, Argentina · +54 351 521-0477</small>
+            <div class="foot__legal"><a href="legal.html#cambios">Cambios y devoluciones</a><a href="legal.html#arrepentimiento">Botón de arrepentimiento</a><a href="legal.html#privacidad">Privacidad</a></div>
             <div class="foot__eco" aria-hidden="true">MISTYCAL OULD</div>
         </div>
     </section>
@@ -460,7 +527,7 @@
             return `
                 <article class="var__card" data-perfume="${esc(p.name)}" style="opacity:1;filter:none">
                     <div class="var__img" style="position:relative">
-                        <img src="${p.image}" alt="${esc(p.name)}" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1">
+                        <img src="${p.image}" alt="${esc(p.name)}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1">
                         ${badgeGen}${badgeSin}
                     </div>
                     <div class="var__body">
@@ -506,6 +573,7 @@
                     season: limpiar(it.temporada), notas: notasLimpias(it.notas), image: im.src, inStock: stockDe(it),
                     venta: Number(it.venta) > 0 ? Number(it.venta) : 0 });
             });
+            products.sort((a, b) => (b.inStock ? 1 : 0) - (a.inStock ? 1 : 0));   // con stock primero
             if(!products.length){ mostrarVacio(); return; }
             filterNames = ['Todas'].concat([...new Set(products.map(p => p.category))]);
             renderFilters(); renderCatalog();
@@ -582,6 +650,8 @@
             if (!reserveCurrent) return;
             const f = new FormData(event.target);
             const r = reserveCurrent;
+            const ent = textoEntrega(); const origen = getOrigen();
+            enviarPedido({ fecha: new Date().toISOString(), perfume: r.name, total: r.total, sena: r.deposit, saldo: r.saldo, nombre: f.get('nombre'), whatsapp: f.get('whatsapp'), direccion: f.get('direccion'), barrio: f.get('barrio'), entrega: ent.entrega, origen: origen, pagina: location.pathname });
             trackPixel('Purchase', { content_name: r.name, content_ids: [r.name], content_type: 'product', value: r.deposit, currency: 'ARS' });
             const msg = `¡Hola! Te envío el comprobante de la seña para reservar:\n\n` +
                 `*${r.name}*\n` +
@@ -593,7 +663,7 @@
                 `WhatsApp: ${f.get('whatsapp')}\n` +
                 `Dirección: ${f.get('direccion')}\n` +
                 `Barrio: ${f.get('barrio')}\n\n` +
-                `(Adjunto el comprobante de la transferencia)`;
+                `Entrega estimada: ${ent.entrega}\n` + (origen ? `Origen: ${origen}\n` : '') + `(Adjunto el comprobante de la transferencia)`;
             const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
             setReserveTitle('CASI LISTO');
@@ -601,13 +671,16 @@
                 <div class="reserve-success">
                     <div class="icon">✓</div>
                     <h4>Reservá ${esc(r.name)}</h4>
-                    <p>Tu perfume queda reservado al confirmar la transferencia. Tenés 15 minutos para realizarla.</p>
+                    <p>Para reservarlo abonás la seña de <strong>${formatMoney(r.deposit)}</strong>. Entrega estimada: <strong>${ent.entrega}</strong>.</p>
+                    <a href="${MP_LINK}" target="_blank" rel="noopener" class="reserve-mp">Pagar seña con Mercado Pago</a>
+                    <p class="reserve-mp-note">Ingresá el monto de ${formatMoney(r.deposit)}. Podés pagar con tarjeta o dinero en cuenta.</p>
+                    <p class="reserve-o">o por transferencia</p>
                     <div class="reserve-alias">
                         <p style="margin:0">Transferí <strong>${formatMoney(r.deposit)}</strong> al alias:</p>
                         <div class="alias" id="reserve-alias-text">${esc(RESERVE_ALIAS)}</div>
                         <button type="button" class="reserve-copy" onclick="copyAlias(this)">Copiar alias</button>
                     </div>
-                    <p>Una vez realizada la transferencia:</p>
+                    <p>Una vez realizado el pago:</p>
                     <a href="${waLink}" target="_blank" rel="noopener" class="reserve-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i> Enviar comprobante por WhatsApp
                     </a>
