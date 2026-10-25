@@ -21,6 +21,7 @@ import requests
 
 SHEET_CSV_URL = os.getenv("SHEET_CSV_URL", "")
 ORIGINALES_GID = os.getenv("ORIGINALES_GID", "1700000001")   # numero (gid) de la pestana Originales
+MUESTRAS_GID = os.getenv("MUESTRAS_GID", "1700000002")       # numero (gid) de la pestana Muestras
 
 # Nombres de la planilla que difieren del nombre que usa la pagina (errores de tipeo).
 # Formato:  "NOMBRE EN LA PLANILLA": "Nombre en la pagina"
@@ -189,28 +190,30 @@ def main():
     ahora = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M")
     output = {"actualizado": ahora, "perfumes": perfumes}
 
-    # Pestana "Originales" (misma hoja, otra pestana). Si falla, se conserva lo anterior y NO se toca lo de los G5.
+    # Otras pestanas de la misma hoja (Originales y Muestras). Si una falla, se conserva lo anterior y NO se toca lo de los G5.
+    nombres_g5 = {norm(x["nombre"]) for x in perfumes}
     try:
-        csv_o = fetch_csv(SHEET_CSV_URL, gid_forzado=ORIGINALES_GID)
-        orig = parse_stock(csv_o, con_venta=True)
-        orig = [o for o in orig if o.get("precio")]        # hace falta nombre y precio
-        print(f"Originales leidos: {len(orig)}")
-        # Defensa: si trajo los mismos perfumes que la pestana de los G5, el enlace no distingue pestanas
-        nombres_g5 = {norm(x["nombre"]) for x in perfumes}
-        repetidos = [x for x in orig if norm(x["nombre"]) in nombres_g5]
-        if orig and len(repetidos) >= max(3, len(orig) // 2):
-            print("AVISO: la pestana Originales trajo los mismos perfumes que la de los G5 "
-                  "(el enlace de la hoja no esta distinguiendo pestanas). Se ignora y no se guardan originales.")
-            orig = []
-        output["originales"] = orig
-    except Exception as e:
-        print(f"AVISO: no pude leer la pestana Originales ({e}); se conserva lo anterior")
+        previo_json = json.loads(Path("stock.json").read_text(encoding="utf-8"))
+    except Exception:
+        previo_json = {}
+    for clave, gid in (("originales", ORIGINALES_GID), ("muestras", MUESTRAS_GID)):
         try:
-            previo = json.loads(Path("stock.json").read_text(encoding="utf-8")).get("originales")
-            if previo is not None:
-                output["originales"] = previo
-        except Exception:
-            pass
+            csv_x = fetch_csv(SHEET_CSV_URL, gid_forzado=gid)
+            items = parse_stock(csv_x, con_venta=True)
+            items = [o for o in items if o.get("precio")]        # hace falta nombre y precio
+            print(f"{clave.capitalize()} leidos: {len(items)}")
+            # Defensa: si trajo los mismos perfumes que la pestana de los G5, el enlace no distingue pestanas
+            repetidos = [x for x in items if norm(x["nombre"]) in nombres_g5]
+            if items and len(repetidos) >= max(3, len(items) // 2):
+                print(f"AVISO: la pestana {clave} trajo los mismos perfumes que la de los G5 "
+                      "(el enlace de la hoja no esta distinguiendo pestanas). Se ignora y no se guardan.")
+                items = []
+            output[clave] = items
+        except Exception as e:
+            print(f"AVISO: no pude leer la pestana {clave} ({e}); se conserva lo anterior")
+            if previo_json.get(clave) is not None:
+                output[clave] = previo_json[clave]
+
     Path("stock.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print("stock.json generado OK")
 
