@@ -8,34 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        .elegir2{padding:56px 0 72px;background:var(--surface)}
-        .elegir2__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:1000px;margin:0 auto;align-items:start}
-        .eleg-card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:#fff;border-radius:6px;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .25s}
-        .eleg-card--g5{background:var(--ink)}
-        .eleg-card--orig{background:var(--accent);margin-top:44px}
-        .eleg-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
-        .eleg-media{position:relative;aspect-ratio:5/4;overflow:hidden;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.14),rgba(255,255,255,.03))}
-        .eleg-card--g5 .eleg-media{clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}
-        .eleg-card--orig .eleg-media{clip-path:polygon(0 0,100% 0,100% 100%,0 86%)}
-        .eleg-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease}
-        .eleg-media img.is-on{opacity:1}
-        .eleg-body{display:flex;flex-direction:column;gap:12px;padding:6px 26px 28px;flex:1}
-        .eleg-tag{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light);font-weight:700}
-        .eleg-card h3{font-family:var(--font-display);font-size:36px;line-height:1.05;margin:0;color:#fff}
-        .eleg-card p{margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.8)}
-        .eleg-cta{margin-top:10px;display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:13px 22px;border:1.5px solid var(--gold);border-radius:999px;color:var(--gold-light);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
-        .eleg-card:hover .eleg-cta{background:var(--gold);color:var(--ink)}
-        .eleg-cta i{font-style:normal;transition:transform .2s}
-        .eleg-card:hover .eleg-cta i{transform:translateX(4px)}
-        @media (max-width:749px){
-            .elegir2{padding:40px 0 56px}
-            .elegir2__grid{grid-template-columns:1fr;gap:22px}
-            .eleg-card--orig{margin-top:0}
-            .eleg-card h3{font-size:34px}
-            .eleg-media{aspect-ratio:4/3}
-            .eleg-body{padding:4px 22px 26px}
-        }
-        @media (prefers-reduced-motion:reduce){ .eleg-media img{transition:none} .eleg-card{transition:none} }
 /* PARCHE MISTYCAL - Ocultar botones Editar/Exportar - NO TOCA BANNER */
 .edit-toggle, .edit-hint, .save-bar, .export-btn, #edit-toggle, button.edit-toggle, button.export-btn, button.save-bar {
     display: none !important;
@@ -255,6 +227,9 @@
             .cab .cab-nav a{padding:9px 13px;font-size:10.5px;letter-spacing:.05em}
             .cab .cab-nav a.solo-pc, .cab .cab-nav .solo-pc{display:none}
         }
+        .franja-orig{background:var(--surface);text-align:center;padding:9px 12px;font-size:12.5px;border-bottom:1px solid var(--line)}
+        .franja-orig a{color:var(--accent);font-weight:600;text-decoration:none;letter-spacing:.02em}
+        .franja-orig a:hover{text-decoration:underline}
         /* Titulo de cada cuadro del banner (Mamá dulce / intensa / fresca) */
         .madre-tit{font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.2;text-align:center;color:var(--ink);margin:0 0 16px}
         .madre-tit::after{content:"";display:block;width:38px;height:2px;background:#D4AF37;margin:9px auto 0}
@@ -363,6 +338,116 @@
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1438105681629107&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel -->
+    <meta name="description" content="Oferta de temporada. Elegí entre miniaturas y tubitos, perfumes calidad G5 y perfumes originales. Reservá con el 50% y pagá el saldo al recibir.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MISTYCAL OULD · Perfumería — Córdoba">
+    <meta property="og:description" content="Oferta de temporada. Elegí entre miniaturas y tubitos, perfumes calidad G5 y perfumes originales. Reservá con el 50% y pagá el saldo al recibir.">
+    <meta property="og:image" content="https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/c_k4C_JTwiCKzgBAIDpJ6.png">
+    <meta property="og:url" content="https://raadaro.github.io/mistycal-ould-landing/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#141414">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='45' font-size='40' text-anchor='middle' fill='%23D4AF37' font-family='Georgia,serif' font-weight='700'%3EM%3C/text%3E%3C/svg%3E">
+    <style>
+        .reserve-mp{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:8px;background:#009EE3;color:#fff;font-weight:700;font-size:14px;text-decoration:none;margin-top:6px}
+        .reserve-mp:hover{background:#0087c4}
+        .reserve-mp-note{margin:.5rem 0 0;font-size:12px;color:var(--muted)}
+        .reserve-o{margin:1rem 0 .4rem;font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+        .foot__legal{margin-top:10px;font-size:12px;line-height:1.9}
+        .foot__legal a{color:var(--muted);text-decoration:underline;margin:0 6px}
+    </style>
+    <script>
+    // ---- Entrega por ciclos: pedidos hasta el miercoles 16 hs, entrega el viernes ----
+    const CIERRE_DIA = 3, CIERRE_HORA = 16, ENTREGA_DIA = 5;   // 0=domingo ... 3=miercoles ... 5=viernes
+    const DIAS_ES = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+    function proximaEntrega(){
+        const ahora = new Date(Date.now() - 3*3600*1000);              // hora de Argentina, leida con getUTC*
+        const dia = ahora.getUTCDay();
+        const minutos = ahora.getUTCHours()*60 + ahora.getUTCMinutes();
+        let d = (CIERRE_DIA - dia + 7) % 7;
+        if(d === 0 && minutos >= CIERRE_HORA*60) d = 7;
+        const cierre = new Date(Date.UTC(ahora.getUTCFullYear(), ahora.getUTCMonth(), ahora.getUTCDate() + d));
+        const entrega = new Date(cierre.getTime() + ((ENTREGA_DIA - CIERRE_DIA + 7) % 7) * 86400000);
+        return { cierre, entrega };
+    }
+    function fmtFecha(f){ return DIAS_ES[f.getUTCDay()] + ' ' + String(f.getUTCDate()).padStart(2,'0') + '/' + String(f.getUTCMonth()+1).padStart(2,'0'); }
+    function textoEntrega(){ const e = proximaEntrega(); return { entrega: fmtFecha(e.entrega), cierre: fmtFecha(e.cierre) }; }
+    document.addEventListener('DOMContentLoaded', function(){
+        const t = textoEntrega();
+        document.querySelectorAll('[data-entrega]').forEach(function(el){
+            const k = el.getAttribute('data-entrega');
+            el.textContent = (k === 'cierre') ? t.cierre : t.entrega;
+        });
+    });
+
+    // ---- Origen del cliente (anuncio de Meta): se recuerda 7 dias y se agrega al mensaje de WhatsApp ----
+    (function(){
+        try{
+            const q = new URLSearchParams(location.search);
+            const s = q.get('utm_source'), c = q.get('utm_campaign'), x = q.get('utm_content');
+            if(s || c || x || q.get('fbclid')){
+                const v = [s, c, x].filter(Boolean).join(' / ') || 'meta';
+                localStorage.setItem('mistycal_origen', JSON.stringify({ v: v, t: Date.now() }));
+            }
+        }catch(e){}
+    })();
+    function getOrigen(){
+        try{ const o = JSON.parse(localStorage.getItem('mistycal_origen') || 'null'); if(o && Date.now() - o.t < 7*86400000) return o.v; }catch(e){}
+        return '';
+    }
+
+    // ---- Pagos y pedidos ----
+    const MP_LINK = 'https://link.mercadopago.com.ar/robinoraul';
+    // Para recibir cada reserva automaticamente (n8n o Google Apps Script), pega aca la direccion del webhook:
+    const PEDIDOS_WEBHOOK_URL = '';
+    function enviarPedido(datos){
+        if(!PEDIDOS_WEBHOOK_URL) return;
+        try{ fetch(PEDIDOS_WEBHOOK_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(datos), keepalive:true }); }catch(e){}
+    }
+    </script>
+    <style>
+        .t-hero{text-align:center;padding:38px 20px 28px}
+        .t-hero h1{margin:0;font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1}
+        .t-hero .t-l1{display:block;font-size:58px;letter-spacing:.06em}
+        .t-hero .t-l2{display:block;margin-top:8px;font-size:clamp(17px,5.8vw,25px);letter-spacing:.16em;white-space:nowrap;color:var(--accent)}
+        .t-tiles{display:grid;grid-template-columns:1fr;gap:14px;max-width:1040px;margin:0 auto;padding:0 16px}
+        .tile{position:relative;display:flex;align-items:center;min-height:132px;border-radius:10px;overflow:hidden;border:1px solid var(--gold);color:#fff;text-decoration:none;isolation:isolate}
+        .tile--m{background:linear-gradient(120deg,#3A2E24,#7A6040)}
+        .tile--g{background:linear-gradient(120deg,#2A2A2A,#6B5A5A)}
+        .tile--o{background:linear-gradient(120deg,#5A1630,#A33A5E)}
+        .tile__media{position:absolute;top:0;right:0;bottom:0;left:0;z-index:-2}
+        .tile__media img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease}
+        .tile__media img.is-on{opacity:1}
+        .tile__shade{position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.2))}
+        .tile__txt{padding:0 18px;flex:1;display:flex;flex-direction:column;gap:5px}
+        .tile__tag{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:#E6C75C}
+        .tile__label{font-family:var(--font-display);font-size:27px;font-weight:700;line-height:1.05;text-transform:uppercase;letter-spacing:.03em}
+        .tile__sub{font-size:13px;color:#F1EDE4}
+        .tile__arrow{margin-right:16px;width:36px;height:36px;border-radius:50%;border:1.5px solid #fff;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s}
+        .tile:hover .tile__arrow{transform:translateX(4px);background:rgba(255,255,255,.15)}
+        .t-chip{max-width:1040px;margin:28px auto 0;padding:0 16px}
+        .t-chip__in{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;gap:12px;align-items:center;font-size:13px;line-height:1.4}
+        .t-como{max-width:1040px;margin:0 auto;padding:30px 16px 8px}
+        .t-como h2{font-family:var(--font-display);font-size:28px;font-weight:600;text-align:center;margin:0 0 16px}
+        .t-steps{display:flex;gap:12px}
+        .t-step{flex:1;text-align:center;font-size:12.5px;line-height:1.4}
+        .t-step i{font-style:normal;width:32px;height:32px;margin:0 auto 8px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+        @media (min-width:750px){
+            .t-hero{padding:56px 20px 40px}
+            .t-hero .t-l1{font-size:104px}
+            .t-hero .t-l2{font-size:36px;margin-top:12px}
+            .t-tiles{grid-template-columns:repeat(3,1fr);gap:20px}
+            .tile{min-height:300px;align-items:flex-end}
+            .tile__txt{padding:0 22px 22px;gap:8px}
+            .tile__label{font-size:34px}
+            .tile__sub{font-size:14px}
+            .tile__arrow{position:absolute;top:16px;right:16px;margin:0}
+            .tile__shade{background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.1) 70%)}
+            .t-chip__in{justify-content:center;font-size:14px}
+            .t-como h2{font-size:34px}
+            .t-step{font-size:14px}
+        }
+        @media (prefers-reduced-motion:reduce){ .tile__media img{transition:none} }
+    </style>
 </head>
 <body class="">
 <section class="topbar" data-bloque="topbar">
@@ -370,240 +455,83 @@
         <span class="topbar__sep">|</span>
         <span><i class="fa-solid fa-truck" style="margin-right:6px;color:var(--gold-light)"></i>Envío Gratis en Córdoba Capital</span>
     </section>
-
     <section class="cab" data-bloque="cabecera">
         <div class="wrap cab__in">
-            <div class="logo-area">
-                <div>
-                    <a href="./" class="logo" style="text-decoration:none;color:inherit;display:block">MISTYCAL</a>
-                    <div class="logo-sub">Parfumerie Exclusive</div>
-                </div>
-            </div>
-            <nav class="cab-nav">
-                <a href="g5.html" class="is-cta"><span class="solo-pc">Perfumes&nbsp;</span>G5</a>
-                <a href="originales.html" class="is-cta">Originales</a>
-            </nav>
+            <div class="logo-area"><div>
+                <a href="./" class="logo" style="text-decoration:none;color:inherit;display:block">MISTYCAL</a>
+                <div class="logo-sub">Parfumerie Exclusive</div>
+            </div></div>
         </div>
     </section>
-
-    <!-- BANNER DIA DE LA MADRE -->
-    <section id="alternativas-madre" data-bloque="alternativas" style="padding:56px 0;background:#FBFBF9;border-top:2px solid #D4AF37;border-bottom:1px solid #E9E9E6;display:block !important;">
-        <div class="wrap">
-            <div style="text-align:center;max-width:720px;margin:0 auto 36px;">
-                <p style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:#D4AF37;font-weight:700;" data-field="alternativas-0">MISTYCAL · DÍA DE LA MADRE</p>
-                <h2 style="font-family:var(--font-display);font-size:32px;margin:12px 0 8px;" data-field="alternativas-1">Si voló, te dejamos el reemplazo</h2>
-                <p style="color:#5F5A57;font-size:14px;" data-field="alternativas-2">Si tu perfume favorito no tiene stock, tenemos la alternativa igual de rica que SÍ tiene stock HOY.</p>
-            </div>
-            <div id="madre-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto;"></div>
-            </div>
-        
+    <section class="t-hero"><h1><span class="t-l1" id="t-l1">Oferta</span><span class="t-l2" id="t-l2">Primavera Verano</span></h1></section>
+    <section class="t-tiles">
+        <a class="tile tile--m" href="muestras.html" aria-label="Ver miniaturas y tubitos"><div class="tile__media" id="slides-muestras"></div><div class="tile__shade"></div><div class="tile__txt"><span class="tile__tag">Probá antes de elegir</span><span class="tile__label">Miniaturas y tubitos</span></div><span class="tile__arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="tile tile--g" href="g5.html" aria-label="Ver perfumes calidad G5"><div class="tile__media" id="slides-g5"></div><div class="tile__shade"></div><div class="tile__txt"><span class="tile__tag">Calidad G5</span><span class="tile__label">Perfumes G5</span><span class="tile__sub">Desde $44.900</span></div><span class="tile__arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="tile tile--o" href="originales.html" aria-label="Ver perfumes originales"><div class="tile__media" id="slides-orig"></div><div class="tile__shade"></div><div class="tile__txt"><span class="tile__tag">Originales</span><span class="tile__label">Perfumes originales</span><span class="tile__sub">Selección de marcas originales</span></div><span class="tile__arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </section>
-
-    <section id="elegir" class="elegir2">
-        <div class="wrap">
-            <div style="text-align:center;max-width:720px;margin:0 auto 32px;">
-                <p style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:#D4AF37;font-weight:700;">ELEGÍ TU CATÁLOGO</p>
-                <h2 style="font-family:var(--font-display);font-size:34px;margin:12px 0 8px;">¿Qué perfumes estás buscando?</h2>
-            </div>
-            <div class="elegir2__grid">
-                <a class="eleg-card eleg-card--g5" href="g5.html" aria-label="Ver perfumes calidad G5">
-                    <div class="eleg-media" id="slides-g5"></div>
-                    <div class="eleg-body">
-                        <span class="eleg-tag">Calidad G5</span>
-                        <h3>Perfumes G5</h3>
-                        <p>Las fragancias más pedidas. Reservá con el 50% y abonás el saldo contra entrega. Envío gratis en Córdoba Capital.</p>
-                        <span class="eleg-cta">Ver desde $44.900 <i>&rarr;</i></span>
-                    </div>
-                </a>
-                <a class="eleg-card eleg-card--orig" href="originales.html" aria-label="Ver perfumes originales">
-                    <div class="eleg-media" id="slides-orig"></div>
-                    <div class="eleg-body">
-                        <span class="eleg-tag">Originales</span>
-                        <h3>Perfumes originales</h3>
-                        <p>Nuestra selección de perfumes originales. Reservá con el 50% y abonás el saldo contra entrega.</p>
-                        <span class="eleg-cta">Ver originales <i>&rarr;</i></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
+    <div class="t-chip"><div class="t-chip__in"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A1F3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Próxima entrega: <span data-entrega="entrega">viernes</span></strong><br>Pedidos hasta el <span data-entrega="cierre">miércoles</span>, 16 hs</div></div></div>
+    <section class="t-como"><h2>Cómo funciona</h2><div class="t-steps">
+        <div class="t-step"><i>1</i>Elegís y reservás con el 50%</div>
+        <div class="t-step"><i>2</i>Cerramos pedidos el miércoles a las 16 hs</div>
+        <div class="t-step"><i>3</i>Te lo llevamos el viernes y pagás el saldo</div></div></section>
     <section class="foot" data-bloque="footer">
         <div class="wrap">
             <small>© 2026 · Mistycal Ould · Perfumería de Autor · Córdoba, Argentina · +54 351 521-0477</small>
+            <div class="foot__legal"><a href="legal.html#cambios">Cambios y devoluciones</a><a href="legal.html#arrepentimiento">Botón de arrepentimiento</a><a href="legal.html#privacidad">Privacidad</a></div>
             <div class="foot__eco" aria-hidden="true">MISTYCAL OULD</div>
         </div>
     </section>
 
     <script>
     (function(){
-        const WA_FALLBACK = '';
-        const imgBase = "https://storage.googleapis.com/comprarporwhatsapp-19eb8.appspot.com/2DeT93dEFdPYBKoksJyx/products/";
-        const fallbackImage = "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=500";
-        const PRICE_MULT = 2.4938;
-        function getPrices(basePrice){ const total = Math.round(basePrice * PRICE_MULT); return { total, deposit: Math.round(total/2) }; }
+        // Titulo por temporada: fuera de las fechas de abajo se muestra "Oferta Primavera Verano"
+        const TEMPORADAS = [ { desde: '2026-11-15', hasta: '2026-12-25', l1: 'Oferta', l2: 'Navidad' } ];
+        const hoy = new Date(Date.now() - 3*3600*1000).toISOString().slice(0, 10);
+        const t = TEMPORADAS.find(x => hoy >= x.desde && hoy <= x.hasta);
+        if(t){ document.getElementById('t-l1').textContent = t.l1; document.getElementById('t-l2').textContent = t.l2; }
 
-        // Datos de los perfumes del banner (notas verificadas contra el perfume original)
-        const products = [
-            { id: 40, name: "Odyssey Candee G5", basePrice: 25000, category: "Odyssey", gender: "Mujer", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "ZsEgYbPqswycejCeNU7ER.png", notas: "Fresa, Frambuesa, Durazno, Caramelo, Jazmín, Maracuyá, Ámbar, Almizcle" },
-            { id: 36, name: "Odyssey Pink Pop G5", basePrice: 25000, category: "Odyssey", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "JASsECfMw7ocMUHchOTNC.png", notas: "Fresa, Piña, Mandarina, Flor de azahar, Jazmín, Coco, Vainilla, Almizcle" },
-            { id: 157, name: "Noble Blush G5", basePrice: 25000, category: "Badee Al Oud", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "3kkx53txPZ_CnWExT82QQ.png", notas: "Leche de rosa, Merengue, Almendra, Vainilla, Sándalo, Almizcle" },
-            { id: 125, name: "Angham G5", basePrice: 30000, category: "Lattafa", gender: "Mujer", season: "Primavera/Verano", featured: false, inStock: true, image: imgBase + "WxfwCLEPjnic5lAlmIbLI.png", notas: "Mandarina, Jengibre, Pimienta rosa, Lavanda, Praliné, Cacao, Jazmín, Vainilla, Ámbar, Almizcle" },
-            { id: 161, name: "Khamrah G5", basePrice: 30000, category: "Khamrah", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "h-_jooj3dMsZz8oDV-aSx.png", notas: "Canela, Nuez moscada, Bergamota, Dátiles, Praliné, Tuberosa, Vainilla, Haba tonka, Ámbar, Mirra" },
-            { id: 119, name: "Orientica Amber Rouge G5", basePrice: 30000, category: "Orientica", gender: "Unisex", season: "Otoño/Invierno", featured: false, inStock: true, image: imgBase + "dcS_9tZee9eBr6XbKJHKh.png", notas: "Azafrán, Jazmín, Ámbar, Ámbar gris, Cedro, Resina de abeto" },
-            { id: 46, name: "Limoni G5", basePrice: 25000, category: "Odyssey", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "QD82tfVUtjxGEULSsf4Wm.png", notas: "Limón, Naranja, Bergamota, Jengibre, Flor de azahar, Notas marinas, Té azul, Almizcle" },
-            { id: 198, name: "Tropical Vibe G5", basePrice: 25000, category: "Rayhaan", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "7NdpXkvtt6W4g7eS3BlAW.png", notas: "Mango, Piña, Bergamota, Flores blancas, Coco, Ámbar, Sándalo, Almizcle" },
-            { id: 20, name: "9AM Dive G5", basePrice: 25000, category: "9PM", gender: "Unisex", season: "Verano", featured: false, inStock: true, image: imgBase + "89Td4x7VkaRkW4ifZgL4z.png", notas: "Limón, Pimienta rosa, Menta, Grosella negra, Manzana, Incienso, Cedro, Pachulí, Jengibre, Sándalo" },
-        ];
-
-        // ============================================================
-        // BANNER "MAMA..." - reposicion automatica
-        // Si el titular no tiene stock, muestra el reemplazo 1; si tampoco, el reemplazo 2.
-        // Los nombres deben ser iguales a los de la hoja y a los de la lista de arriba.
-        // ============================================================
-        const SISTEMA_3 = [
-            // 1) Dulce y femenina
-            { titulo: 'Mamá dulce y femenina',  titular: 'Odyssey Candee G5', supl1: 'Odyssey Pink Pop G5', supl2: 'Noble Blush G5' },
-            // 2) Intensa y sensual
-            { titulo: 'Mamá intensa y sensual',  titular: 'Angham G5',         supl1: 'Khamrah G5',          supl2: 'Orientica Amber Rouge G5' },
-            // 3) Fresca y deportiva
-            { titulo: 'Mamá fresca y deportiva', titular: 'Limoni G5',         supl1: 'Tropical Vibe G5',    supl2: '9AM Dive G5' }
-        ];
-
-        function createCardHtml(p) {
-            const total = getPrices(p.basePrice).total;
-            const oldPrice = Math.round(total * 1.2);
-            const imageSrc = p.image || fallbackImage;
-            const isOutOfStock = !p.inStock;
-
-            let badgeBg = "color-mix(in srgb, var(--gold) 10%, transparent)";
-            let badgeColor = "var(--gold)";
-            let badgeBorder = "color-mix(in srgb, var(--gold) 30%, transparent)";
-            if (p.gender === 'Mujer') { badgeBg = "color-mix(in srgb, #EC4899 10%, transparent)"; badgeColor = "#EC4899"; badgeBorder = "color-mix(in srgb, #EC4899 30%, transparent)"; }
-            if (p.gender === 'Hombre') { badgeBg = "color-mix(in srgb, #3B82F6 10%, transparent)"; badgeColor = "#3B82F6"; badgeBorder = "color-mix(in srgb, #3B82F6 30%, transparent)"; }
-
-            const seasonIcon = p.season.includes('Verano') ? 'fa-sun' : p.season.includes('Invierno') ? 'fa-snowflake' : p.season.includes('Primavera') ? 'fa-seedling' : p.season.includes('Otoño') ? 'fa-leaf' : 'fa-calendar';
-            const badgeSinStock = isOutOfStock ? '<div style="position:absolute;top:10px;left:10px;z-index:15;background:#8b1a1a;color:#fff;padding:5px 12px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.08em;box-shadow:0 2px 6px rgba(0,0,0,.2)">SIN STOCK</div>' : '';
-            let btnHtml = '';
-            if(isOutOfStock){
-                btnHtml = `<button type="button" class="var__cta" disabled style="background:#E9E9E6 !important;color:#9A9A96 !important;cursor:not-allowed;opacity:1;border:1px solid #E0E0DC"><i class="fa-solid fa-ban" style="margin-right:6px"></i> SIN STOCK</button>`;
-            } else {
-                btnHtml = `<button type="button" class="var__cta" data-reservar="${p.name}"><i class="fa-brands fa-whatsapp"></i> RESERVAR</button>`;
-            }
-            return `
-                <article class="var__card" data-perfume="${p.name}" style="opacity:1;filter:none">
-                    <div class="var__img" style="position:relative">
-                        <img src="${imageSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1">
-                        <span class="var__badge" style="background:${badgeBg};color:${badgeColor};border:1px solid ${badgeBorder}">${p.gender}</span>
-                        ${badgeSinStock}
-                    </div>
-                    <div class="var__body">
-                        <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:4px">${p.category}</div>
-                        <h3 style="color:var(--ink);font-weight:600;font-size:16px;line-height:1.3;margin:0 0 0.5rem 0">${p.name}</h3>
-                        <p style="color:var(--muted);font-size:13px;line-height:1.4">${p.notas}</p>
-                        <div style="margin-top:8px"><span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:20px;background:var(--surface);border:1px solid var(--line);color:var(--muted)"><i class="fa-solid ${seasonIcon}"></i> ${p.season}</span></div>
-                        <div class="var__old">$${oldPrice.toLocaleString('es-AR')}</div>
-                        <div class="var__price var__price--now">$${total.toLocaleString('es-AR')}</div>
-                        <div class="var__offer">🔥 Oferta limitada</div>
-                        <div class="var__dep">50% seña: <strong>$${Math.round(total/2).toLocaleString('es-AR')}</strong></div>
-                        ${btnHtml}
-                    </div>
-                </article>
-            `;
-        }
-
-        function buscarProd(nombre){ const n = nombre.toLowerCase().trim(); return products.find(p => p.name.toLowerCase() === n); }
-        function elegirConStock(cfg){
-            const t = buscarProd(cfg.titular);
-            if(t && t.inStock) return {prod:t, esReemplazo:false};
-            const s1 = buscarProd(cfg.supl1);
-            if(s1 && s1.inStock) return {prod:s1, esReemplazo:true};
-            const s2 = buscarProd(cfg.supl2);
-            if(s2 && s2.inStock) return {prod:s2, esReemplazo:true};
-            return {prod:t || s1 || s2, esReemplazo:false};
-        }
-        function renderBannerMadre(){
-            const grid = document.getElementById('madre-grid');
-            if(!grid) return;
-            let out = '';
-            SISTEMA_3.forEach(cfg => {
-                const r = elegirConStock(cfg), p = r.prod;
-                if(!p) return;
-                const badge = r.esReemplazo ? '<div style="position:absolute;top:10px;left:10px;z-index:16;background:#D4AF37;color:#000;font-size:10px;font-weight:700;padding:5px 10px;border-radius:99px;">REEMPLAZO CON STOCK</div>' : '';
-                out += '<div><div class="madre-tit">' + (cfg.titulo || '') + '</div><div style="position:relative;">' + badge + createCardHtml(p) + '</div></div>';
-            });
-            if(out) grid.innerHTML = out;
-        }
-
-        // Foto de respaldo: si una foto no carga, se prueba la que figura en la hoja (una sola vez)
+        // Fotos de los botones. Miniaturas y tubitos: fotos del proveedor. G5 y Originales: salen de tu hoja.
+        const P = 'https://cdn.pedix.app/2DeT93dEFdPYBKoksJyx/products/';
+        const FOTOS_MUESTRAS = [ P + 'gxg_G4M0bjr3T3Uwq3-Yw.png?size=2000x2000', P + 'djAIqEOyS7udzl1xrhw7J.png?size=250x250', P + '7KLJlA6QTDlVWYeC9yptj.png?size=250x250',
+                                 P + 'Z_PGrF70ljL7XH2v4TfpQ.png?size=250x250', P + 'iJWRWAFXFiiogPk7Z7F2j.png?size=250x250', P + 'GTDYkZxwkvpGXa5pUbs7E.png?size=250x250' ];
         window.__IMG_ALT = {};
         document.addEventListener('error', function(e){
-            const t = e.target;
-            if(!t || t.tagName !== 'IMG' || t.dataset.altProbado) return;
-            const alt = window.__IMG_ALT[t.src];
-            if(alt){ t.dataset.altProbado = '1'; t.src = alt; }
+            const el = e.target;
+            if(!el || el.tagName !== 'IMG' || el.dataset.altProbado) return;
+            const alt = window.__IMG_ALT[el.src];
+            if(alt){ el.dataset.altProbado = '1'; el.src = alt; }
         }, true);
-
-        // El boton RESERVAR lleva a la landing G5 con el cuadro de reserva abierto
-        document.addEventListener('click', function(e){
-            const b = e.target.closest('[data-reservar]');
-            if(b) location.href = 'g5.html?reservar=' + encodeURIComponent(b.getAttribute('data-reservar'));
-        });
-
-        // ---- Carrusel automatico de fotos en las dos tarjetas ----
         const reducirMov = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         function mezclar(a){ a = a.slice(); for(let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
         function imgChica(url){
             const m = /cdn\.pedix\.app\/[^?]*\?(?:.*&)?size=(\d+)x\d+/.exec(url || '');
-            if(m && Number(m[1]) > 900){ const src = url.replace(/size=\d+x\d+/, 'size=800x800'); window.__IMG_ALT[src] = url; return src; }
+            if(m && Number(m[1]) !== 800){ const src = url.replace(/size=\d+x\d+/, 'size=800x800'); window.__IMG_ALT[src] = url; return src; }
             return url;
         }
         function montarSlides(id, urls, demora){
             const box = document.getElementById(id);
             if(!box || !urls.length) return;
             box.innerHTML = urls.map((u, i) => '<img src="' + u + '" alt="" ' + (i ? 'loading="lazy" ' : '') + 'class="' + (i === 0 ? 'is-on' : '') + '">').join('');
-            box.querySelectorAll('img').forEach(im => im.addEventListener('error', () => { if(im.dataset.altProbado) im.remove(); }));
+            box.querySelectorAll('img').forEach(im => im.addEventListener('error', () => { if(im.dataset.altProbado || !window.__IMG_ALT[im.src]) im.remove(); }));
             if(reducirMov) return;
             let i = 0;
-            setTimeout(function(){
-                setInterval(function(){
-                    const imgs = box.querySelectorAll('img');
-                    if(imgs.length < 2) return;
-                    imgs[i % imgs.length].classList.remove('is-on');
-                    i = (i + 1) % imgs.length;
-                    imgs[i].classList.add('is-on');
-                }, 3400);
-            }, demora || 0);
+            setTimeout(function(){ setInterval(function(){
+                const imgs = box.querySelectorAll('img'); if(imgs.length < 2) return;
+                imgs[i % imgs.length].classList.remove('is-on'); i = (i + 1) % imgs.length; imgs[i].classList.add('is-on');
+            }, 3400); }, demora || 0);
         }
         const NO_G5 = /body splash|kit|promo|miniatura/i;
-        function fotosDesdeStock(data){
+        function montarTodo(data){
+            data = data || {};
+            const nombres = new Set((data.perfumes || []).map(p => String(p.nombre).toLowerCase()));
             const g5 = (data.perfumes || []).filter(p => p && p.stock && p.imagen && !NO_G5.test((p.categoria || '') + ' ' + p.nombre)).map(p => imgChica(p.imagen));
-            const g5nombres = new Set((data.perfumes || []).map(p => String(p.nombre).toLowerCase()));
-            const orig = (data.originales || []).filter(p => p && p.imagen && !g5nombres.has(String(p.nombre).toLowerCase())).map(p => imgChica(p.imagen));
+            const orig = (data.originales || []).filter(p => p && p.imagen && !nombres.has(String(p.nombre).toLowerCase())).map(p => imgChica(p.imagen));
+            const mue = (data.muestras || []).filter(p => p && p.imagen).map(p => imgChica(p.imagen));
+            montarSlides('slides-muestras', mue.length ? mezclar(mue).slice(0, 6) : FOTOS_MUESTRAS.map(imgChica), 900);
             montarSlides('slides-g5', mezclar(g5).slice(0, 6), 0);
-            montarSlides('slides-orig', mezclar(orig).slice(0, 6), 1700);
+            montarSlides('slides-orig', mezclar(orig).slice(0, 6), 1800);
         }
-
-        // Stock y precios desde la hoja (stock.json lo arma el bot)
-        const norm = s => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').toLowerCase().trim();
-        const stockDe = pr => (typeof pr.stock === 'string') ? ['si','sí','true','1'].includes(pr.stock.toLowerCase().trim()) : !!pr.stock;
-        renderBannerMadre();
-        fetch('./stock.json?v=' + Date.now(), {cache:'no-store'})
-            .then(r => r.json())
-            .then(data => {
-                const porNombre = {};
-                (data.perfumes || []).forEach(pr => { if(pr && pr.nombre){ const k = norm(pr.nombre); if(!(k in porNombre)) porNombre[k] = pr; } });
-                products.forEach(p => {
-                    const it = porNombre[norm(p.name)];
-                    if(!it) return;
-                    p.inStock = stockDe(it);
-                    const pv = Number(it.precio); if(pv > 0) p.basePrice = pv;
-                    if(it.imagen && it.imagen !== p.image) window.__IMG_ALT[p.image] = it.imagen;
-                });
-                renderBannerMadre();
-                fotosDesdeStock(data);
-            })
-            .catch(err => { console.error('MISTYCAL: no se pudo cargar stock.json', err); montarSlides('slides-g5', mezclar(products.map(p => p.image)).slice(0, 6), 0); });
+        fetch('./stock.json?v=' + Date.now(), {cache:'no-store'}).then(r => r.json()).then(montarTodo).catch(function(){ montarTodo({}); });
     })();
     </script>
 
